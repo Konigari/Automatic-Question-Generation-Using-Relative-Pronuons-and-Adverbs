@@ -15,3 +15,11 @@ def show(u_line):
 	for ent in doc.ents:
 		print(ent.text, ent.start_char, ent.end_char, ent.label_) 
 	print("SENTENCE DONE")
+
+def genq(sentence):
+	doc = nlp(u_line)
+	att = {
+		tag_ : 'WP',
+		dep_ : 'nsubj'
+	}
+	filter(lambda x:token.)

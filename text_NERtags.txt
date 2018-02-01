@@ -1,0 +1,206 @@
+Sentence - Mary is a teacher in a primary school.
+(u'Mary', 0, 4, u'PERSON')
+SENTENCE DONE
+Sentence - John is a handsome old man.
+(u'John', 0, 4, u'PERSON')
+SENTENCE DONE
+Sentence - He is a stupid guy.
+SENTENCE DONE
+Sentence - I am a doctorate student at the University of London.
+(u'the University of London', 28, 52, u'ORG')
+SENTENCE DONE
+Sentence - You are poor.
+SENTENCE DONE
+Sentence - They are mad at you.
+SENTENCE DONE
+Sentence - I feel cold.
+SENTENCE DONE
+Sentence - She plays badminton very well.
+SENTENCE DONE
+Sentence - Robert eats cookies everyday.
+(u'Robert', 0, 6, u'PERSON')
+(u'everyday', 20, 28, u'DATE')
+SENTENCE DONE
+Sentence - The college students dance on popular songs only.
+SENTENCE DONE
+Sentence - I hit him everyday.
+SENTENCE DONE
+Sentence - We write English poems for a literary website on Sundays.
+(u'English', 9, 16, u'LANGUAGE')
+(u'Sundays', 49, 56, u'DATE')
+SENTENCE DONE
+Sentence - Probably, they give all the money to the gangster.
+SENTENCE DONE
+Sentence - I want to study.
+SENTENCE DONE
+Sentence - This plan looks too good to be true.
+SENTENCE DONE
+Sentence - You earn a lot of money.
+SENTENCE DONE
+Sentence - I wish I were a successful businessman.
+SENTENCE DONE
+Sentence - He is surviving on college scholarship.
+SENTENCE DONE
+Sentence - I am doing the dishes today.
+(u'today', 22, 27, u'DATE')
+SENTENCE DONE
+Sentence - You are cleaning your untidy bedroom.
+SENTENCE DONE
+Sentence - You are supposed to stay at home during weekends.
+SENTENCE DONE
+Sentence - All of them are acting strangely.
+SENTENCE DONE
+Sentence - They are planning to buy a new house in the old city towards the year end.
+(u'the year end', 61, 73, u'DATE')
+SENTENCE DONE
+Sentence - She is thinking of getting married to her long time boyfriend.
+SENTENCE DONE
+Sentence - I am coming home now.
+SENTENCE DONE
+Sentence - John is staring at Mary.
+(u'John', 0, 4, u'PERSON')
+(u'Mary', 19, 23, u'PERSON')
+SENTENCE DONE
+Sentence - Please put the red flowers in the vase on time.
+SENTENCE DONE
+Sentence - Kindly be quite for a while.
+SENTENCE DONE
+Sentence - Don't keep me waiting.
+SENTENCE DONE
+Sentence - Don't buy new clothes for now.
+SENTENCE DONE
+Sentence - I don't want to study.
+SENTENCE DONE
+Sentence - She is not a thief.
+SENTENCE DONE
+Sentence - They are not helping you actually.
+SENTENCE DONE
+Sentence - You are not thinking straight.
+SENTENCE DONE
+Sentence - She could not sleep all day.
+(u'all day', 20, 27, u'DATE')
+SENTENCE DONE
+Sentence - They must not behave like this.
+SENTENCE DONE
+Sentence - Sarah will not forgive you.
+(u'Sarah', 0, 5, u'PERSON')
+SENTENCE DONE
+Sentence - One day, I will meet the girl of my dreams.
+(u'One day', 0, 7, u'DATE')
+SENTENCE DONE
+Sentence - Sam will take care of her mom.
+(u'Sam', 0, 3, u'PERSON')
+SENTENCE DONE
+Sentence - I will be doing my homework during summer vacations.
+(u'summer', 35, 41, u'DATE')
+SENTENCE DONE
+Sentence - Sarah completed all the work herself.
+(u'Sarah', 0, 5, u'PERSON')
+SENTENCE DONE
+Sentence - The train arrived a little late as usual.
+SENTENCE DONE
+Sentence - Sam grew old to be a great father.
+(u'Sam', 0, 3, u'PERSON')
+SENTENCE DONE
+Sentence - The clouds looked clear that day.
+(u'that day', 24, 32, u'DATE')
+SENTENCE DONE
+Sentence - I hit him yesterday.
+(u'yesterday', 10, 19, u'DATE')
+SENTENCE DONE
+Sentence - The sheep ran away.
+SENTENCE DONE
+Sentence - The school kids got off the bus.
+SENTENCE DONE
+Sentence - You can turn off the lights.
+SENTENCE DONE
+Sentence - She should wait for her friends before leaving.
+SENTENCE DONE
+Sentence - I must help the needy.
+SENTENCE DONE
+Sentence - Sam could drink 2 litres of water as a teenager.
+(u'Sam', 0, 3, u'PERSON')
+(u'2', 16, 17, u'CARDINAL')
+SENTENCE DONE
+Sentence - There must be an error in this code.
+SENTENCE DONE
+Sentence - They were talking about the world health issues in the meeting at the main building.
+SENTENCE DONE
+Sentence - Perhaps I was a bit too interested in your proposal at that time.
+SENTENCE DONE
+Sentence - Frankly, our chances were slim.
+SENTENCE DONE
+Sentence - Predictably, the game was really difficult.
+SENTENCE DONE
+Sentence - Robert and Martha are old friends.
+(u'Robert', 0, 6, u'PERSON')
+(u'Martha', 11, 17, u'PERSON')
+SENTENCE DONE
+Sentence - Robert and Martha gave their clothes to Sam.
+(u'Robert', 0, 6, u'PERSON')
+(u'Martha', 11, 17, u'PERSON')
+(u'Sam', 40, 43, u'PERSON')
+SENTENCE DONE
+Sentence - I like Robert and Martha
+(u'Robert', 7, 13, u'PERSON')
+(u'Martha', 18, 24, u'PERSON')
+SENTENCE DONE
+Sentence - I have two dogs and one cat.
+(u'two', 7, 10, u'CARDINAL')
+(u'one', 20, 23, u'CARDINAL')
+SENTENCE DONE
+Sentence - Sam will paint the furniture and Alex will repair the wooden cupboards.
+(u'Sam', 0, 3, u'PERSON')
+(u'Alex', 33, 37, u'ORG')
+SENTENCE DONE
+Sentence - We all like chocolate ice-cream and vanilla milkshake.
+SENTENCE DONE
+Sentence - The teacher went home when nobody came to the class.
+SENTENCE DONE
+Sentence - The boy likes the girl who wears spectacles.
+SENTENCE DONE
+Sentence - The person who is the smartest in the class came to meet us.
+SENTENCE DONE
+Sentence - I know everyone who bunks classes.
+SENTENCE DONE
+Sentence - I will meet you where the cars are parked.
+SENTENCE DONE
+Sentence - I bought the table which you saw in the market.
+SENTENCE DONE
+Sentence - We see the stars that are the brightest in the sky.
+SENTENCE DONE
+Sentence - I think that you do not like me.
+SENTENCE DONE
+Sentence - I will tell you how it is done.
+SENTENCE DONE
+Sentence - I will give you the packet when we meet.
+SENTENCE DONE
+Sentence - Whenever there is a problem, she helps me.
+SENTENCE DONE
+Sentence - Although I never told her, she understood everything.
+SENTENCE DONE
+Sentence - If you go to the market, bring some eggs.
+SENTENCE DONE
+Sentence - If he comes late at home, I will talk to him.
+SENTENCE DONE
+Sentence - I ate the pasta because I was hungry.
+SENTENCE DONE
+Sentence - Nobody turned up for the class because of which the teacher got upset.
+SENTENCE DONE
+Sentence - I have been waiting here since morning.
+(u'morning', 31, 38, u'TIME')
+SENTENCE DONE
+Sentence - You are saying this since you know me.
+SENTENCE DONE
+Sentence - Mary could not meet him as she was not home at that time.
+SENTENCE DONE
+Sentence - John slapped him in order to teach him a lesson.
+(u'John', 0, 4, u'PERSON')
+SENTENCE DONE
+Sentence - Atop the main building in the heart of the Rome lies a big golden dome.
+(u'Rome', 43, 47, u'GPE')
+SENTENCE DONE
+Sentence - We distributed packets consisting of sugar candies.
+SENTENCE DONE
+Sentence - The young lady got lost in the jungle while searching for her brother.
+SENTENCE DONE

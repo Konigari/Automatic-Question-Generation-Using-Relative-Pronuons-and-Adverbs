@@ -1,6 +1,7 @@
 import spacy
 import inspect
 from spacy import displacy
+import ipdb
 nlp = spacy.load('en')
 
 
@@ -31,40 +32,62 @@ def props(obj):
             pr[name] = value
     return pr
 
+def recursePrint(obj):
+	l = []
+	for i in obj.lefts:
+		x = recursePrint(i.children)
+		l.append(x)
+	l.append(obj.text)
+	for i in obj.rights:
+		x = recursePrint(i.children)
+		l.append(x)
+	return l
+
+def serialize(obj):
+	return {
+		'tag_': obj.tag_,
+		'dep_': obj.dep_,
+		'pos_': obj.pos_,
+
+	}
+
+def filt(d2):
+	return lambda x:set(d2.items()).issubset(set(serialize(x).items()))
+
+def filteratt(att, doc):
+	return (list(filter(lambda tup: filt(att)(tup), doc)))
+
+
 def genq(sentence):
-	def serialize(obj):
-		return {
-			'tag_': obj.tag_,
-			'dep_': obj.dep_,
-			'pos_': obj.pos_,
-
-		}
-
-	def filt(d2):
-		return lambda x:set(d2.items()).issubset(set(serialize(x).items()))
-
-	def filteratt(att, doc):
-		return (list(filter(lambda tup: filt(att)(tup[1]), enumerate(doc))))
 
 	doc = nlp(sentence)
 
-	att = {
+	relativeclauseswh = filteratt({
 		'tag_' : 'WP',
 		'dep_' : 'nsubj'
-	}
-	relativeclauses = filteratt(att, doc)
-	for word in relativeclauses:
-		index = word[0]
-		relclause = word[1]
-		print(word[1].text + " " + " ".join(sentence.split(" ")[index+1:])+"?")
-		verb_past = filteratt({
-			'tag_':'VBD',
-			'dep_':'ROOT'
-			}, doc)
-		for verb in verb_past:
-			if relclause.text.lower()=='who':
-				print("Who "+"did "+ next(doc.noun_chunks).text + " " + verb[1].lemma_ + " " + "to meet")
+	}, doc)
+	rootofrelclause = filteratt({
+		'dep_':'relcl'
+		}, doc)
+	answer = rootofrelclause[0].head
 
+	for relclause in relativeclauseswh:
+		if relclause.text.lower()=='who':
+			print(relclause.text + " " + " ".join([x.text for x in doc[relclause.i+1:]])+"?")
+			beginning = doc[0:answer.head.i]
+			#convert verb to lemma
+			pasttenseverb = filteratt({
+				'tag_':'VBD',
+				'dep_':'ROOT'
+				}, beginning)
+
+			if len(pasttenseverb)>0:
+				pasttenseverb = pasttenseverb[0]
+				end = answer.head.i+1 if answer.head.dep_=="prep" else answer.head.i
+				converted = [x.text for x in doc[0:pasttenseverb.i]] + [pasttenseverb.lemma_] + [x.text for x in doc[pasttenseverb.i+1:end]]
+				print("Who "+"did "+ " ".join(converted) + '?')
+						
+					
 	# relativeclause = 
 
 	## who did they give the chocolate t

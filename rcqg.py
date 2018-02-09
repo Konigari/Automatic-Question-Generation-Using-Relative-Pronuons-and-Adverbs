@@ -2,6 +2,7 @@ import spacy
 import inspect
 nlp = spacy.load('en')
 
+
 def filetotext():
 	return open("temp.txt","r").read()
 

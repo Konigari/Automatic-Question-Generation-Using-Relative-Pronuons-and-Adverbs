@@ -10,15 +10,17 @@ def filetotext():
 
 def show(u_line):
 	doc = nlp(u_line)	
-	print("Sentence -" ,u_line) 
-	print("Tokens and POS tags")
+	print("=========================Sentence -" ,u_line) 
+	print("=========================Tokens and POS tags")
 	for token in doc:
 	    print(token.text, token.lemma_, token.pos_, token.tag_, token.dep_,token.shape_, token.is_alpha, token.is_stop)					
-	print("NER tags")
-	doc = nlp(u_line)	
+	print("=========================NER tags")
 	for ent in doc.ents:
 		print(ent.text, ent.start_char, ent.end_char, ent.label_) 
-	print("SENTENCE DONE")
+	print("=========================Noun Chunks tags")
+	for c in doc.noun_chunks:
+		print(c.text) 
+	print("=========================SENTENCE DONE")
 
 def display(u_line):
 	doc = nlp(u_line)	
@@ -74,10 +76,14 @@ def genq(sentence):
 	for relclause in relativeclauseswh:
 		if relclause.text.lower()=='who':
 			print(relclause.text + " " + " ".join([x.text for x in doc[relclause.i+1:]])+"?")
-			beginning = doc[0:answer.head.i]
+			beginning = doc[0:answer.head.i+1]
 			#convert verb to lemma
 			pasttenseverb = filteratt({
 				'tag_':'VBD',
+				'dep_':'ROOT'
+				}, beginning)
+			presentcontinuousverb = filteratt({
+				'tag_':'VBG',
 				'dep_':'ROOT'
 				}, beginning)
 
@@ -86,8 +92,14 @@ def genq(sentence):
 				end = answer.head.i+1 if answer.head.dep_=="prep" else answer.head.i
 				converted = [x.text for x in doc[0:pasttenseverb.i]] + [pasttenseverb.lemma_] + [x.text for x in doc[pasttenseverb.i+1:end]]
 				print("Who "+"did "+ " ".join(converted) + '?')
-						
-					
+			
+			if len(presentcontinuousverb)>0:
+				aux = filteratt({
+					'dep_' : 'aux'
+				}, beginning)[0]
+				end = answer.head.i+1 if answer.head.dep_=="prep" else answer.head.i
+				converted = [aux.text] + [x.text for x in doc[0:aux.i]] + [x.text for x in doc[aux.i+1:end]]
+				print("Who %(kwarg)s?" % {'kwarg': " ".join(converted)})
+			
 	# relativeclause = 
 
-	## who did they give the chocolate t

@@ -86,14 +86,17 @@ def genq(sentence):
 				'tag_':'VBG',
 				'dep_':'ROOT'
 				}, beginning)
-
+			pastparticiple = filteratt({
+				'tag_':'VBN',
+				'dep_':'ROOT'
+			}, beginning)	
 			if len(pasttenseverb)>0:
 				pasttenseverb = pasttenseverb[0]
 				end = answer.head.i+1 if answer.head.dep_=="prep" else answer.head.i
 				converted = [x.text for x in doc[0:pasttenseverb.i]] + [pasttenseverb.lemma_] + [x.text for x in doc[pasttenseverb.i+1:end]]
 				print("Who "+"did "+ " ".join(converted) + '?')
 			
-			if len(presentcontinuousverb)>0:
+			if len(presentcontinuousverb)>0 or len(pastparticiple) > 0:
 				aux = filteratt({
 					'dep_' : 'aux'
 				}, beginning)[0]
@@ -101,5 +104,7 @@ def genq(sentence):
 				converted = [aux.text] + [x.text for x in doc[0:aux.i]] + [x.text for x in doc[aux.i+1:end]]
 				print("Who %(kwarg)s?" % {'kwarg': " ".join(converted)})
 			
-	# relativeclause = 
-
+			
+				# Ram has eaten all the fruits that were left for Sita who is his sister 
+				#Who is his sister?
+				#Who has eaten 

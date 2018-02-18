@@ -84,7 +84,8 @@ def genq(sentence):
         if relclause.text.lower() == 'who':
             print(relclause.text + " " + " ".join([x.text for x in doc[relclause.i + 1:]]) + "?")
             beginning = doc[0:answer.head.i + 1]
-            # convert verb to lemma
+
+            # Find Requirements
             pasttenseverb = filteratt({
                 'tag_': 'VBD',
                 'dep_': 'ROOT'
@@ -97,6 +98,8 @@ def genq(sentence):
                 'tag_': 'VBN',
                 'dep_': 'ROOT'
             }, beginning)
+
+            # Rules
             if len(pasttenseverb) > 0:
                 pasttenseverb = pasttenseverb[0]
                 end = answer.head.i + 1 if answer.head.dep_ == "prep" else answer.head.i

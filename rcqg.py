@@ -137,6 +137,11 @@ def genq(sentence):
                 print("Whom " + "does " + " ".join(converted) + '?')
 
         if relclause.text.lower() == 'who':
+            # relativeclauseswh = filteratt({
+            # 'tag_': 'WP',
+
+            # }, doc)
+
             #print(relclause.text.capitalize() + " " + " ".join([x.text for x in doc[relclause.i + 1:]]) + "?")
             beginning = doc[0:answer.head.i + 1]
             ending = doc[relclause.i :]
@@ -165,7 +170,10 @@ def genq(sentence):
                 'dep_': 'relcl'
             }, ending)
 
-            # # Rules
+            if relclause.dep_ == "nsubj":
+                print(relclause.text.capitalize() + " " + " ".join([x.text for x in doc[relclause.i + 1:]]) + "?")
+                return
+              # # Rules
             if len(pasttenseverb) > 0:
                 #print ("here")
                 pasttenseverb = pasttenseverb[0]
@@ -188,7 +196,7 @@ def genq(sentence):
                 converted = [x.text for x in doc[relclause.i + 1 :presentsimple.i]] + [presentsimple.lemma_] + [x.text for x in doc[
                                                                                                                  presentsimple.i + 1:]]
                 print("Whom " + "do " + " ".join(converted) + '?')
-            if len(presentsimplethird) > 0:
+            if len(presentsimplethird) > 0 :
                 presentsimplethird = presentsimplethird[0]
                 converted = [x.text for x in doc[relclause.i + 1 :presentsimplethird.i]] + [presentsimplethird.lemma_] + [x.text for x in doc[
                                                                                                                  presentsimplethird.i+1:]]

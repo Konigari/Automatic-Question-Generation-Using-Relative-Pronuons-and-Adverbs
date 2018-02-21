@@ -80,52 +80,61 @@ def genq(sentence):
     answer = rootofrelclause[0].head
 
     for relclause in relativeclauseswh:
-        # if relclause.text.lower() == 'who':
-        #     print(relclause.text.capitalize() + " " + " ".join([x.text for x in doc[relclause.i + 1:]]) + "?")
-        #     beginning = doc[0:answer.head.i + 1]
+        if relclause.text.lower() == 'who':
+            print(relclause.text.capitalize() + " " + " ".join([x.text for x in doc[relclause.i + 1:]]) + "?")
+            beginning = doc[0:answer.head.i + 1]
 
-        #     # Find Requirements
-        #     pasttenseverb = filteratt({
-        #         'tag_': 'VBD',
-        #         'dep_': 'ROOT'
-        #     }, beginning)
-        #     presentcontinuousverb = filteratt({
-        #         'tag_': 'VBG',
-        #         'dep_': 'ROOT'
-        #     }, beginning)
-        #     pastparticiple = filteratt({
-        #         'tag_': 'VBN',
-        #         'dep_': 'ROOT'
-        #     }, beginning)
+            # Find Requirements
+            pasttenseverb = filteratt({
+                'tag_': 'VBD',
+                'dep_': 'ROOT'
+            }, beginning)
+            presentcontinuousverb = filteratt({
+                'tag_': 'VBG',
+                'dep_': 'ROOT'
+            }, beginning)
+            pastparticiple = filteratt({
+                'tag_': 'VBN',
+                'dep_': 'ROOT'
+            }, beginning)
+            presentsimple = filteratt({
+                'tag_': 'VBP',
+                'dep_': 'ROOT'
+            }, beginning)
+            presentsimplethird = filteratt({
+                'tag_': 'VBZ',
+                'dep_': 'ROOT'
+            }, beginning)
 
-        #     # Rules
-        #     if len(pasttenseverb) > 0:
-        #         pasttenseverb = pasttenseverb[0]
-        #         end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
-        #         converted = [x.text for x in doc[0:pasttenseverb.i]] + [pasttenseverb.lemma_] + [x.text for x in doc[
-        #                                                                                                          pasttenseverb.i + 1:end]]
-        #         print("Whom " + "did " + " ".join(converted) + '?')
 
-        #     if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0:
-        #         aux = filteratt({
-        #             'dep_': 'aux'
-        #         }, beginning)[0]
-        #         end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
-        #         converted = [aux.text] + [x.text for x in doc[0:aux.i]] + [x.text for x in doc[aux.i + 1:end]]
-        #         print("Whom %(kwarg)s?" % {'kwarg': " ".join(converted)})
+            # Rules
+            if len(pasttenseverb) > 0:
+                pasttenseverb = pasttenseverb[0]
+                end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
+                converted = [x.text for x in doc[0:pasttenseverb.i]] + [pasttenseverb.lemma_] + [x.text for x in doc[
+                                                                                                                 pasttenseverb.i + 1:end]]
+                print("Whom " + "did " + " ".join(converted) + '?')
+
+            if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0:
+                aux = filteratt({
+                    'dep_': 'aux'
+                }, beginning)[0]
+                end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
+                converted = [aux.text] + [x.text for x in doc[0:aux.i]] + [x.text for x in doc[aux.i + 1:end]]
+                print("Whom %(kwarg)s?" % {'kwarg': " ".join(converted)})
                 
-        #     if len(presentsimple) > 0:
-        #         presentsimple = presentsimple[0]
-        #         end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
-        #         converted = [x.text for x in doc[0:presentsimple.i]] + [presentsimple.lemma_] + [x.text for x in doc[
-        #                                                                                                          presentsimple.i + 1:end]]
-        #         print("Whom " + "do " + " ".join(converted) + '?')
-        #     if len(presentsimplethird) > 0:
-        #         presentsimplethird = presentsimplethird[0]
-        #         end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
-        #         converted = [x.text for x in doc[0:presentsimplethird.i]] + [presentsimplethird.lemma_] + [x.text for x in doc[
-        #                                                                                                          presentsimplethird.i + 1:end]]
-        #         print("Whom " + "does " + " ".join(converted) + '?')
+            if len(presentsimple) > 0:
+                presentsimple = presentsimple[0]
+                end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
+                converted = [x.text for x in doc[0:presentsimple.i]] + [presentsimple.lemma_] + [x.text for x in doc[
+                                                                                                                 presentsimple.i + 1:end]]
+                print("Whom " + "do " + " ".join(converted) + '?')
+            if len(presentsimplethird) > 0:
+                presentsimplethird = presentsimplethird[0]
+                end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
+                converted = [x.text for x in doc[0:presentsimplethird.i]] + [presentsimplethird.lemma_] + [x.text for x in doc[
+                                                                                                                 presentsimplethird.i + 1:end]]
+                print("Whom " + "does " + " ".join(converted) + '?')
 
         if relclause.text.lower() == 'who':
             print(relclause.text.capitalize() + " " + " ".join([x.text for x in doc[relclause.i + 1:]]) + "?")
@@ -145,7 +154,15 @@ def genq(sentence):
             }, ending)
             pastparticiple = filteratt({
                 'tag_': 'VBN',
-                'dep_': 'relcl'
+                'dep_': 'ROOT'
+            }, ending)
+            presentsimple = filteratt({
+                'tag_': 'VBP',
+                'dep_': 'ROOT'
+            }, ending)
+            presentsimplethird = filteratt({
+                'tag_': 'VBZ',
+                'dep_': 'ROOT'
             }, ending)
 
             # # Rules
@@ -166,13 +183,13 @@ def genq(sentence):
                 converted = [aux.text] + [x.text for x in doc[relclause.i +1:aux.i]] + [x.text for x in doc[aux.i + 1:]]
                 print("Whom %(kwarg)s?" % {'kwarg': " ".join(converted)})
                 
-            if len(presentsimple) > 0:
-                presentsimple = presentsimple[0]
-                end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
-                converted = [x.text for x in doc[0:presentsimple.i]] + [presentsimple.lemma_] + [x.text for x in doc[
-                                                                                                                 presentsimple.i + 1:end]]
-                print("Whom " + "do " + " ".join(converted) + '?')
-            # # if len(presentsimplethird) > 0:
+            # if len(presentsimple) > 0:
+            #     presentsimple = presentsimple[0]
+            #     end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
+            #     converted = [x.text for x in doc[0:presentsimple.i]] + [presentsimple.lemma_] + [x.text for x in doc[
+            #                                                                                                      presentsimple.i + 1:end]]
+            #     print("Whom " + "do " + " ".join(converted) + '?')
+            # if len(presentsimplethird) > 0:
             #     presentsimplethird = presentsimplethird[0]
             #     end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
             #     converted = [x.text for x in doc[0:presentsimplethird.i]] + [presentsimplethird.lemma_] + [x.text for x in doc[

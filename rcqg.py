@@ -154,11 +154,11 @@ def genq(sentence):
             }, ending)
             pastparticiple = filteratt({
                 'tag_': 'VBN',
-                'dep_': 'ROOT'
+                'dep_': 'relcl'
             }, ending)
             presentsimple = filteratt({
                 'tag_': 'VBP',
-                'dep_': 'ROOT'
+                'dep_': 'relcl'
             }, ending)
             presentsimplethird = filteratt({
                 'tag_': 'VBZ',
@@ -183,12 +183,11 @@ def genq(sentence):
                 converted = [aux.text] + [x.text for x in doc[relclause.i +1:aux.i]] + [x.text for x in doc[aux.i + 1:]]
                 print("Whom %(kwarg)s?" % {'kwarg': " ".join(converted)})
                 
-            # if len(presentssimple) > 0:
-            #     presentsimple = presentsimple[0]
-            #     end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
-            #     converted = [x.text for x in doc[0:presentsimple.i]] + [presentsimple.lemma_] + [x.text for x in doc[
-            #                                                                                                      presentsimple.i + 1:end]]
-            #     print("Whom " + "do " + " ".join(converted) + '?')
+            if len(presentsimple) > 0:
+                presentsimple = presentsimple[0]
+                converted = [x.text for x in doc[relclause.i + 1 :presentsimple.i]] + [presentsimple.lemma_] + [x.text for x in doc[
+                                                                                                                 presentsimple.i + 1:]]
+                print("Whom " + "do " + " ".join(converted) + '?')
             if len(presentsimplethird) > 0:
                 presentsimplethird = presentsimplethird[0]
                 converted = [x.text for x in doc[relclause.i + 1 :presentsimplethird.i]] + [presentsimplethird.lemma_] + [x.text for x in doc[

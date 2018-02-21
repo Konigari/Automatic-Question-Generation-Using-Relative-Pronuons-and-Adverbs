@@ -98,6 +98,14 @@ def genq(sentence):
                 'tag_': 'VBN',
                 'dep_': 'ROOT'
             }, beginning)
+            presentsimple = filteratt({
+                'tag_': 'VBP',
+                'dep_': 'ROOT'
+            }, beginning)
+            presentsimplethird = filteratt({
+                'tag_': 'VBZ',
+                'dep_': 'ROOT'
+            }, beginning)
 
             # Rules
             if len(pasttenseverb) > 0:

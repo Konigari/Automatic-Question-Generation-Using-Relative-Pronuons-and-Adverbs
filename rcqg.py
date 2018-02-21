@@ -81,7 +81,7 @@ def genq(sentence):
 
     for relclause in relativeclauseswh:
         if relclause.text.lower() == 'who':
-            print(relclause.text.capitalize() + " " + " ".join([x.text for x in doc[relclause.i + 1:]]) + "?")
+            #print(relclause.text.capitalize() + " " + " ".join([x.text for x in doc[relclause.i + 1:]]) + "?")
             beginning = doc[0:answer.head.i + 1]
 
             # Find Requirements
@@ -137,12 +137,12 @@ def genq(sentence):
                 print("Whom " + "does " + " ".join(converted) + '?')
 
         if relclause.text.lower() == 'who':
-            print(relclause.text.capitalize() + " " + " ".join([x.text for x in doc[relclause.i + 1:]]) + "?")
+            #print(relclause.text.capitalize() + " " + " ".join([x.text for x in doc[relclause.i + 1:]]) + "?")
             beginning = doc[0:answer.head.i + 1]
             ending = doc[relclause.i :]
-            print (relclause.text)
-            print("hello")
-            print(ending)
+            #print (relclause.text)
+            #print("hello")
+            #print(ending)
             # Find Requirements
             pasttenseverb = filteratt({
                 'tag_': 'VBD',
@@ -167,10 +167,10 @@ def genq(sentence):
 
             # # Rules
             if len(pasttenseverb) > 0:
-                print ("here")
+                #print ("here")
                 pasttenseverb = pasttenseverb[0]
-                print(pasttenseverb)
-                print ([x.text for x in doc[relclause.i + 1:pasttenseverb.i ]]+ [pasttenseverb.lemma_])
+                #print(pasttenseverb)
+                #print ([x.text for x in doc[relclause.i + 1:pasttenseverb.i ]]+ [pasttenseverb.lemma_])
                 converted = [x.text for x in doc[relclause.i + 1:pasttenseverb.i ]] + [pasttenseverb.lemma_] + [x.text for x in doc[
                                                                                                                 pasttenseverb.i+1:]]
                 print("Whom " + "did " + " ".join(converted) + '?')

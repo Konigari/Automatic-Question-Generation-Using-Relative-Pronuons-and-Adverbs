@@ -162,7 +162,7 @@ def genq(sentence):
             }, ending)
             presentsimplethird = filteratt({
                 'tag_': 'VBZ',
-                'dep_': 'ROOT'
+                'dep_': 'relcl'
             }, ending)
 
             # # Rules
@@ -183,18 +183,17 @@ def genq(sentence):
                 converted = [aux.text] + [x.text for x in doc[relclause.i +1:aux.i]] + [x.text for x in doc[aux.i + 1:]]
                 print("Whom %(kwarg)s?" % {'kwarg': " ".join(converted)})
                 
-            # if len(presentsimple) > 0:
+            # if len(presentssimple) > 0:
             #     presentsimple = presentsimple[0]
             #     end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
             #     converted = [x.text for x in doc[0:presentsimple.i]] + [presentsimple.lemma_] + [x.text for x in doc[
             #                                                                                                      presentsimple.i + 1:end]]
             #     print("Whom " + "do " + " ".join(converted) + '?')
-            # if len(presentsimplethird) > 0:
-            #     presentsimplethird = presentsimplethird[0]
-            #     end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
-            #     converted = [x.text for x in doc[0:presentsimplethird.i]] + [presentsimplethird.lemma_] + [x.text for x in doc[
-            #                                                                                                      presentsimplethird.i + 1:end]]
-            #     print("Whom " + "does " + " ".join(converted) + '?')
+            if len(presentsimplethird) > 0:
+                presentsimplethird = presentsimplethird[0]
+                converted = [x.text for x in doc[relclause.i + 1 :presentsimplethird.i]] + [presentsimplethird.lemma_] + [x.text for x in doc[
+                                                                                                                 presentsimplethird.i+1:]]
+                print("Whom " + "does " + " ".join(converted) + '?')
 
             # Ram has eaten all the fruits that were left for Sita who is his sister
                 # Who is his sister?

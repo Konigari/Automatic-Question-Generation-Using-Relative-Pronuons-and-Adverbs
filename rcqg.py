@@ -13,6 +13,7 @@ def filetotext():
 
 def show(u_line):
     doc = nlp(u_line)
+    print(doc[9].head)
     print("=========================Sentence -", u_line)
     print("=========================Tokens and POS tags")
     for token in doc:
@@ -28,7 +29,7 @@ def show(u_line):
 
 def display(u_line):
     doc = nlp(u_line)
-    displacy.serve(doc, style='dep',port = 8080)
+    displacy.serve(doc, style='dep',port = 8000)
 
 
 def props(obj):
@@ -76,6 +77,8 @@ def genq(sentence):
         'tag_': 'WP',
     }, doc)
 
+
+
     loc_relative_clause = 0
     for relclause in relativeclauseswh:
         answer = relclause.head.head
@@ -87,31 +90,31 @@ def genq(sentence):
         
         if relclause.text.lower() == 'who':
 
+
             # Find Requirements
             pasttenseverb = filteratt({
                 'tag_': 'VBD',
-                #'dep_': 'ROOT'
+                'dep_': 'ROOT' #Mukul is thinking of solution (or relcl)
             }, beginning)
             presentcontinuousverb = filteratt({
                 'tag_': 'VBG',
-                #'dep_': 'ROOT'
+                'dep_': 'ROOT' #Mukul is thinking of solution (or relcl)
             }, beginning)
             pastparticiple = filteratt({
                 'tag_': 'VBN',
-                #'dep_': 'ROOT'
+                'dep_': 'ROOT' #Mukul is thinking of solution (or relcl)
             }, beginning)
             presentsimple = filteratt({
                 'tag_': 'VBP',
-                #'dep_': 'ROOT'
+                'dep_': 'ROOT' #Mukul is thinking of solution (or relcl)
             }, beginning)
             presentsimplethird = filteratt({
                 'tag_': 'VBZ',
-                #'dep_': 'ROOT'
+                'dep_': 'ROOT' #Mukul is thinking of solution (or relcl)
             }, beginning)
 
 
             # Rules
-            print("hi",beginning)
             if len(pasttenseverb) > 0:
                 pasttenseverb = pasttenseverb[0]
                 end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
@@ -120,9 +123,13 @@ def genq(sentence):
                 print("Whom " + "did " + " ".join(converted) + '?')
 
             if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0:
+                print(beginning)
                 aux = filteratt({
-                    'dep_': 'aux'
-                }, beginning)[0]
+                    'dep_': 'aux' #Woahh Mukul is so smart that he thinks he can handle it.(or auxpass)
+                }, beginning)+filteratt({
+                    'dep_': 'auxpass' #Woahh Mukul is so smart that he thinks he can handle it.(or auxpass)
+                }, beginning)
+                aux= aux[0]
                 end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
                 converted = [aux.text] + [x.text for x in doc[loc_relative_clause:aux.i]] + [x.text for x in doc[aux.i + 1:end]]
                 print("Whom %(kwarg)s?" % {'kwarg': " ".join(converted)})
@@ -162,8 +169,7 @@ def genq(sentence):
                 'dep_': 'relcl'
             }, ending)
 
-            verb_after_wh = pasttenseverb + presentcontinuousverb + pastparticiple + presentsimple + presentsimplethird
-            print (verb_after_wh)
+            # verb_after_wh = pasttenseverb + presentcontinuousverb + pastparticiple + presentsimple + presentsimplethird
 
 
             #ipdb.set_trace()
@@ -209,5 +215,23 @@ def genq(sentence):
                 # Ram has eaten all the fruits that were left for Sita who is his sister
                     # Who is his sister?
                 # Who has eaten?
+            print("I'm here")
+            Head_Noun_Chunk = doc[relclause.i].head.head
+            for noun in doc.noun_chunks:
+                if Head_Noun_Chunk.text in noun.text:    
+                    noun_chunk = noun.text
+
+            print(Head_Noun_Chunk.tag_ ,noun_chunk)
+            #Requirements
+            if (Head_Noun_Chunk.tag_ == "NNS"):
+                if len(pasttenseverb)>0:
+                    print("Who were " + noun_chunk + "?")
+                else:
+                    print("Who are " + noun_chunk + "?")
+            else:    
+                if len(pasttenseverb)>0:
+                    print("Who was " + noun_chunk + "?")
+                else:
+                    print("Who is " + noun_chunk + "?")
 
             loc_relative_clause = relclause.i

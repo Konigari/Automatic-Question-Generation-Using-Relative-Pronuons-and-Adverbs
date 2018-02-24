@@ -2,6 +2,7 @@ import inspect
 
 import spacy
 from spacy import displacy
+import ipdb
 
 nlp = spacy.load('en')
 
@@ -27,7 +28,7 @@ def show(u_line):
 
 def display(u_line):
     doc = nlp(u_line)
-    displacy.serve(doc, style='dep')
+    displacy.serve(doc, style='dep',port = 8080)
 
 
 def props(obj):
@@ -136,14 +137,7 @@ def genq(sentence):
                                                                                                                  presentsimplethird.i + 1:end]]
                 print("Whom " + "does " + " ".join(converted) + '?')
 
-        if relclause.text.lower() == 'who':
-            # relativeclauseswh = filteratt({
-            # 'tag_': 'WP',
-
-            # }, doc)
-
             #print(relclause.text.capitalize() + " " + " ".join([x.text for x in doc[relclause.i + 1:]]) + "?")
-            beginning = doc[0:answer.head.i + 1]
             ending = doc[relclause.i :]
             #print (relclause.text)
             #print("hello")
@@ -170,10 +164,15 @@ def genq(sentence):
                 'dep_': 'relcl'
             }, ending)
 
-            if relclause.dep_ == "nsubj":
+            verb_after_wh = pasttenseverb + presentcontinuousverb + pastparticiple + presentsimple + presentsimplethird
+            print (verb_after_wh)
+
+
+            ipdb.set_trace()
+            if relclause.dep_ == "nsubj" or relclause.dep_ == "nsubjpass":
                 print(relclause.text.capitalize() + " " + " ".join([x.text for x in doc[relclause.i + 1:]]) + "?")
                 return
-              # # Rules
+            #   # # Rules
             if len(pasttenseverb) > 0:
                 #print ("here")
                 pasttenseverb = pasttenseverb[0]
@@ -185,8 +184,13 @@ def genq(sentence):
 
             if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0:
                 aux = filteratt({	
-                    'dep_': 'aux'
-                }, ending)[0]
+                    'dep_': 'aux',
+                }, ending)
+                aux += filteratt({   
+                    'dep_': 'auxpass',
+                }, ending)
+                aux = aux[0]
+
                 #end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
                 converted = [aux.text] + [x.text for x in doc[relclause.i +1:aux.i]] + [x.text for x in doc[aux.i + 1:]]
                 print("Whom %(kwarg)s?" % {'kwarg': " ".join(converted)})
@@ -202,6 +206,8 @@ def genq(sentence):
                                                                                                                  presentsimplethird.i+1:]]
                 print("Whom " + "does " + " ".join(converted) + '?')
 
+
             # Ram has eaten all the fruits that were left for Sita who is his sister
                 # Who is his sister?
             # Who has eaten?
+

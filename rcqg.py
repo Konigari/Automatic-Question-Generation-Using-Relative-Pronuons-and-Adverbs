@@ -110,6 +110,7 @@ class WHQuestionGenerator():
                 }, matrix)
 
                 # Rules
+
                 if len(pasttenseverb) > 0:
                     pasttenseverb = pasttenseverb[0]
                     end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
@@ -148,7 +149,6 @@ class WHQuestionGenerator():
                     # Ram has eaten all the fruits that were left for Sita who is his sister
                     # Who is his sister?
                 # Who has eaten?
-
                 # print(wpword.text.capitalize() + " " + " ".join([x.text for x in doc[wpword.i + 1:]]) + "?")
                 # print (wpword.text)
                 # print("hello")
@@ -178,7 +178,12 @@ class WHQuestionGenerator():
                 if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass":
                     print(wpword.text.capitalize() + " " + " ".join([x.text for x in doc[wpword.i + 1:]]) + "?")
                     loc_relative_clause = wpword.i
+                    Head_Noun_Chunk = doc[wpword.i].head.head
+                    
+
                 else:
+                    Head_Noun_Chunk = doc[wpword.i].head.head.head
+
                     #   # # Rules
                     if len(pasttenseverb) > 0:
                         # print ("here")
@@ -221,23 +226,30 @@ class WHQuestionGenerator():
                         print("Whom " + "does " + " ".join(converted) + '?')
 
 
-                        # Ram has eaten all the fruits that were left for Sita who is his sister
-                        # Who is his sister?
-                        # Who has eaten?
+                Head_Noun_Chunk = doc[wpword.i].head
+                while (Head_Noun_Chunk.pos_ not in ['NOUN','PROPN'] and (Head_Noun_Chunk.i != Head_Noun_Chunk.head.i)):
+                    Head_Noun_Chunk = Head_Noun_Chunk.head
 
-                Head_Noun_Chunk = doc[wpword.i].head.head
+
+                print(Head_Noun_Chunk,[i for i in doc.noun_chunks])
+
                 for noun in doc.noun_chunks:
                     if Head_Noun_Chunk.text in noun.text:
                         noun_chunk = noun.text
                 # Requirements
-                if (Head_Noun_Chunk.tag_ == "NNS"):
-                    if len(pasttenseverb) > 0:
-                        print("Who were " + noun_chunk + "?")
-                    else:
-                        print("Who are " + noun_chunk + "?")
+                if 'noun_chunk' not in locals():
+                    print("Subject modified by relative clause not found.")
                 else:
-                    if len(pasttenseverb) > 0:
-                        print("Who was " + noun_chunk + "?")
+                
+                    if (Head_Noun_Chunk.tag_ == "NNS"):
+                        if len(pasttenseverb) > 0:
+                            print("Who were " + noun_chunk + "?")
+                        else:
+                            print("Who are " + noun_chunk + "?")
                     else:
-                        print("Who is " + noun_chunk + "?")
+                        if len(pasttenseverb) > 0:
+                            print("Who was " + noun_chunk + "?")
+                        else:
+                            print("Who is " + noun_chunk + "?")
+                
                 loc_relative_clause = wpword.i

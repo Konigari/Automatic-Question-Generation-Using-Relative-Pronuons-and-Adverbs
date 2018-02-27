@@ -59,9 +59,14 @@ class WHQuestionGenerator():
                 temp = copy.deepcopy(d)
                 temp[ind] = option
                 result += self.expand(temp, i + 1)
+        else:
+            result += self.expand(d, i + 1)
         return result
 
     def filteratt(self, att, doc):
+        att = self.expand(att)
+        if len(att) == 1:
+            att = att[0]
         if type(att) == list:
             return sum([self.filteratt(i, doc) for i in att], [])
         return list(filter(lambda tup: self.filt(att)(tup), doc))
@@ -113,14 +118,16 @@ class WHQuestionGenerator():
                                         pasttenseverb.i + 1:end]]
                     print("Whom " + "did " + " ".join(converted) + '?')
 
+
                 if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0:
                     aux = self.filteratt({
-                        'dep_': 'aux'
+                        'dep_': ['aux', 'auxpass']
                     }, matrix)[0]
                     end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
                     converted = [aux.text] + [x.text for x in doc[loc_relative_clause:aux.i]] + [x.text for x in
                                                                                                  doc[aux.i + 1:end]]
                     print("Whom %(kwarg)s?" % {'kwarg': " ".join(converted)})
+
 
                 if len(presentsimple) > 0:
                     presentsimple = presentsimple[0]
@@ -129,6 +136,7 @@ class WHQuestionGenerator():
                         x.text for x in doc[
                                         presentsimple.i + 1:end]]
                     print("Whom " + "do " + " ".join(converted) + '?')
+
                 if len(presentsimplethird) > 0:
                     presentsimplethird = presentsimplethird[0]
                     end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
@@ -136,6 +144,10 @@ class WHQuestionGenerator():
                         presentsimplethird.lemma_] + [x.text for x in doc[
                                                                       presentsimplethird.i + 1:end]]
                     print("Whom " + "does " + " ".join(converted) + '?')
+
+                    # Ram has eaten all the fruits that were left for Sita who is his sister
+                    # Who is his sister?
+                # Who has eaten?
 
                 # print(wpword.text.capitalize() + " " + " ".join([x.text for x in doc[wpword.i + 1:]]) + "?")
                 # print (wpword.text)
@@ -163,7 +175,7 @@ class WHQuestionGenerator():
                     'dep_': 'relcl'
                 }, relclause)
 
-                if wpword.dep_ == "nsubj":
+                if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass":
                     print(wpword.text.capitalize() + " " + " ".join([x.text for x in doc[wpword.i + 1:]]) + "?")
                     loc_relative_clause = wpword.i
                 else:
@@ -213,4 +225,19 @@ class WHQuestionGenerator():
                         # Who is his sister?
                         # Who has eaten?
 
+                Head_Noun_Chunk = doc[wpword.i].head.head
+                for noun in doc.noun_chunks:
+                    if Head_Noun_Chunk.text in noun.text:
+                        noun_chunk = noun.text
+                # Requirements
+                if (Head_Noun_Chunk.tag_ == "NNS"):
+                    if len(pasttenseverb) > 0:
+                        print("Who were " + noun_chunk + "?")
+                    else:
+                        print("Who are " + noun_chunk + "?")
+                else:
+                    if len(pasttenseverb) > 0:
+                        print("Who was " + noun_chunk + "?")
+                    else:
+                        print("Who is " + noun_chunk + "?")
                 loc_relative_clause = wpword.i

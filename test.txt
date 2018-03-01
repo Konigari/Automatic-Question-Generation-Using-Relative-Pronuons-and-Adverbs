@@ -2,3 +2,25 @@
   Sentence: I killed the man who was a btech student
 - Questions: ['Whom do I like?', 'Whom does she hat?', 'Who is the boy?']
   Sentence: I like the boy who she hates
+- Questions: ['Who was The big fat girl?', 'Whom did everybody like?', 'Who was the
+      girl?']
+  Sentence: The big fat girl was the girl at college who everybody liked
+- Questions: ['Who is The big fat girl?', 'Whom did everybody like?', 'Who was the
+      girl?']
+  Sentence: The big fat girl is the girl at college who everybody liked
+- Questions: ['Whom is Each year the banquet held in city hall for?', 'Who are invited
+      to the capital?', 'Who are the winners of losers of nobel prizes?']
+  Sentence: Each year the banquet is held in city hall for the winners of losers of
+    nobel prizes, who are invited to the capital
+- Questions: ['Whom is Each year the banquet held in city hall for?', 'Who are invited
+      to the capital?', 'Who are the winners of losers of nobel prizes?']
+  Sentence: Each year the banquet is held in city hall for the winners of losers of
+    nobel prizes, who are invited to the capital
+- Questions: ['Whom is She giving chocolates to?', 'Who is fat?', 'Who is the boy?']
+  Sentence: She is giving chocolates to the boy who is fat and she likes him
+- Questions: ['Whom did I meet?', 'Who is in Africa?', 'Who is my brother?', 'Who
+      is in France?', 'Who is my sister?']
+  Sentence: I met my brother who is in Africa because my mother is in USA and my sister
+    who is in France
+- Questions: ['Who studies law?','Who met my mother?', 'Who is His friend?']
+  Sentence: His friend who studies law , met my mother

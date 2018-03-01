@@ -105,7 +105,6 @@ class WHQuestionGenerator():
         return splitsentence(doc)
 
     def genq(self, sentence):
-        print(sentence)
         def NounParent(index): 
             Head_Noun_Chunk = doc[index].head
             while (Head_Noun_Chunk.pos_ not in ['NOUN','PROPN'] and (Head_Noun_Chunk.i != Head_Noun_Chunk.head.i)):
@@ -140,6 +139,10 @@ class WHQuestionGenerator():
             'tag_': 'WP',
         }, doc)
 
+        root = self.filteratt({
+            'dep_' : 'ROOT'
+        },doc)
+
         loc_relative_clause = 0
         for wpword in relativeclauseswh:
 
@@ -147,6 +150,11 @@ class WHQuestionGenerator():
 
             matrix = doc[loc_relative_clause:answer.start]
             relclause = doc[wpword.i:]
+
+            print("hi" , answer.text)
+            if self.filteratt({'dep_':'nsubj'},root[0].children)[0].text in answer.text:
+                r
+
 
             if wpword.text.lower() == 'who':
                 # print(wpword.text.capitalize() + " " + " ".join([x.text for x in doc[wpword.i + 1:]]) + "?")
@@ -176,7 +184,7 @@ class WHQuestionGenerator():
                     'tag_': 'VBZ',
                     'dep_': 'ROOT'
                 }, matrix)
-
+ 
                 # Rules
 
                 if len(pasttenseverb) > 0:
@@ -246,6 +254,7 @@ class WHQuestionGenerator():
                     'tag_': 'VBZ',
                     'dep_': 'relcl'
                 }, relclause)
+
 
                 if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass":
                     yield (wpword.text.capitalize() + " " + " ".join([x.text for x in doc[wpword.i + 1:]]) + "?")

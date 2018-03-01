@@ -143,28 +143,31 @@ class WHQuestionGenerator():
         relativeclauseswh = self.filteratt({
             'tag_': 'WP',
         }, doc)
-
-        root = self.filteratt({
-            'dep_' : 'ROOT'
-        },doc)
-
+        #wpword.i < root[0].i
+        
         loc_relative_clause = 0
         for wpword in relativeclauseswh:
-
+            
             answer = PPChunker(doc,NounParent(wpword.i))
 
             matrix = doc[loc_relative_clause:answer.start]
             relclause = doc[wpword.i:]
 
-            print("hi" , answer.text)
-            if self.filteratt({'dep_':'nsubj'},root[0].children)[0].text in answer.text:
-                r
-
+                #doc = doc[:root[0].i]
+                #To handle the root whose nsubj is before relclause "His friend who studies law in India for his mother and plays football, is fat and his mom who hates me is in USA""
 
             if wpword.text.lower() == 'who':
                 # print(wpword.text.capitalize() + " " + " ".join([x.text for x in doc[wpword.i + 1:]]) + "?")
 
                 # Find Requirements
+                root = self.filteratt({
+                    'dep_' : ['ROOT'],
+                },doc[wpword.i:])
+                if len(root) > 0:
+                    if self.filteratt({'dep_':'nsubj'},root[0].children)[0].text in answer.text:
+                        yield("Who" + " " + doc[root[0].i:].text +"?")
+           
+
                 pasttenseverb = self.filteratt({
                     'tag_': 'VBD',
                     'dep_': 'ROOT'
@@ -200,7 +203,7 @@ class WHQuestionGenerator():
                         yield ("Who" + " " + pasttenseverb[0].text + " " + getNounChunk(noun).text + "?")
                     else:
                         pasttenseverb = pasttenseverb[0]
-                        end = (answer.start) if doc[answer.start].pos_ == "ADP" else answer.start - 1
+                        end = (answer.start) if doc[answer.start].pos_ == "ADP" else answer.start 
                         converted = [x.text for x in doc[loc_relative_clause:pasttenseverb.i]] + [pasttenseverb.lemma_] + [
                             x.text for x in doc[
                                             pasttenseverb.i + 1:end]]
@@ -260,14 +263,13 @@ class WHQuestionGenerator():
                 }, relclause)
 
                 if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass":
-                    yield (wpword.text.capitalize() + " " + " ".join([x.text for x in doc[wpword.i + 1:]]) + "?")
-                    loc_relative_clause = wpword.i
-                    Head_Noun_Chunk = doc[wpword.i].head.head
-                    
+                    #TODO - Mukul says its Hack , Co-authors disagree , Module overlap
+                    if len(root) > 0:
+                        yield (wpword.text.capitalize() + " " + " ".join([x.text for x in doc[wpword.i + 1:root[0].i]]) + "?")
+                    else:
+                        yield (wpword.text.capitalize() + " " + " ".join([x.text for x in doc[wpword.i + 1:]]) + "?")
 
                 else:
-                    Head_Noun_Chunk = doc[wpword.i].head.head.head
-
                     #   # # Rules
                     if len(pasttenseverb) > 0:
                         # print ("here")

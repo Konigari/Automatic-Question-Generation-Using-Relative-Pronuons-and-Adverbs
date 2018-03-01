@@ -271,10 +271,7 @@ class WHQuestionGenerator():
 
                     if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0:
                         aux = self.filteratt({
-                            'dep_': 'aux',
-                        }, relclause)
-                        aux += self.filteratt({
-                            'dep_': 'auxpass',
+                            'dep_': ['aux', 'auxpass']
                         }, relclause)
                         aux = aux[0]
 

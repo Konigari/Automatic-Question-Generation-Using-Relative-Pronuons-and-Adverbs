@@ -46,9 +46,11 @@ class WHQuestionGenerator():
             'pos_': obj.pos_,
         }
 
+
     def filt(self, d2):
         return lambda x: set(d2.items()).issubset(set(self.serialize(x).items()))
 
+    
     def expand(self, d, i=0):
         if i >= len(d.keys()):
             return [d]
@@ -72,6 +74,24 @@ class WHQuestionGenerator():
         return list(filter(lambda tup: self.filt(att)(tup), doc))
 
     def genq(self, sentence):
+
+        def NounParent(index): 
+            Head_Noun_Chunk = doc[index].head
+            while (Head_Noun_Chunk.pos_ not in ['NOUN','PROPN'] and (Head_Noun_Chunk.i != Head_Noun_Chunk.head.i)):
+                Head_Noun_Chunk = Head_Noun_Chunk.head
+            return Head_Noun_Chunk
+        
+        def getNounChunk(noun):
+            found = False
+            for noun_chunk in doc.noun_chunks:
+                if noun_chunk.start <= noun.i and noun_chunk.end >= noun.i:
+                    found = True
+                    result = noun_chunk.text
+            if found:
+                return result
+            else:
+                return False
+
         doc = self.nlp(sentence)
 
         relativeclauseswh = self.filteratt({
@@ -80,7 +100,7 @@ class WHQuestionGenerator():
 
         loc_relative_clause = 0
         for wpword in relativeclauseswh:
-            answer = wpword.head.head
+            answer = NounParent(wpword.i)
             matrix = doc[loc_relative_clause:answer.head.i + 1]
             relclause = doc[wpword.i:]
 
@@ -90,41 +110,51 @@ class WHQuestionGenerator():
                 # Find Requirements
                 pasttenseverb = self.filteratt({
                     'tag_': 'VBD',
-                    # 'dep_': 'ROOT'
+                    'dep_': 'ROOT'
+                }, matrix)
+                bareverb = self.filteratt({
+                    'tag_': 'VB',
+                    'dep_': 'ROOT'
                 }, matrix)
                 presentcontinuousverb = self.filteratt({
                     'tag_': 'VBG',
-                    # 'dep_': 'ROOT'
+                    'dep_': 'ROOT'
                 }, matrix)
                 pastparticiple = self.filteratt({
                     'tag_': 'VBN',
-                    # 'dep_': 'ROOT'
+                    'dep_': 'ROOT'
                 }, matrix)
                 presentsimple = self.filteratt({
                     'tag_': 'VBP',
-                    # 'dep_': 'ROOT'
+                    'dep_': 'ROOT'
                 }, matrix)
                 presentsimplethird = self.filteratt({
                     'tag_': 'VBZ',
-                    # 'dep_': 'ROOT'
+                    'dep_': 'ROOT'
                 }, matrix)
 
                 # Rules
 
                 if len(pasttenseverb) > 0:
-                    pasttenseverb = pasttenseverb[0]
-                    end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
-                    converted = [x.text for x in doc[loc_relative_clause:pasttenseverb.i]] + [pasttenseverb.lemma_] + [
-                        x.text for x in doc[
-                                        pasttenseverb.i + 1:end]]
-                    print("Whom " + "did " + " ".join(converted) + '?')
+                    if(pasttenseverb[0].lemma_ == "be"):
+                        noun = self.filteratt({
+                                'dep_': 'nsubj'
+                            }, pasttenseverb[0].children)[0]
+                        print("Who" + " " + pasttenseverb[0].text + " " + getNounChunk(noun) + "?")
+                    else:
+                        pasttenseverb = pasttenseverb[0]
+                        end = (answer.head.i + 1) if answer.head.pos_ == "ADP" else answer.head.i
+                        converted = [x.text for x in doc[loc_relative_clause:pasttenseverb.i]] + [pasttenseverb.lemma_] + [
+                            x.text for x in doc[
+                                            pasttenseverb.i + 1:end]]
+                        print("Whom " + "did " + " ".join(converted) + '?')
 
 
-                if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0:
+                if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0 or len(bareverb) > 0:
                     aux = self.filteratt({
                         'dep_': ['aux', 'auxpass']
                     }, matrix)[0]
-                    end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
+                    end = (answer.head.i + 1)   
                     converted = [aux.text] + [x.text for x in doc[loc_relative_clause:aux.i]] + [x.text for x in
                                                                                                  doc[aux.i + 1:end]]
                     print("Whom %(kwarg)s?" % {'kwarg': " ".join(converted)})
@@ -132,7 +162,7 @@ class WHQuestionGenerator():
 
                 if len(presentsimple) > 0:
                     presentsimple = presentsimple[0]
-                    end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
+                    end = (answer.head.i + 1) if answer.head.pos_ == "ADP" else answer.head.i
                     converted = [x.text for x in doc[loc_relative_clause:presentsimple.i]] + [presentsimple.lemma_] + [
                         x.text for x in doc[
                                         presentsimple.i + 1:end]]
@@ -140,7 +170,7 @@ class WHQuestionGenerator():
 
                 if len(presentsimplethird) > 0:
                     presentsimplethird = presentsimplethird[0]
-                    end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
+                    end = (answer.head.i + 1) if answer.head.pos_ == "ADP" else answer.head.i
                     converted = [x.text for x in doc[loc_relative_clause:presentsimplethird.i]] + [
                         presentsimplethird.lemma_] + [x.text for x in doc[
                                                                       presentsimplethird.i + 1:end]]
@@ -226,18 +256,12 @@ class WHQuestionGenerator():
                         print("Whom " + "does " + " ".join(converted) + '?')
 
 
-                Head_Noun_Chunk = doc[wpword.i].head
-                while (Head_Noun_Chunk.pos_ not in ['NOUN','PROPN'] and (Head_Noun_Chunk.i != Head_Noun_Chunk.head.i)):
-                    Head_Noun_Chunk = Head_Noun_Chunk.head
+                Head_Noun_Chunk = NounParent(wpword.i)
 
-
-                print(Head_Noun_Chunk,[i for i in doc.noun_chunks])
-
-                for noun in doc.noun_chunks:
-                    if Head_Noun_Chunk.text in noun.text:
-                        noun_chunk = noun.text
+                
+                noun_chunk = getNounChunk(Head_Noun_Chunk)
                 # Requirements
-                if 'noun_chunk' not in locals():
+                if not noun_chunk:
                     print("Subject modified by relative clause not found.")
                 else:
                 
@@ -253,3 +277,13 @@ class WHQuestionGenerator():
                             print("Who is " + noun_chunk + "?")
                 
                 loc_relative_clause = wpword.i
+
+                # for word in doc:
+                #     for word.pos_ in ["VERB"]:
+                #         verbs = word
+
+
+
+                # for verb in verbs:
+
+

@@ -1,0 +1,4 @@
+- Questions: ['Whom did I kill?', 'Who was a btech student?', 'Who was the man?']
+  Sentence: I killed the man who was a btech student
+- Questions: ['Whom do I like?', 'Whom does she hat?', 'Who is the boy?']
+  Sentence: I like the boy who she hates

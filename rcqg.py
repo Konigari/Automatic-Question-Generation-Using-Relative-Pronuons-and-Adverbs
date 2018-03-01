@@ -140,15 +140,14 @@ class WHQuestionGenerator():
                         noun = self.filteratt({
                                 'dep_': 'nsubj'
                             }, pasttenseverb[0].children)[0]
-                        print("Who" + " " + pasttenseverb[0].text + " " + getNounChunk(noun) + "?")
+                        yield ("Who" + " " + pasttenseverb[0].text + " " + getNounChunk(noun) + "?")
                     else:
                         pasttenseverb = pasttenseverb[0]
                         end = (answer.head.i + 1) if answer.head.pos_ == "ADP" else answer.head.i
                         converted = [x.text for x in doc[loc_relative_clause:pasttenseverb.i]] + [pasttenseverb.lemma_] + [
                             x.text for x in doc[
                                             pasttenseverb.i + 1:end]]
-                        print("Whom " + "did " + " ".join(converted) + '?')
-
+                        yield ("Whom " + "did " + " ".join(converted) + '?')
 
                 if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0 or len(bareverb) > 0:
                     aux = self.filteratt({
@@ -157,7 +156,7 @@ class WHQuestionGenerator():
                     end = (answer.head.i + 1)   
                     converted = [aux.text] + [x.text for x in doc[loc_relative_clause:aux.i]] + [x.text for x in
                                                                                                  doc[aux.i + 1:end]]
-                    print("Whom %(kwarg)s?" % {'kwarg': " ".join(converted)})
+                    yield ("Whom %(kwarg)s?" % {'kwarg': " ".join(converted)})
 
 
                 if len(presentsimple) > 0:
@@ -166,7 +165,7 @@ class WHQuestionGenerator():
                     converted = [x.text for x in doc[loc_relative_clause:presentsimple.i]] + [presentsimple.lemma_] + [
                         x.text for x in doc[
                                         presentsimple.i + 1:end]]
-                    print("Whom " + "do " + " ".join(converted) + '?')
+                    yield ("Whom " + "do " + " ".join(converted) + '?')
 
                 if len(presentsimplethird) > 0:
                     presentsimplethird = presentsimplethird[0]
@@ -174,15 +173,15 @@ class WHQuestionGenerator():
                     converted = [x.text for x in doc[loc_relative_clause:presentsimplethird.i]] + [
                         presentsimplethird.lemma_] + [x.text for x in doc[
                                                                       presentsimplethird.i + 1:end]]
-                    print("Whom " + "does " + " ".join(converted) + '?')
+                    yield ("Whom " + "does " + " ".join(converted) + '?')
 
                     # Ram has eaten all the fruits that were left for Sita who is his sister
                     # Who is his sister?
                 # Who has eaten?
-                # print(wpword.text.capitalize() + " " + " ".join([x.text for x in doc[wpword.i + 1:]]) + "?")
-                # print (wpword.text)
-                # print("hello")
-                # print(relclause)
+                # yield(wpword.text.capitalize() + " " + " ".join([x.text for x in doc[wpword.i + 1:]]) + "?")
+                # yield (wpword.text)
+                # yield("hello")
+                # yield(relclause)
                 # Find Requirements
                 pasttenseverb = self.filteratt({
                     'tag_': 'VBD',
@@ -206,7 +205,7 @@ class WHQuestionGenerator():
                 }, relclause)
 
                 if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass":
-                    print(wpword.text.capitalize() + " " + " ".join([x.text for x in doc[wpword.i + 1:]]) + "?")
+                    yield (wpword.text.capitalize() + " " + " ".join([x.text for x in doc[wpword.i + 1:]]) + "?")
                     loc_relative_clause = wpword.i
                     Head_Noun_Chunk = doc[wpword.i].head.head
                     
@@ -225,7 +224,7 @@ class WHQuestionGenerator():
                             for x in
                             doc[
                             pasttenseverb.i + 1:]]
-                        print("Whom " + "did " + " ".join(converted) + '?')
+                        yield ("Whom " + "did " + " ".join(converted) + '?')
 
                     if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0:
                         aux = self.filteratt({
@@ -239,7 +238,7 @@ class WHQuestionGenerator():
                         # end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
                         converted = [aux.text] + [x.text for x in doc[wpword.i + 1:aux.i]] + [x.text for x in
                                                                                               doc[aux.i + 1:]]
-                        print("Whom %(kwarg)s?" % {'kwarg': " ".join(converted)})
+                        yield ("Whom %(kwarg)s?" % {'kwarg': " ".join(converted)})
 
                     if len(presentsimple) > 0:
                         presentsimple = presentsimple[0]
@@ -247,13 +246,13 @@ class WHQuestionGenerator():
                             x.text
                             for x in doc[
                                      presentsimple.i + 1:]]
-                        print("Whom " + "do " + " ".join(converted) + '?')
+                        yield ("Whom " + "do " + " ".join(converted) + '?')
                     if len(presentsimplethird) > 0:
                         presentsimplethird = presentsimplethird[0]
                         converted = [x.text for x in doc[wpword.i + 1:presentsimplethird.i]] + [
                             presentsimplethird.lemma_] + [x.text for x in doc[
                                                                           presentsimplethird.i + 1:]]
-                        print("Whom " + "does " + " ".join(converted) + '?')
+                        yield ("Whom " + "does " + " ".join(converted) + '?')
 
 
                 Head_Noun_Chunk = NounParent(wpword.i)
@@ -267,17 +266,18 @@ class WHQuestionGenerator():
                 
                     if (Head_Noun_Chunk.tag_ == "NNS"):
                         if len(pasttenseverb) > 0:
-                            print("Who were " + noun_chunk + "?")
+                            yield ("Who were " + noun_chunk + "?")
                         else:
-                            print("Who are " + noun_chunk + "?")
+                            yield ("Who are " + noun_chunk + "?")
                     else:
                         if len(pasttenseverb) > 0:
-                            print("Who was " + noun_chunk + "?")
+                            yield ("Who was " + noun_chunk + "?")
                         else:
-                            print("Who is " + noun_chunk + "?")
+                            yield ("Who is " + noun_chunk + "?")
                 
                 loc_relative_clause = wpword.i
 
+<<<<<<< HEAD
                 # for word in doc:
                 #     for word.pos_ in ["VERB"]:
                 #         verbs = word
@@ -287,3 +287,7 @@ class WHQuestionGenerator():
                 # for verb in verbs:
 
 
+=======
+    def genqlist(self, sentence):
+        return list(self.genq(sentence))
+>>>>>>> 295c372b3f4f043a25a7303b079aeff32b27e2b4

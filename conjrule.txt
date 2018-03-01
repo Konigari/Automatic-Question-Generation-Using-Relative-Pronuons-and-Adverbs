@@ -1,0 +1,14 @@
+Cases where we remove conjunction
+	- If its conj to the main verb ("She is giving chocolates to the boy who is fat and she likes him ")
+	- if its advcl to the verb in relcl ( "She is giving chocolates to the boy who is fat because she likes him ")
+	- If its conj to the dobj or pobj in the relcl ("She is meeting the boy who likes chocolates and the girl who likes sweets.") - break and save if there is a who like in this case.
+
+
+
+
+
+
+Testing Qs:
+She is meeting the boy who likes chocolates and the girl who likes sweets.
+She is meeting the boy who likes chocolates .
+

@@ -10,3 +10,5 @@ I killed the man who was a btech student.
 I met my brother who came home and his wife ate all my food.
 I killed the man who came home and stole my identity.
 Each year the banquet for the winners of the nobel prizes, who are invited to the capital , is held in city hall.
+whom is the banquet for the winners of the nobel prizes held in city hall for
+Each year the banquet is held in city hall for the winners of the nobel prizes, who are invited to the capital ,

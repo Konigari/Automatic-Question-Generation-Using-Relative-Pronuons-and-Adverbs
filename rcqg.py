@@ -144,6 +144,10 @@ class WHQuestionGenerator():
             'tag_': 'WP',
         }, doc)
 
+        root = self.filteratt({
+            'dep_' : 'ROOT'
+        },doc)
+
         loc_relative_clause = 0
         for wpword in relativeclauseswh:
 
@@ -151,6 +155,11 @@ class WHQuestionGenerator():
 
             matrix = doc[loc_relative_clause:answer.start]
             relclause = doc[wpword.i:]
+
+            print("hi" , answer.text)
+            if self.filteratt({'dep_':'nsubj'},root[0].children)[0].text in answer.text:
+                r
+
 
             if wpword.text.lower() == 'who':
                 # print(wpword.text.capitalize() + " " + " ".join([x.text for x in doc[wpword.i + 1:]]) + "?")

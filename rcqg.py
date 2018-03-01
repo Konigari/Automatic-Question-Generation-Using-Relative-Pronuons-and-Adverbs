@@ -106,6 +106,10 @@ class WHQuestionGenerator():
 
     def genq(self, sentence):
         print(sentence)
+
+        def without(start, end, doc):
+            return [x.text for x in doc[:start]] + [x.text for x in doc[end + 1:]]
+
         def NounParent(index): 
             Head_Noun_Chunk = doc[index].head
             while (Head_Noun_Chunk.pos_ not in ['NOUN','PROPN'] and (Head_Noun_Chunk.i != Head_Noun_Chunk.head.i)):
@@ -197,9 +201,8 @@ class WHQuestionGenerator():
                     aux = self.filteratt({
                         'dep_': ['aux', 'auxpass']
                     }, matrix)[0]
-                    end = (answer.start)   
-                    converted = [aux.text] + [x.text for x in doc[loc_relative_clause:aux.i]] + [x.text for x in
-                                                                                                 doc[aux.i + 1:end]]
+                    end = (answer.start)
+                    converted = [aux.text] + without(aux.i, aux.i, doc[loc_relative_clause: end])
                     yield ("Whom %(kwarg)s?" % {'kwarg': " ".join(converted)})
 
 
@@ -276,8 +279,7 @@ class WHQuestionGenerator():
                         aux = aux[0]
 
                         # end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
-                        converted = [aux.text] + [x.text for x in doc[wpword.i + 1:aux.i]] + [x.text for x in
-                                                                                              doc[aux.i + 1:]]
+                        converted = [aux.text] + without(aux.i, aux.i, doc[wpword:])
                         yield ("Whom %(kwarg)s?" % {'kwarg': " ".join(converted)})
 
                     if len(presentsimple) > 0:

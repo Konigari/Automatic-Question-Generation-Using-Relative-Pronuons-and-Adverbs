@@ -155,19 +155,34 @@ class WHQuestionGenerator():
 
                 #doc = doc[:root[0].i]
                 #To handle the root whose nsubj is before relclause "His friend who studies law in India for his mother and plays football, is fat and his mom who hates me is in USA""
-
-            if wpword.text.lower() == 'who':
-                # print(wpword.text.capitalize() + " " + " ".join([x.text for x in doc[wpword.i + 1:]]) + "?")
-
+            # which and that are just like who, but becomes what
+            # whose becomes who for rule 1 and rule 3 and whose in rule 2
+            # how and why and what work the same, no rule 3, rule 1 is same as who, rule 2 has what everywhere
+            # where works exactly like who
+            # when works exactly like who
+            conversions = {
+                'who': ['Who', 'Whom', 'Who'],
+                'whom': ['Whom', 'Whom', 'Who'],
+                'whose': ['Who', 'Whose', 'Who'],
+                'which': ['What', 'What', 'What'],
+                'when': ['When', 'When', 'When'],
+                'how': ['How', 'What', ],
+                'why': ['Why', 'What']
+            }
+            if wpword.text.lower() in conversions.keys():
+                questionwords = conversions[wpword.text.lower()]
                 # Find Requirements
                 root = self.filteratt({
                     'dep_' : ['ROOT'],
                 },doc[wpword.i:])
+
+                # Rules
+                # Rule 0
                 if len(root) > 0:
                     if self.filteratt({'dep_':'nsubj'},root[0].children)[0].text in answer.text:
-                        yield("Who" + " " + doc[root[0].i:].text +"?")
-           
+                        yield (questionwords[0] + " " + doc[root[0].i:].text + "?")
 
+                # Rule 1
                 pasttenseverb = self.filteratt({
                     'tag_': 'VBD',
                     'dep_': 'ROOT'
@@ -193,21 +208,19 @@ class WHQuestionGenerator():
                     'dep_': 'ROOT'
                 }, matrix)
 
-                # Rules
-
                 if len(pasttenseverb) > 0:
                     if(pasttenseverb[0].lemma_ == "be"):
                         noun = self.filteratt({
                                 'dep_': 'nsubj'
                             }, pasttenseverb[0].children)[0]
-                        yield ("Who" + " " + pasttenseverb[0].text + " " + getNounChunk(noun).text + "?")
+                        yield ("%s %s %s?" % (questionwords[0], pasttenseverb[0].text, getNounChunk(noun).text))
                     else:
                         pasttenseverb = pasttenseverb[0]
                         end = (answer.start) if doc[answer.start].pos_ == "ADP" else answer.start 
                         converted = [x.text for x in doc[loc_relative_clause:pasttenseverb.i]] + [pasttenseverb.lemma_] + [
                             x.text for x in doc[
                                             pasttenseverb.i + 1:end]]
-                        yield ("Whom " + "did " + " ".join(converted) + '?')
+                        yield ("%s did %s?" % (questionwords[0], " ".join(converted)))
 
                 if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0 or len(bareverb) > 0:
                     aux = self.filteratt({
@@ -215,7 +228,7 @@ class WHQuestionGenerator():
                     }, matrix)[0]
                     end = (answer.start)
                     converted = [aux.text] + without(aux.i, aux.i, doc[loc_relative_clause: end])
-                    yield ("Whom %(kwarg)s?" % {'kwarg': " ".join(converted)})
+                    yield ("%s %s?" % (questionwords[0], " ".join(converted)))
 
 
                 if len(presentsimple) > 0:
@@ -224,22 +237,23 @@ class WHQuestionGenerator():
                     converted = [x.text for x in doc[loc_relative_clause:presentsimple.i]] + [presentsimple.lemma_] + [
                         x.text for x in doc[
                                         presentsimple.i + 1:end]]
-                    yield ("Whom " + "do " + " ".join(converted) + '?')
+                    yield ("%s do %s?" % (questionwords[0], " ".join(converted)))
 
                 if len(presentsimplethird) > 0:
                     if(presentsimplethird[0].lemma_ == "be"):
                         noun = self.filteratt({
                                 'dep_': 'nsubj'
                             }, presentsimplethird[0].children)[0]
-                        yield ("Who" + " " + presentsimplethird[0].text + " " + getNounChunk(noun).text + "?")
+                        yield ("%s %s %s?", (questionwords[0], presentsimplethird[0].text, getNounChunk(noun).text))
                     else:
                         presentsimplethird = presentsimplethird[0]
                         end = (answer.start) if doc[answer.start].pos_ == "ADP" else answer.start - 1
                         converted = [x.text for x in doc[loc_relative_clause:presentsimplethird.i]] + [
                             presentsimplethird.lemma_] + [x.text for x in doc[
                                                                           presentsimplethird.i + 1:end]]
-                        yield ("Whom " + "does " + " ".join(converted) + '?')
+                        yield ("%s does %s?" % (questionwords[0], " ".join(converted)))
 
+                # Rule 2
                 # Find Requirements
                 pasttenseverb = self.filteratt({
                     'tag_': 'VBD',
@@ -265,9 +279,9 @@ class WHQuestionGenerator():
                 if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass":
                     #TODO - Mukul says its Hack , Co-authors disagree , Module overlap
                     if len(root) > 0:
-                        yield (wpword.text.capitalize() + " " + " ".join([x.text for x in doc[wpword.i + 1:root[0].i]]) + "?")
+                        yield ("%s %s?" % (questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:root[0].i]])))
                     else:
-                        yield (wpword.text.capitalize() + " " + " ".join([x.text for x in doc[wpword.i + 1:]]) + "?")
+                        yield ("%s %s?" % (questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:]])))
 
                 else:
                     #   # # Rules
@@ -281,7 +295,7 @@ class WHQuestionGenerator():
                             for x in
                             doc[
                             pasttenseverb.i + 1:]]
-                        yield ("Whom " + "did " + " ".join(converted) + '?')
+                        yield ("%s did %s" % (questionwords[1], " ".join(converted)))
 
                     if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0:
                         aux = self.filteratt({
@@ -291,7 +305,7 @@ class WHQuestionGenerator():
 
                         # end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
                         converted = [aux.text] + without(aux.i, aux.i, doc[wpword:])
-                        yield ("Whom %(kwarg)s?" % {'kwarg': " ".join(converted)})
+                        yield ("%s %s?" % (questionwords[1], " ".join(converted)))
 
                     if len(presentsimple) > 0:
                         presentsimple = presentsimple[0]
@@ -299,19 +313,17 @@ class WHQuestionGenerator():
                             x.text
                             for x in doc[
                                      presentsimple.i + 1:]]
-                        yield ("Whom " + "do " + " ".join(converted) + '?')
+                        yield ("%s do %s?" % (questionwords[1], " ".join(converted)))
                     if len(presentsimplethird) > 0:
                         presentsimplethird = presentsimplethird[0]
                         converted = [x.text for x in doc[wpword.i + 1:presentsimplethird.i]] + [
                             presentsimplethird.lemma_] + [x.text for x in doc[
                                                                           presentsimplethird.i + 1:]]
-                        yield ("Whom " + "does " + " ".join(converted) + '?')
+                        yield ("%s does %s?" % (questionwords[1], " ".join(converted)))
 
-
+                # Rule 3
                 Head_Noun_Chunk = NounParent(wpword.i)
 
-                
-                # noun_chunk = getNounChunk(Head_Noun_Chunk).text
                 noun_chunk = PPChunker(doc,Head_Noun_Chunk).text
                 # Requirements
                 if not noun_chunk:
@@ -320,14 +332,14 @@ class WHQuestionGenerator():
         
                     if (Head_Noun_Chunk.tag_ == "NNS"):
                         if len(pasttenseverb) > 0:
-                            yield ("Who were " + noun_chunk + "?")
+                            yield ("%s were %s?" % (questionwords[2], noun_chunk))
                         else:
-                            yield ("Who are " + noun_chunk + "?")
+                            yield ("%s are %s?" % (questionwords[2], noun_chunk))
                     else:
                         if len(pasttenseverb) > 0:
-                            yield ("Who was " + noun_chunk + "?")
+                            yield ("%s was %s?" % (questionwords[2], noun_chunk))
                         else:
-                            yield ("Who is " + noun_chunk + "?")
+                            yield ("%s is %s?" % (questionwords[2], noun_chunk))
                 
             loc_relative_clause = wpword.i
 

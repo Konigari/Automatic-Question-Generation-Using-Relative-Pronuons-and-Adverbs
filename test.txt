@@ -1,6 +1,6 @@
-- Questions: ['Whom did I kill?', 'Who was a btech student?', 'Who was the man?']
+- Questions: ['Who did I kill?', 'Who was a btech student?', 'Who was the man?']
   Sentence: I killed the man who was a btech student
-- Questions: ['Whom do I like?', 'Whom does she hat?', 'Who is the boy?']
+- Questions: ['Who do I like?', 'Whom does she hat?', 'Who is the boy?']
   Sentence: I like the boy who she hates
 - Questions: ['Who was The big fat girl?', 'Whom did everybody like?', 'Who was the
       girl?']
@@ -18,13 +18,13 @@
     nobel prizes, who are invited to the capital
 - Questions: ['Whom is She giving chocolates to?', 'Who is fat?', 'Who is the boy?']
   Sentence: She is giving chocolates to the boy who is fat and she likes him
-- Questions: ['Whom did I meet?', 'Who is in Africa?', 'Who is my brother?', 'Who
+- Questions: ['Who did I meet?', 'Who is in Africa?', 'Who is my brother?', 'Who
       is in France?', 'Who is my sister?']
   Sentence: I met my brother who is in Africa because my mother is in USA and my sister
     who is in France
 - Questions: ['Who studies law?', 'Who met my mother?', 'Who is His friend?']
   Sentence: His friend who studies law , met my mother
-- Questions: ['Whom did The boy give chocolates to?', 'Who was fat?', 'Who was the
+- Questions: ['Who did The boy give chocolates to?', 'Who was fat?', 'Who was the
       girl?']
   Sentence: The boy gave chocolates to the girl who was fat
 - Questions: [Who is fat, 'Who studies law in India for his mother and plays football
@@ -35,7 +35,7 @@
     'Who hates me?', 'Who is his mom?']
   Sentence: 'His friend who studies law , is fat and his mom who hates me is in USA '
 - Questions: [Who was the girl at college who everybody liked, 'Who was The big fat
-      girl?', 'Whom did everybody like?', 'Who was the girl?']
+      girl?', 'Who did everybody like?', 'Who was the girl?']
   Sentence: The big fat girl was the girl at college who everybody liked
-- Questions: ['Whom did I kill?', 'Who ?', 'Who was the man?']
+- Questions: ['Who did I kill?', 'Who ?', 'Who was the man?']
   Sentence: I killed the man who was a btech student

@@ -141,8 +141,9 @@ class WHQuestionGenerator():
         doc = self.nlp(sentence)
 
         relativeclauseswh = self.filteratt({
-            'tag_': 'WP',
+            'tag_': ['WDT', 'WP$', 'WPO', 'WPS', 'WQL', 'WRB', 'WP'],
         }, doc)
+        print(relativeclauseswh)
         #wpword.i < root[0].i
         
         loc_relative_clause = 0
@@ -165,6 +166,7 @@ class WHQuestionGenerator():
                 'whom': ['Whom', 'Whom', 'Who'],
                 'whose': ['Who', 'Whose', 'Who'],
                 'which': ['What', 'What', 'What'],
+                'that': ['What', 'What', 'What'],
                 'when': ['When', 'When', 'When'],
                 'how': ['How', 'What', ],
                 'why': ['Why', 'What']

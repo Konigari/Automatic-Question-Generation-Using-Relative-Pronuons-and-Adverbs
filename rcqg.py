@@ -73,6 +73,7 @@ class WHQuestionGenerator():
             att = att[0]
         if type(att) == list:
             return sum([self.filteratt(i, doc) for i in att], [])
+        # print(list(filter(lambda tup: self.filt(att)(tup), doc)), att, list(doc))
         return list(filter(lambda tup: self.filt(att)(tup), doc))
 
     def conjHandling(self,doc):
@@ -110,9 +111,12 @@ class WHQuestionGenerator():
         def without(start, end, doc):
             return [x.text for x in doc[:start]] + [x.text for x in doc[end + 1:]]
 
-        def NounParent(index): 
-            Head_Noun_Chunk = doc[index].head
-            while (Head_Noun_Chunk.pos_ not in ['NOUN','PROPN'] and (Head_Noun_Chunk.i != Head_Noun_Chunk.head.i)):
+        def NounParent(index):
+            original = index
+            Head_Noun_Chunk = index.head
+            while (Head_Noun_Chunk.pos_ not in ['NOUN', 'PROPN']):
+                if Head_Noun_Chunk == Head_Noun_Chunk.head:
+                    return original
                 Head_Noun_Chunk = Head_Noun_Chunk.head
             return Head_Noun_Chunk
         
@@ -143,14 +147,16 @@ class WHQuestionGenerator():
         relativeclauseswh = self.filteratt({
             'tag_': ['WDT', 'WP$', 'WPO', 'WPS', 'WQL', 'WRB', 'WP'],
         }, doc)
-        print(relativeclauseswh)
         #wpword.i < root[0].i
         
         loc_relative_clause = 0
         for wpword in relativeclauseswh:
-            
-            answer = PPChunker(doc,NounParent(wpword.i))
-
+            '''
+            Rule 1: Using the matrix clause
+            Rule 2: Using the embedded clause
+            Rule 3: Relative clause modifying the NP Constituent
+            '''
+            answer = PPChunker(doc, NounParent(wpword))
             matrix = doc[loc_relative_clause:answer.start]
             relclause = doc[wpword.i:]
 
@@ -169,7 +175,7 @@ class WHQuestionGenerator():
                 'that': ['What', 'What', 'What'],
                 'when': ['When', 'When', 'When'],
                 'how': ['How', 'What', ],
-                'why': ['Why', 'What']
+                'why': ['Why', 'What', ]
             }
             if wpword.text.lower() in conversions.keys():
                 questionwords = conversions[wpword.text.lower()]
@@ -181,7 +187,7 @@ class WHQuestionGenerator():
                 # Rules
                 # Rule 0
                 if len(root) > 0:
-                    if self.filteratt({'dep_':'nsubj'},root[0].children)[0].text in answer.text:
+                    if self.filteratt({'dep_': ['nsubj', 'nsubjpass']}, list(root[0].children))[0].text in answer.text:
                         yield (questionwords[0] + " " + doc[root[0].i:].text + "?")
 
                 # Rule 1
@@ -211,6 +217,7 @@ class WHQuestionGenerator():
                 }, matrix)
 
                 if len(pasttenseverb) > 0:
+
                     if(pasttenseverb[0].lemma_ == "be"):
                         noun = self.filteratt({
                                 'dep_': 'nsubj'
@@ -306,7 +313,7 @@ class WHQuestionGenerator():
                         aux = aux[0]
 
                         # end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
-                        converted = [aux.text] + without(aux.i, aux.i, doc[wpword:])
+                        converted = [aux.text] + without(aux.i, aux.i, doc[wpword.i:])
                         yield ("%s %s?" % (questionwords[1], " ".join(converted)))
 
                     if len(presentsimple) > 0:
@@ -324,7 +331,7 @@ class WHQuestionGenerator():
                         yield ("%s does %s?" % (questionwords[1], " ".join(converted)))
 
                 # Rule 3
-                Head_Noun_Chunk = NounParent(wpword.i)
+                Head_Noun_Chunk = NounParent(wpword)
 
                 noun_chunk = PPChunker(doc,Head_Noun_Chunk).text
                 # Requirements

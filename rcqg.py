@@ -106,8 +106,6 @@ class WHQuestionGenerator():
         return splitsentence(doc)
 
     def genq(self, sentence):
-        print(sentence)
-
         def without(start, end, doc):
             return [x.text for x in doc[:start]] + [x.text for x in doc[end + 1:]]
 
@@ -168,7 +166,7 @@ class WHQuestionGenerator():
             # where works exactly like who
             # when works exactly like who
             conversions = {
-                'who': ['Who', 'Whom', 'Who'],
+                'who': ['Who', 'Who', 'Who'],
                 'whom': ['Whom', 'Whom', 'Who'],
                 'whose': ['Who', 'Whose', 'Who'],
                 'which': ['What', 'What', 'What'],
@@ -253,7 +251,7 @@ class WHQuestionGenerator():
                         noun = self.filteratt({
                                 'dep_': 'nsubj'
                             }, presentsimplethird[0].children)[0]
-                        yield ("%s %s %s?", (questionwords[0], presentsimplethird[0].text, getNounChunk(noun).text))
+                        yield ("%s %s %s?" % (questionwords[0], presentsimplethird[0].text, getNounChunk(noun).text))
                     else:
                         presentsimplethird = presentsimplethird[0]
                         end = (answer.start) if doc[answer.start].pos_ == "ADP" else answer.start - 1
@@ -295,7 +293,6 @@ class WHQuestionGenerator():
                 else:
                     #   # # Rules
                     if len(pasttenseverb) > 0:
-                        # print ("here")
                         pasttenseverb = pasttenseverb[0]
                         # print(pasttenseverb)
                         # print ([x.text for x in doc[wpword.i + 1:pasttenseverb.i ]]+ [pasttenseverb.lemma_])
@@ -304,7 +301,7 @@ class WHQuestionGenerator():
                             for x in
                             doc[
                             pasttenseverb.i + 1:]]
-                        yield ("%s did %s" % (questionwords[1], " ".join(converted)))
+                        yield ("%s did %s?" % (questionwords[1], " ".join(converted)))
 
                     if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0:
                         aux = self.filteratt({

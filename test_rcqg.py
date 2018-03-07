@@ -36,4 +36,4 @@ def test_rcqg():
         for j in qg.genqlist(i['Sentence']):
             counter += 1
             assert (j in i['Questions']), "Wrong Question"
-        assert (count == counter), "Wrong number of questions"
+        assert (count == counter), "Wrong number of questions" + str(qg.genqlist(i['Sentence']))

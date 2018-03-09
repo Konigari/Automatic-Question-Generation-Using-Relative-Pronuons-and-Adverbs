@@ -75,3 +75,8 @@
   Sentence: Rachna who is fat is invited to the party
 - Questions: ['What was fixed yesterday?', 'What got broken?', 'What is The table?']
   Sentence: The table that got broken was fixed yesterday.
+- Questions: ['Who is Mary?', 'Who are jealous of her?', 'Who are Indian women?']
+  Sentence: Mary is friends with Indian women who are jealous of her
+- Questions: ['What has Robert postponed?', 'What brought everyone bad luck in the
+      company?', 'What was the event?']
+  Sentence: Robert has postponed the event that brought everyone bad luck in the company

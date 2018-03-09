@@ -34,7 +34,8 @@
 - Questions: ['Who is fat?', 'Who studies law ,?', 'Who is His friend?', 'Who is in
       USA?', 'Who hates me?', 'Who is his mom?']
   Sentence: 'His friend who studies law , is fat and his mom who hates me is in USA '
-- Questions: ['Who was The big fat girl?', 'Who did everybody like?', 'Who was the girl?']
+- Questions: ['Who was The big fat girl?', 'Who did everybody like?', 'Who was the
+      girl?']
   Sentence: The big fat girl was the girl at college who everybody liked
 - Questions: ['Who does Mary love?', 'Who loves Ana?', 'Who is John?']
   Sentence: Mary loves John who loves Ana
@@ -55,11 +56,11 @@
 - Questions: ['What has Robert postponed?', 'What brought everyone bad luck in the
       company?', 'What was the event?']
   Sentence: Robert has postponed the event that brought everyone bad luck in the company.
-- Questions: ['What does he start?', 'What makes tremendous profit?', 'What is a
-      company?']
+- Questions: ['What does he start?', 'What makes tremendous profit?', 'What is a company?']
   Sentence: Robert would like to make sure that he starts a company which makes tremendous
     profit
-- Questions: ['Who did The dog chase?', 'Who chased the rat who ate all my cheese?', 'Who was the cat?', 'Who ate all my cheese?', 'Who was the rat?']
+- Questions: ['Who did The dog chase?', 'Who chased the rat who ate all my cheese?',
+    'Who was the cat?', 'Who ate all my cheese?', 'Who was the rat?']
   Sentence: The dog chased the cat who chased the rat who ate all my cheese
 - Questions: ['Who does The cop chase?', 'Who steals from the banker who steals from
       the public who votes for the corrupt politicians?', 'Who is the thief?', 'Who
@@ -67,10 +68,10 @@
       banker?', 'Who votes for the corrupt politicians?', 'Who is the public?']
   Sentence: The cop chases the thief who steals from the banker who steals from the
     public who votes for the corrupt politicians
-- Questions: ['What fixed yesterday.?', 'What got broken was?', 'What is The table?']
-  Sentence: The table that got broken was fixed yesterday.
 - Questions: ['What did The cat quickly chase?', 'What was perhaps dark black in colour?',
     'What was the mouse?']
   Sentence: The cat quickly chased the mouse which was perhaps dark black in colour
 - Questions: ['Who is invited to the party?', 'Who is fat?', 'Who is Rachna?']
   Sentence: Rachna who is fat is invited to the party
+- Questions: ['What was fixed yesterday?', 'What got broken?', 'What is The table?']
+  Sentence: The table that got broken was fixed yesterday.

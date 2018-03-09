@@ -5,79 +5,96 @@
       girl?', 'Who was the girl at college who everybody liked?']
   Sentence: The big fat girl was the girl at college who everybody liked
 - Questions: ['Who is The big fat girl?', 'Who did everybody like?', 'Who was the
-      girl?']
+      girl?', 'Who was the girl at college who everybody liked?']
   Sentence: The big fat girl is the girl at college who everybody liked
 - Questions: ['Who is Each year the banquet held in city hall for?', 'Who are invited
-      to the capital?', 'Who are the winners of losers of nobel prizes?']
+      to the capital?', 'Who are the winners of losers of nobel prizes?', 'Who are
+      the winners of losers of nobel prizes , who are invited to the capital?']
   Sentence: Each year the banquet is held in city hall for the winners of losers of
     nobel prizes, who are invited to the capital
-- Questions: ['Who is Each year the banquet held in city hall for?', 'Who are invited
-      to the capital?', 'Who are the winners of losers of nobel prizes?']
-  Sentence: Each year the banquet is held in city hall for the winners of losers of
-    nobel prizes, who are invited to the capital
-- Questions: ['Who is She giving chocolates to?', 'Who is fat?', 'Who is the boy?']
+- Questions: ['Who is She giving chocolates to?', 'Who is fat?', 'Who is the boy?',
+    'Who is the boy who is fat?']
   Sentence: She is giving chocolates to the boy who is fat and she likes him
 - Questions: ['Who did I meet?', 'Who is in Africa?', 'Who is my brother?', 'Who is
-      in France?', 'Who is my sister?']
+      my brother who is in Africa?', 'Who is my mother?', 'Who is in France?', 'Who
+      is my sister?', 'Who is my sister who is in France?']
   Sentence: I met my brother who is in Africa because my mother is in USA and my sister
     who is in France
-- Questions: ['Who studies law ,?', 'Who met my mother?', 'Who is His friend?']
+- Questions: ['Who met my mother?', 'Who studies law ,?', 'Who is His friend?', 'Who
+      is His friend who studies law , met my mother?']
   Sentence: His friend who studies law , met my mother
 - Questions: ['Who did The boy give chocolates to?', 'Who was fat?', 'Who was the
-      girl?']
+      girl?', 'Who was the girl who was fat?']
   Sentence: The boy gave chocolates to the girl who was fat
-- Questions: ['Who is fat?', 'Who studies law in India for his mother and plays football
-      ,?', 'Who is His friend?', 'Who is in USA?', 'Who hates me?', 'Who is his mom?']
+- Questions: ['Who studies law in India for his mother and plays football?', 'Who
+      is His friend?', 'Who is His friend who studies law in India for his mother
+      and plays football?', 'Who is in USA?', 'Who hates me?', 'Who is his mom?',
+    'Who is his mom who hates me is in USA?']
   Sentence: His friend who studies law in India for his mother and plays football,
     is fat and his mom who hates me is in USA
-- Questions: ['Who is fat?', 'Who studies law ,?', 'Who is His friend?', 'Who is in
-      USA?', 'Who hates me?', 'Who is his mom?']
+- Questions: ['Who studies law?', 'Who is His friend?', 'Who is His friend who studies
+      law?', 'Who is in USA?', 'Who hates me?', 'Who is his mom?', 'Who is his mom
+      who hates me is in USA?']
   Sentence: 'His friend who studies law , is fat and his mom who hates me is in USA '
-- Questions: ['Who was The big fat girl?', 'Who did everybody like?', 'Who was the
-      girl?']
-  Sentence: The big fat girl was the girl at college who everybody liked
-- Questions: ['Who does Mary love?', 'Who loves Ana?', 'Who is John?']
+- Questions: ['Who does Mary love?', 'Who loves Ana?', 'Who is John?', 'Who is John
+      who loves Ana?']
   Sentence: Mary loves John who loves Ana
-- Questions: ['Who did Mary love?', 'Who loved Ana?', 'Who was John?']
+- Questions: ['Who did Mary love?', 'Who loved Ana?', 'Who was John?', 'Who was John
+      who loved Ana?']
   Sentence: Mary loved John who loved Ana
-- Questions: ['Who has Mary been loving?', 'Who has been loving Ana?', 'Who is John?']
+- Questions: ['Who has Mary been loving?', 'Who has been loving Ana?', 'Who is John?',
+    'Who is John who has been loving Ana?']
   Sentence: Mary has been loving John who has been loving Ana
-- Questions: ['Who should Mary not love?', 'Who loves Ana?', 'Who is John?']
+- Questions: ['Who should Mary not love?', 'Who loves Ana?', 'Who is John?', 'Who
+      is John who loves Ana?']
   Sentence: Mary should not love John who loves Ana
 - Questions: ['Who should Mary not be thinking about loving?', 'Who loves Ana?', 'Who
-      is John?']
+      is John?', 'Who is John who loves Ana?']
   Sentence: Mary should not be thinking about loving John who loves Ana
 - Questions: ['Who did The president just meet?', 'Who lives in France?', 'Who is
-      the son of the king?']
+      the son of the king?', 'Who is the son of the king of France who lives in France?']
   Sentence: The president just met the son of the king of France who lives in France
-- Questions: ['Who is Mary?', 'Who are jealous of her?', 'Who are Indian women?']
+- Questions: ['Who is Mary?', 'Who are jealous of her?', 'Who are Indian women?',
+    'Who are Indian women who are jealous of her?']
   Sentence: Mary is friends with Indian women who are jealous of her.
 - Questions: ['What has Robert postponed?', 'What brought everyone bad luck in the
-      company?', 'What was the event?']
+      company?', 'What was the event?', 'What was the event that brought everyone
+      bad luck in the company?']
   Sentence: Robert has postponed the event that brought everyone bad luck in the company.
-- Questions: ['What does he start?', 'What makes tremendous profit?', 'What is a company?']
+- Questions: ['What does he start?', 'What makes tremendous profit?', 'What is a company?',
+    'What is a company which makes tremendous profit?']
   Sentence: Robert would like to make sure that he starts a company which makes tremendous
     profit
 - Questions: ['Who did The dog chase?', 'Who chased the rat who ate all my cheese?',
-    'Who was the cat?', 'Who ate all my cheese?', 'Who was the rat?']
+    'Who was the cat?', 'Who was the cat who chased the rat who ate all my cheese?',
+    'Who ate all my cheese?', 'Who was the rat?', 'Who was the rat who ate all my
+      cheese?']
   Sentence: The dog chased the cat who chased the rat who ate all my cheese
 - Questions: ['Who does The cop chase?', 'Who steals from the banker who steals from
       the public who votes for the corrupt politicians?', 'Who is the thief?', 'Who
-      steals from the public who votes for the corrupt politicians?', 'Who is the
-      banker?', 'Who votes for the corrupt politicians?', 'Who is the public?']
+      is the thief who steals from the banker who steals from the public who votes
+      for the corrupt politicians?', 'Who steals from the public who votes for the
+      corrupt politicians?', 'Who is the banker?', 'Who is the banker who steals from
+      the public who votes for the corrupt politicians?', 'Who votes for the corrupt
+      politicians?', 'Who is the public?', 'Who is the public who votes for the corrupt
+      politicians?']
   Sentence: The cop chases the thief who steals from the banker who steals from the
     public who votes for the corrupt politicians
 - Questions: ['What did The cat quickly chase?', 'What was perhaps dark black in colour?',
-    'What was the mouse?']
+    'What was the mouse?', 'What was the mouse which was perhaps dark black in colour?']
   Sentence: The cat quickly chased the mouse which was perhaps dark black in colour
-- Questions: ['Who is invited to the party?', 'Who is fat?', 'Who is Rachna?']
+- Questions: ['Who is invited to the party?', 'Who is fat?', 'Who is Rachna?', 'Who
+      is Rachna who is fat is invited to the party?']
   Sentence: Rachna who is fat is invited to the party
-- Questions: ['What was fixed yesterday?', 'What got broken?', 'What is The table?']
+- Questions: ['What was fixed yesterday?', 'What got broken?', 'What is The table?',
+    'What is The table that got broken was fixed yesterday?']
   Sentence: The table that got broken was fixed yesterday.
-- Questions: ['Who is Mary?', 'Who are jealous of her?', 'Who are Indian women?']
+- Questions: ['Who is Mary?', 'Who are jealous of her?', 'Who are Indian women?',
+    'Who are Indian women who are jealous of her?']
   Sentence: Mary is friends with Indian women who are jealous of her
 - Questions: ['What has Robert postponed?', 'What brought everyone bad luck in the
-      company?', 'What was the event?']
+      company?', 'What was the event?', 'What was the event that brought everyone
+      bad luck in the company?']
   Sentence: Robert has postponed the event that brought everyone bad luck in the company
 - Questions: ['Who did Mary meet?', 'Who is studying?', 'Who is Bob?', 'Who is Bob
       in the car  who is studying?']

@@ -19,11 +19,15 @@ def loadTests():
 
 def generate_test(line):
     tests = yaml.load(loadTests())
-    temp = {
-        'Sentence': line,
-        'Questions': qg.genqlist(line)
-    }
-    tests += [temp]
+    result = next(filter(lambda x: x["Sentence"] == line, tests), False)
+    if result:
+        result['Questions'] = qg.genqlist(line)
+    else:
+        temp = {
+            'Sentence': line,
+            'Questions': qg.genqlist(line)
+        }
+        tests += [temp]
     testfile = open('test.txt', 'w')
     testfile.write(yaml.dump(tests))
 
@@ -35,5 +39,5 @@ def test_rcqg():
         counter = 0
         for j in qg.genqlist(i['Sentence']):
             counter += 1
-            assert (j in i['Questions']), "Wrong Question"
-        assert (count == counter), "Wrong number of questions" + str(qg.genqlist(i['Sentence']))
+            assert (j in i['Questions']), "Wrong Question" + i['Sentence']
+        assert (count == counter), "Wrong number of questions" + str(qg.genqlist(i['Sentence']) + i['Sentence'])

@@ -1,9 +1,8 @@
-- Questions: ['Who did I kill?', 'Who was a btech student?', 'Who was the man?']
-  Sentence: I killed the man who was a btech student
-- Questions: ['Who do I like?', 'Who does she hat?', 'Who is the boy?']
+- Questions: ['Who do I like?', 'Who does she hat?', 'Who is the boy?', 'Who is the
+      boy who she hates?']
   Sentence: I like the boy who she hates
 - Questions: ['Who was The big fat girl?', 'Who did everybody like?', 'Who was the
-      girl?']
+      girl?', 'Who was the girl at college who everybody liked?']
   Sentence: The big fat girl was the girl at college who everybody liked
 - Questions: ['Who is The big fat girl?', 'Who did everybody like?', 'Who was the
       girl?']
@@ -86,3 +85,6 @@
 - Questions: ['Who did Mary meet?', 'Who is studying?', 'Who is Bob?', 'Who is Bob
       in the car  who is studying?']
   Sentence: 'Mary met Bob in the car  who is studying '
+- Questions: ['Who did I kill?', 'Who was a BTech student?', 'Who was the man?', 'Who
+      was the man who was a BTech student?']
+  Sentence: I killed the man who was a BTech student

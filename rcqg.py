@@ -87,10 +87,9 @@ class WHQuestionGenerator():
         sorted_conjunctions = sorted(conjunctions, key = lambda x: x.i)
         end = len(doc)
         for conjunction in reversed(sorted_conjunctions):
-            nsubjs = self.filteratt({
-                'dep_': 'nsubj'
-                }, doc[conjunction.i:end])
-            if len(nsubjs)>0:
+            #temp_doc = doc[conjunction.i:]
+            noun_chunks = [c for c in doc[conjunction.i:].noun_chunks]
+            if noun_chunks[0].root.dep_ == "nsubj":
                 sentential_conjunctions.append(conjunction)
             end = conjunction.i
         sentential_conjunctions = reversed(sentential_conjunctions)
@@ -103,6 +102,8 @@ class WHQuestionGenerator():
                 if i.i in indices:
                     return [doc[start:i.i]] + splitsentence(doc[i.i+1:end+1])
             return [sentence]
+
+        print(splitsentence(doc))
         return splitsentence(doc)
 
     def genq(self, sentence):
@@ -126,7 +127,7 @@ class WHQuestionGenerator():
         def NounParent(index):
             original = index
             Head_Noun_Chunk = index.head
-            while (Head_Noun_Chunk.pos_ not in ['NOUN', 'PROPN']):
+            while (Head_Noun_Chunk.pos_ not in ['NOUN']):
                 if Head_Noun_Chunk == Head_Noun_Chunk.head:
                     return original
                 Head_Noun_Chunk = Head_Noun_Chunk.head
@@ -147,7 +148,7 @@ class WHQuestionGenerator():
             end = Head_Noun_Chunk 
 
             while True:
-                if Head_Noun_Chunk.head.text == "of" and Head_Noun_Chunk.head.head.pos_ == "NOUN":
+                if Head_Noun_Chunk.head.text == "of" and Head_Noun_Chunk.head.head.pos_ in ["NOUN"] :
                     Head_Noun_Chunk = Head_Noun_Chunk.head.head
                 else:
                     break
@@ -160,7 +161,7 @@ class WHQuestionGenerator():
             'tag_': ['WDT', 'WP$', 'WPO', 'WPS', 'WQL', 'WRB', 'WP'],
         }, doc)
         #wpword.i < root[0].i
-        
+        print("hi",sentence)
         loc_relative_clause = 0
         for wpword in relativeclauseswh:
             '''
@@ -246,6 +247,7 @@ class WHQuestionGenerator():
                     aux = self.filteratt({
                         'dep_': ['aux', 'auxpass']
                     }, matrix)[0]
+                    print("why the fuck you no come here?")
                     end = (answer.start)
                     converted = [aux.text] + without(aux.i, aux.i, doc[loc_relative_clause: end])
                     yield ("%s %s?" % (questionwords[0], " ".join(converted)))
@@ -362,6 +364,24 @@ class WHQuestionGenerator():
                         else:
                             yield ("%s is %s?" % (questionwords[2], noun_chunk))
                 
+                #Rule 4
+                if not noun_chunk:
+                    print("Subject modified by relative clause not found.")
+                else:
+        
+                    if (Head_Noun_Chunk.tag_ == "NNS"):
+                        if len(pasttenseverb) > 0:
+                            yield ("%s were % %s?" % (questionwords[2], noun_chunk,doc[Head_Noun_Chunk.i+1:]))
+                        else:
+                            yield ("%s are %s %s?" % (questionwords[2], noun_chunk , doc[Head_Noun_Chunk.i+1:]))
+                    else:
+                        if len(pasttenseverb) > 0:
+                            yield ("%s was %s %s?" % (questionwords[2], noun_chunk , doc[Head_Noun_Chunk.i+1:]))
+                        else:
+                            yield ("%s is %s %s?" % (questionwords[2], noun_chunk , doc[Head_Noun_Chunk.i+1:]))
+                
+
+
             loc_relative_clause = wpword.i
 
     def genqlist(self, sentence):

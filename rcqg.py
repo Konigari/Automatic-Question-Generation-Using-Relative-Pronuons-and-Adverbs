@@ -109,6 +109,20 @@ class WHQuestionGenerator():
         def without(start, end, doc):
             return [x.text for x in doc[:start]] + [x.text for x in doc[end + 1:]]
 
+        def VerbChunk(root):
+            print(root.text)
+            aux_verb = self.filteratt({
+            'dep_' : ['aux','auxpass']
+            },list(root.children))
+            print(aux_verb)
+            if len(aux_verb) > 0:
+            	print(aux_verb[0].i)
+            	return aux_verb[0].i
+            else:
+            	return root.i
+        	# if root.head == aux or root.head == auxpass :
+        	# 	return root.head.i
+
         def NounParent(index):
             original = index
             Head_Noun_Chunk = index.head
@@ -186,7 +200,7 @@ class WHQuestionGenerator():
                 # Rule 0
                 if len(root) > 0:
                     if self.filteratt({'dep_': ['nsubj', 'nsubjpass']}, list(root[0].children))[0].text in answer.text:
-                        yield (questionwords[0] + " " + doc[root[0].i:].text + "?")
+                        yield (questionwords[0] + " " + doc[VerbChunk(root[0]):].text + "?")
 
                 # Rule 1
                 pasttenseverb = self.filteratt({
@@ -285,8 +299,10 @@ class WHQuestionGenerator():
 
                 if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass":
                     #TODO - Mukul says its Hack , Co-authors disagree , Module overlap
+                    
                     if len(root) > 0:
-                        yield ("%s %s?" % (questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:root[0].i]])))
+                        print("fucker")
+                        yield ("%s %s?" % (questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:VerbChunk(root[0])]])))
                     else:
                         yield ("%s %s?" % (questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:]])))
 

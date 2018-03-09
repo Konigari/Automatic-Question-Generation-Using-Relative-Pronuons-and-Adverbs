@@ -18,8 +18,8 @@
     nobel prizes, who are invited to the capital
 - Questions: ['Who is She giving chocolates to?', 'Who is fat?', 'Who is the boy?']
   Sentence: She is giving chocolates to the boy who is fat and she likes him
-- Questions: ['Who did I meet?', 'Who is in Africa?', 'Who is my brother?', 'Who
-      is in France?', 'Who is my sister?']
+- Questions: ['Who did I meet?', 'Who is in Africa?', 'Who is my brother?', 'Who is
+      in France?', 'Who is my sister?']
   Sentence: I met my brother who is in Africa because my mother is in USA and my sister
     who is in France
 - Questions: ['Who studies law ,?', 'Who met my mother?', 'Who is His friend?']
@@ -31,11 +31,24 @@
       ,?', 'Who is His friend?', 'Who is in USA?', 'Who hates me?', 'Who is his mom?']
   Sentence: His friend who studies law in India for his mother and plays football,
     is fat and his mom who hates me is in USA
-- Questions: ['Who is fat?', 'Who studies law ,?', 'Who is His friend?', 'Who is in USA?',
-    'Who hates me?', 'Who is his mom?']
+- Questions: ['Who is fat?', 'Who studies law ,?', 'Who is His friend?', 'Who is in
+      USA?', 'Who hates me?', 'Who is his mom?']
   Sentence: 'His friend who studies law , is fat and his mom who hates me is in USA '
 - Questions: [Who was the girl at college who everybody liked, 'Who was The big fat
       girl?', 'Who did everybody like?', 'Who was the girl?']
   Sentence: The big fat girl was the girl at college who everybody liked
 - Questions: ['Who did I kill?', 'Who ?', 'Who was the man?']
   Sentence: I killed the man who was a btech student
+- Questions: ['Who does The cop chase?', 'Who steals from the banker who steals from
+      the public who votes for the corrupt politicians?', 'Who is the thief?', 'Who
+      steals from the public who votes for the corrupt politicians?', 'Who is the
+      banker?', 'Who votes for the corrupt politicians?', 'Who is the public?']
+  Sentence: The cop chases the thief who steals from the banker who steals from the
+    public who votes for the corrupt politicians
+- Questions: ['What fixed yesterday.?', 'What got broken was?', 'What is The table?']
+  Sentence: The table that got broken was fixed yesterday.
+- Questions: ['What did The cat quickly chase?', 'What was perhaps dark black in colour?',
+    'What was the mouse?']
+  Sentence: The cat quickly chased the mouse which was perhaps dark black in colour
+- Questions: ['Who is invited to the party?', 'Who is fat?', 'Who is Rachna?']
+  Sentence: Rachna who is fat is invited to the party

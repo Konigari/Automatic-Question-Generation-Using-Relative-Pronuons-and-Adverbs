@@ -213,7 +213,6 @@ class WHQuestionGenerator():
                     'tag_': 'VBZ',
                     'dep_': 'ROOT'
                 }, matrix)
-
                 if len(pasttenseverb) > 0:
 
                     if(pasttenseverb[0].lemma_ == "be"):
@@ -350,6 +349,11 @@ class WHQuestionGenerator():
             loc_relative_clause = wpword.i
 
     def genqlist(self, sentence):
+        sentence = sentence.strip('. ')
         doc = self.nlp(sentence)
         sentences = self.conjHandling(doc)
         return sum([list(self.genq(x.text)) for x in sentences], [])
+
+
+
+

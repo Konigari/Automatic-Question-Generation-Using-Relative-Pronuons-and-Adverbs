@@ -153,6 +153,7 @@ class WHQuestionGenerator():
             'tag_': ['WDT', 'WP$', 'WPO', 'WPS', 'WQL', 'WRB', 'WP'],
         }, doc)
         loc_relative_clause = 0
+
         for wpword in relativeclauseswh:
             '''
             Rule 1: Using the matrix clause
@@ -338,7 +339,7 @@ class WHQuestionGenerator():
                             yield ("%s were %s?" % (questionwords[2], noun_chunk))
                         else:
                             yield ("%s are %s?" % (questionwords[2], noun_chunk))
-                    else:
+                    elif(not Head_Noun_Chunk.tag_== "NNS"):
                         if len(pasttenseverb) > 0:
                             yield ("%s was %s?" % (questionwords[2], noun_chunk))
                         else:

@@ -21,7 +21,7 @@ class WHQuestionGenerator():
         for token in doc:
             print(token.text, token.lemma_, token.pos_, token.tag_, token.dep_, token.shape_, token.is_alpha,
                   token.is_stop)
-        print("=========================NER tags")
+        print("=========================NER  tags")
         for ent in doc.ents:
             print(ent.text, ent.start_char, ent.end_char, ent.label_)
         print("=========================Noun Chunks tags")
@@ -111,26 +111,39 @@ class WHQuestionGenerator():
             return [x.text for x in doc[:start]] + [x.text for x in doc[end + 1:]]
 
         def VerbChunk(root):
-            print(root.text)
             aux_verb = self.filteratt({
             'dep_' : ['aux','auxpass']
             },list(root.children))
-            print(aux_verb)
             if len(aux_verb) > 0:
-            	print(aux_verb[0].i)
-            	return aux_verb[0].i
+                return aux_verb[0].i
             else:
-            	return root.i
-        	# if root.head == aux or root.head == auxpass :
-        	# 	return root.head.i
+                return root.i
+            # if root.head == aux or root.head == auxpass :
+            #   return root.head.i
+        def NounCousin(root):
+            Root_children = self.filteratt({
+            'pos_':['NOUN','PROPN']
+            },list(root.children))
+            for child in Root_children:
+                if child.dep_ != 'nsubj':
+                    Head_Noun_Chunk = child
+            return Head_Noun_Chunk
+                
+
+
 
         def NounParent(index):
             original = index
             Head_Noun_Chunk = index.head
-            while (Head_Noun_Chunk.pos_ not in ['NOUN']):
-                if Head_Noun_Chunk == Head_Noun_Chunk.head:
+            while (Head_Noun_Chunk.pos_ not in ['NOUN','PROPN']):
+                
+                if Head_Noun_Chunk.dep_ == "ROOT":
+                    return NounCousin(Head_Noun_Chunk)
+                    
+                elif Head_Noun_Chunk == Head_Noun_Chunk.head:
                     return original
                 Head_Noun_Chunk = Head_Noun_Chunk.head
+            #print(Head_Noun_Chunk)
             return Head_Noun_Chunk
         
         def getNounChunk(noun):
@@ -161,7 +174,6 @@ class WHQuestionGenerator():
             'tag_': ['WDT', 'WP$', 'WPO', 'WPS', 'WQL', 'WRB', 'WP'],
         }, doc)
         #wpword.i < root[0].i
-        print("hi",sentence)
         loc_relative_clause = 0
         for wpword in relativeclauseswh:
             '''
@@ -247,7 +259,6 @@ class WHQuestionGenerator():
                     aux = self.filteratt({
                         'dep_': ['aux', 'auxpass']
                     }, matrix)[0]
-                    print("why the fuck you no come here?")
                     end = (answer.start)
                     converted = [aux.text] + without(aux.i, aux.i, doc[loc_relative_clause: end])
                     yield ("%s %s?" % (questionwords[0], " ".join(converted)))
@@ -302,7 +313,6 @@ class WHQuestionGenerator():
                     #TODO - Mukul says its Hack , Co-authors disagree , Module overlap
                     
                     if len(root) > 0:
-                        print("fucker")
                         yield ("%s %s?" % (questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:VerbChunk(root[0])]])))
                     else:
                         yield ("%s %s?" % (questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:]])))
@@ -325,9 +335,11 @@ class WHQuestionGenerator():
                             'dep_': ['aux', 'auxpass']
                         }, relclause)
                         aux = aux[0]
-
+                        print("Dude, where aer you?")
                         # end = answer.head.i + 1 if answer.head.pos_ == "ADP" else answer.head.i
                         converted = [aux.text] + without(aux.i, aux.i, doc[wpword.i:])
+                        print("hi", without(aux.i, aux.i, doc[loc_relative_clause: end] ))                   
+                        
                         yield ("%s %s?" % (questionwords[1], " ".join(converted)))
 
                     if len(presentsimple) > 0:
@@ -346,7 +358,7 @@ class WHQuestionGenerator():
 
                 # Rule 3
                 Head_Noun_Chunk = NounParent(wpword)
-
+                print(Head_Noun_Chunk)
                 noun_chunk = PPChunker(doc,Head_Noun_Chunk).text
                 # Requirements
                 if not noun_chunk:
@@ -371,7 +383,7 @@ class WHQuestionGenerator():
         
                     if (Head_Noun_Chunk.tag_ == "NNS"):
                         if len(pasttenseverb) > 0:
-                            yield ("%s were % %s?" % (questionwords[2], noun_chunk,doc[Head_Noun_Chunk.i+1:]))
+                            yield ("%s were %s %s?" % (questionwords[2], noun_chunk,doc[Head_Noun_Chunk.i+1:]))
                         else:
                             yield ("%s are %s %s?" % (questionwords[2], noun_chunk , doc[Head_Noun_Chunk.i+1:]))
                     else:

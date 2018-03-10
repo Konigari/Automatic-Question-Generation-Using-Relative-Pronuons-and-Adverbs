@@ -294,7 +294,7 @@ class WHQuestionGenerator():
                             noun = self.filteratt({
                                 'dep_': 'nsubj'
                             }, presentsimple[0].children)[0]
-                            yield ("%s %s %s %s?" % (questionwords[0], presentsimple[0].text, getNounChunk(noun).text,doc[presentsimple+1:answer]))
+                            yield ("%s %s %s %s?" % (questionwords[0], presentsimple[0].text, getNounChunk(noun).text,doc[presentsimple[0].i+1:answer.start]))
                         else:
                             presentsimple = presentsimple[0]
                             end = (answer.start) if doc[answer.start].pos_ == "ADP" else answer.start - 1

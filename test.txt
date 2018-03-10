@@ -110,3 +110,33 @@
       your family has searched for you?']
   Sentence: You should be seriously considering the option to marry the girl who your
     family has searched for you
+- Questions: ['Who did That crazy old guy shut the door on?', 'Who works in a bank
+      which is state operated?', 'Who was his neighbour?', 'Who was his neighbour
+      who works in a bank which is state operated?', 'What is state operated?', 'What
+      is a bank?', 'What is a bank which is state operated?']
+  Sentence: That crazy old guy shut the door on his neighbour who works in a bank
+    which is state operated
+- Questions: ['What are These chocolate chip cookies processed by?', 'What manufactures
+      cocoa?', 'What is the company?', 'What is the company that manufactures cocoa?']
+  Sentence: These chocolate chip cookies are processed by the company that manufactures
+    cocoa
+- Questions: ['Who am I certain he had been goofing around with?', 'Who have had bad
+      taste in music?', 'Who are women?', 'Who are women who have had bad taste in
+      music?']
+  Sentence: I am certain he had been goofing around with women who have had bad taste
+    in music
+- Questions: ['What will I place?', 'What is the bed?', 'What is the bed which I brought
+      from an online store next to the window which does not have tempered glass?',
+    'What does not have tempered glass?', 'What is the window?', 'What is the window
+      which does not have tempered glass?']
+  Sentence: I will place the bed which I brought from an online store next to the
+    window which does not have tempered glass
+- Questions: ['Who is The audience going to throw all these tomatoes at?', 'Who bored
+      them to death on Christmas eve?', 'Who is the artist?', 'Who is the artist who
+      bored them to death on Christmas eve?']
+  Sentence: The audience is going to throw all these tomatoes at the artist who bored
+    them to death on Christmas eve
+- Questions: ['Who wish to pursue a career in literature?', 'Who are students?', 'Who
+      are students who wish to pursue a career in literature?']
+  Sentence: According to Janet, this classic novel would a perfect start for students
+    who wish to pursue a career in literature

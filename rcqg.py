@@ -185,17 +185,31 @@ class WHQuestionGenerator():
             answer = PPChunker(doc, NounParent(wpword))
             matrix = doc[loc_relative_clause:answer.start]
             relclause = doc[wpword.i:]
+
+            hasanswer = {
+                'who': True,
+                'whom': True,
+                'whose': True,
+                'which': True,
+                'that': True,
+                'when': False,
+                'how': False,
+                'why': False,
+                'whatsoever': False,
+                'whomsoever': False
+            }
+
             conversions = {
                 'who': ['Who', 'Who', 'Who'],
                 'whom': ['Whom', 'Whom', 'Who'],
                 'whose': ['Who', 'Whose', 'Who'],
                 'which': ['What', 'What', 'What'],
                 'that': ['What', 'What', 'What'],
-                'when': ['When', 'When', 'When'],
-                'how': ['What', 'How', ],
-                'why': ['What', 'Why', ],
-                'whatsoever': ['What', 'What'],
-                'whomsoever': ['Who', 'Who']
+                'when': [False, 'When', False],
+                'how': [False, 'What', False, ],
+                'why': [False, 'What', False, ],
+                'whatsoever': ['What', 'What', False],
+                'whomsoever': ['Who', 'Who', False]
             }
             if wpword.text.lower() in conversions.keys():
                 questionwords = conversions[wpword.text.lower()]
@@ -211,177 +225,183 @@ class WHQuestionGenerator():
                         yield (questionwords[0] + " " + doc[VerbChunk(root[0]):].text + "?")
 
                 # Rule 1
-                pasttenseverb = self.filteratt({
-                    'tag_': 'VBD',
-                    'dep_': 'ROOT'
-                }, matrix)
-                bareverb = self.filteratt({
-                    'tag_': 'VB',
-                    'dep_': 'ROOT'
-                }, matrix)
-                presentcontinuousverb = self.filteratt({
-                    'tag_': 'VBG',
-                    'dep_': 'ROOT'
-                }, matrix)
-                pastparticiple = self.filteratt({
-                    'tag_': 'VBN',
-                    'dep_': 'ROOT'
-                }, matrix)
-                presentsimple = self.filteratt({
-                    'tag_': 'VBP',
-                    'dep_': 'ROOT'
-                }, matrix)
-                presentsimplethird = self.filteratt({
-                    'tag_': 'VBZ',
-                    'dep_': 'ROOT'
-                }, matrix)
-                if len(pasttenseverb) > 0:
-
-                    if (pasttenseverb[0].lemma_ == "be"):
-                        noun = self.filteratt({
-                            'dep_': 'nsubj'
-                        }, pasttenseverb[0].children)[0]
-                        yield ("%s %s %s?" % (questionwords[0], pasttenseverb[0].text, getNounChunk(noun).text))
-                    else:
-                        pasttenseverb = pasttenseverb[0]
-                        end = (answer.start) if doc[answer.start].pos_ == "ADP" else answer.start
-                        converted = [x.text for x in doc[loc_relative_clause:pasttenseverb.i]] + [
-                            pasttenseverb.lemma_] + [
-                                        x.text for x in doc[
-                                                        pasttenseverb.i + 1:end]]
-                        yield ("%s did %s?" % (questionwords[0], " ".join(converted)))
-
-                if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0 or len(bareverb) > 0:
-                    aux = self.filteratt({
-                        'dep_': ['aux', 'auxpass']
-                    }, matrix)[0]
-                    end = (answer.start)
-                    converted = [aux.text] + without(aux.i, aux.i, doc[loc_relative_clause: end])
-                    yield ("%s %s?" % (questionwords[0], " ".join(converted)))
-
-                if len(presentsimple) > 0:
-                    presentsimple = presentsimple[0]
-                    end = (answer.start) if doc[answer.start].pos_ == "ADP" else answer.start - 1
-                    converted = [x.text for x in doc[loc_relative_clause:presentsimple.i]] + [presentsimple.lemma_] + [
-                        x.text for x in doc[
-                                        presentsimple.i + 1:end]]
-                    yield ("%s do %s?" % (questionwords[0], " ".join(converted)))
-
-                if len(presentsimplethird) > 0:
-                    if (presentsimplethird[0].lemma_ == "be"):
-                        noun = self.filteratt({
-                            'dep_': 'nsubj'
-                        }, presentsimplethird[0].children)[0]
-                        yield ("%s %s %s?" % (questionwords[0], presentsimplethird[0].text, getNounChunk(noun).text))
-                    else:
-                        presentsimplethird = presentsimplethird[0]
-                        end = (answer.start) if doc[answer.start].pos_ == "ADP" else answer.start - 1
-                        converted = [x.text for x in doc[loc_relative_clause:presentsimplethird.i]] + [
-                            presentsimplethird.lemma_] + [x.text for x in doc[
-                                                                          presentsimplethird.i + 1:end]]
-                        yield ("%s does %s?" % (questionwords[0], " ".join(converted)))
-
-                # Rule 2
-                # Find Requirements
-                pasttenseverb = self.filteratt({
-                    'tag_': 'VBD',
-                    'dep_': 'relcl'
-                }, relclause)
-                presentcontinuousverb = self.filteratt({
-                    'tag_': 'VBG',
-                    'dep_': 'relcl'
-                }, relclause)
-                pastparticiple = self.filteratt({
-                    'tag_': 'VBN',
-                    'dep_': 'relcl'
-                }, relclause)
-                presentsimple = self.filteratt({
-                    'tag_': 'VBP',
-                    'dep_': 'relcl'
-                }, relclause)
-                presentsimplethird = self.filteratt({
-                    'tag_': 'VBZ',
-                    'dep_': 'relcl'
-                }, relclause)
-
-                if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass":
-                    # TODO - Mukul says its Hack , Co-authors disagree , Module overlap
-
-                    if len(root) > 0:
-                        yield ("%s %s?" % (questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:VerbChunk(root[0])]])))
-                    else:
-                        yield ("%s %s?" % (questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:]])))
-
-                else:
-                    #   # # Rules
+                if questionwords[0]:
+                    pasttenseverb = self.filteratt({
+                        'tag_': 'VBD',
+                        'dep_': 'ROOT'
+                    }, matrix)
+                    bareverb = self.filteratt({
+                        'tag_': 'VB',
+                        'dep_': 'ROOT'
+                    }, matrix)
+                    presentcontinuousverb = self.filteratt({
+                        'tag_': 'VBG',
+                        'dep_': 'ROOT'
+                    }, matrix)
+                    pastparticiple = self.filteratt({
+                        'tag_': 'VBN',
+                        'dep_': 'ROOT'
+                    }, matrix)
+                    presentsimple = self.filteratt({
+                        'tag_': 'VBP',
+                        'dep_': 'ROOT'
+                    }, matrix)
+                    presentsimplethird = self.filteratt({
+                        'tag_': 'VBZ',
+                        'dep_': 'ROOT'
+                    }, matrix)
                     if len(pasttenseverb) > 0:
-                        pasttenseverb = pasttenseverb[0]
-                        converted = [x.text for x in doc[wpword.i + 1:pasttenseverb.i]] + [pasttenseverb.lemma_] + [
-                            x.text
-                            for x in
-                            doc[
-                            pasttenseverb.i + 1:]]
-                        yield ("%s did %s?" % (questionwords[1], " ".join(converted)))
 
-                    if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0:
+                        if (pasttenseverb[0].lemma_ == "be"):
+                            noun = self.filteratt({
+                                'dep_': 'nsubj'
+                            }, pasttenseverb[0].children)[0]
+                            yield ("%s %s %s?" % (questionwords[0], pasttenseverb[0].text, getNounChunk(noun).text))
+                        else:
+                            pasttenseverb = pasttenseverb[0]
+                            end = (answer.start) if doc[answer.start].pos_ == "ADP" else answer.start
+                            converted = [x.text for x in doc[loc_relative_clause:pasttenseverb.i]] + [
+                                pasttenseverb.lemma_] + [
+                                            x.text for x in doc[
+                                                            pasttenseverb.i + 1:end]]
+                            yield ("%s did %s?" % (questionwords[0], " ".join(converted)))
+
+                    if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0 or len(bareverb) > 0:
                         aux = self.filteratt({
                             'dep_': ['aux', 'auxpass']
-                        }, relclause)[0]
-                        converted = [aux.text] + without(aux.i, aux.i, doc[wpword.i:])
-                        print("hi", without(aux.i, aux.i, doc[loc_relative_clause: end] ))                   
-                        
-                        yield ("%s %s?" % (questionwords[1], " ".join(converted)))
+                        }, matrix)[0]
+                        end = (answer.start)
+                        converted = [aux.text] + without(aux.i, aux.i, doc[loc_relative_clause: end])
+                        yield ("%s %s?" % (questionwords[0], " ".join(converted)))
 
                     if len(presentsimple) > 0:
                         presentsimple = presentsimple[0]
-                        converted = [x.text for x in doc[wpword.i + 1:presentsimple.i]] + [presentsimple.lemma_] + [
-                            x.text
-                            for x in doc[
-                                     presentsimple.i + 1:]]
-                        yield ("%s do %s?" % (questionwords[1], " ".join(converted)))
+                        end = (answer.start) if doc[answer.start].pos_ == "ADP" else answer.start - 1
+                        converted = [x.text for x in doc[loc_relative_clause:presentsimple.i]] + [
+                            presentsimple.lemma_] + [
+                                        x.text for x in doc[
+                                                        presentsimple.i + 1:end]]
+                        yield ("%s do %s?" % (questionwords[0], " ".join(converted)))
+
                     if len(presentsimplethird) > 0:
-                        presentsimplethird = presentsimplethird[0]
-                        converted = [x.text for x in doc[wpword.i + 1:presentsimplethird.i]] + [
-                            presentsimplethird.lemma_] + [x.text for x in doc[
-                                                                          presentsimplethird.i + 1:]]
-                        yield ("%s does %s?" % (questionwords[1], " ".join(converted)))
-
-                # Rule 3
-                Head_Noun_Chunk = NounParent(wpword)
-                noun_chunk = PPChunker(doc, Head_Noun_Chunk).text
-                
-                # Requirements
-                if not noun_chunk:
-                    print("Subject modified by relative clause not found.")
-                else:
-
-                    if (Head_Noun_Chunk.tag_ == "NNS"):
-                        if len(pasttenseverb) > 0:
-                            yield ("%s were %s?" % (questionwords[2], noun_chunk))
+                        if (presentsimplethird[0].lemma_ == "be"):
+                            noun = self.filteratt({
+                                'dep_': 'nsubj'
+                            }, presentsimplethird[0].children)[0]
+                            yield (
+                            "%s %s %s?" % (questionwords[0], presentsimplethird[0].text, getNounChunk(noun).text))
                         else:
-                            yield ("%s are %s?" % (questionwords[2], noun_chunk))
-                    elif(not Head_Noun_Chunk.tag_== "NNS"):
-                        if len(pasttenseverb) > 0:
-                            yield ("%s was %s?" % (questionwords[2], noun_chunk))
-                        else:
-                            yield ("%s is %s?" % (questionwords[2], noun_chunk))
+                            presentsimplethird = presentsimplethird[0]
+                            end = (answer.start) if doc[answer.start].pos_ == "ADP" else answer.start - 1
+                            converted = [x.text for x in doc[loc_relative_clause:presentsimplethird.i]] + [
+                                presentsimplethird.lemma_] + [x.text for x in doc[
+                                                                              presentsimplethird.i + 1:end]]
+                            yield ("%s does %s?" % (questionwords[0], " ".join(converted)))
 
-                # Rule 4
-                if not noun_chunk:
-                    print("Subject modified by relative clause not found.")
-                else:
+                if questionwords[1]:
+                    # Rule 2
+                    # Find Requirements
+                    pasttenseverb = self.filteratt({
+                        'tag_': 'VBD',
+                        'dep_': 'relcl'
+                    }, relclause)
+                    presentcontinuousverb = self.filteratt({
+                        'tag_': 'VBG',
+                        'dep_': 'relcl'
+                    }, relclause)
+                    pastparticiple = self.filteratt({
+                        'tag_': 'VBN',
+                        'dep_': 'relcl'
+                    }, relclause)
+                    presentsimple = self.filteratt({
+                        'tag_': 'VBP',
+                        'dep_': 'relcl'
+                    }, relclause)
+                    presentsimplethird = self.filteratt({
+                        'tag_': 'VBZ',
+                        'dep_': 'relcl'
+                    }, relclause)
 
-                    if (Head_Noun_Chunk.tag_ == "NNS"):
-                        if len(pasttenseverb) > 0:                            
-                            yield ("%s were %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:]))
+                    if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass":
+                        # TODO - Mukul says its Hack , Co-authors disagree , Module overlap
+
+                        if len(root) > 0:
+                            yield ("%s %s?" % (
+                            questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:VerbChunk(root[0])]])))
                         else:
-                            yield ("%s are %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:]))
+                            yield ("%s %s?" % (questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:]])))
+
                     else:
+                        #   # # Rules
                         if len(pasttenseverb) > 0:
-                            yield ("%s was %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:]))
+                            pasttenseverb = pasttenseverb[0]
+                            converted = [x.text for x in doc[wpword.i + 1:pasttenseverb.i]] + [pasttenseverb.lemma_] + [
+                                x.text
+                                for x in
+                                doc[
+                                pasttenseverb.i + 1:]]
+                            yield ("%s did %s?" % (questionwords[1], " ".join(converted)))
+
+                        if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0:
+                            aux = self.filteratt({
+                                'dep_': ['aux', 'auxpass']
+                            }, relclause)[0]
+                            converted = [aux.text] + without(aux.i, aux.i, doc[wpword.i:])
+                            print("hi", without(aux.i, aux.i, doc[loc_relative_clause: end]))
+
+                            yield ("%s %s?" % (questionwords[1], " ".join(converted)))
+
+                        if len(presentsimple) > 0:
+                            presentsimple = presentsimple[0]
+                            converted = [x.text for x in doc[wpword.i + 1:presentsimple.i]] + [presentsimple.lemma_] + [
+                                x.text
+                                for x in doc[
+                                         presentsimple.i + 1:]]
+                            yield ("%s do %s?" % (questionwords[1], " ".join(converted)))
+                        if len(presentsimplethird) > 0:
+                            presentsimplethird = presentsimplethird[0]
+                            converted = [x.text for x in doc[wpword.i + 1:presentsimplethird.i]] + [
+                                presentsimplethird.lemma_] + [x.text for x in doc[
+                                                                              presentsimplethird.i + 1:]]
+                            yield ("%s does %s?" % (questionwords[1], " ".join(converted)))
+
+                if questionwords[2]:
+                    # Rule 3
+                    Head_Noun_Chunk = NounParent(wpword)
+                    noun_chunk = PPChunker(doc, Head_Noun_Chunk).text
+
+                    # Requirements
+                    if not noun_chunk:
+                        print("Subject modified by relative clause not found.")
+                    else:
+
+                        if (Head_Noun_Chunk.tag_ == "NNS"):
+                            if len(pasttenseverb) > 0:
+                                yield ("%s were %s?" % (questionwords[2], noun_chunk))
+                            else:
+                                yield ("%s are %s?" % (questionwords[2], noun_chunk))
+                        elif (not Head_Noun_Chunk.tag_ == "NNS"):
+                            if len(pasttenseverb) > 0:
+                                yield ("%s was %s?" % (questionwords[2], noun_chunk))
+                            else:
+                                yield ("%s is %s?" % (questionwords[2], noun_chunk))
+
+                    # Rule 4
+                    if not noun_chunk:
+                        print("Subject modified by relative clause not found.")
+                    else:
+
+                        if (Head_Noun_Chunk.tag_ == "NNS"):
+                            if len(pasttenseverb) > 0:
+                                yield ("%s were %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:]))
+                            else:
+                                yield ("%s are %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:]))
                         else:
-                            yield ("%s is %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:]))
-                
+                            if len(pasttenseverb) > 0:
+                                yield ("%s was %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:]))
+                            else:
+                                yield ("%s is %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:]))
+
 
 
             loc_relative_clause = wpword.i

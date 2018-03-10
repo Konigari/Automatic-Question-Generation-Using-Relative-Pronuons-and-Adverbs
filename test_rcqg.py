@@ -31,6 +31,10 @@ def generate_test(line):
     testfile = open('test.txt', 'w')
     testfile.write(yaml.dump(tests))
 
+def update_all_tests():
+    tests = yaml.load(loadTests())
+    for i in tests:
+        generate_test(i['Sentence'])
 
 def test_rcqg():
     tests = yaml.load(loadTests())

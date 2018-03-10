@@ -6,11 +6,19 @@ from spacy import displacy
 def filetotext():
     return open("temp.txt", "r").read()
 
-
 class WHQuestionGenerator():
+    last = False
     def __init__(self, nlp):
         self.nlp = nlp
 
+    def lastdec(fun):
+        def newfun(self, x):
+            self.last = x
+            return fun(self, x)
+
+        return newfun
+
+    @lastdec
     def show(self, u_line):
         doc = self.nlp(u_line)
         print("=========================Sentence -", u_line)
@@ -26,6 +34,7 @@ class WHQuestionGenerator():
             print(c.text)
         print("=========================SENTENCE DONE")
 
+    @lastdec
     def display(self, u_line):
         doc = self.nlp(u_line)
         displacy.serve(doc, style='dep', port=8080)
@@ -391,8 +400,22 @@ class WHQuestionGenerator():
 
             loc_relative_clause = wpword.i
 
+    @lastdec
     def genqlist(self, sentence):
         sentence = sentence.strip('. ')
         doc = self.nlp(sentence)
         sentences = self.conjHandling(doc)
         return sum([list(self.genq(x.text)) for x in sentences], [])
+
+    def genqlistlast(self):
+        print(self.last)
+        if self.last:
+            return self.genqlist(self.last)
+
+    def showlast(self):
+        if self.last:
+            return self.show(self.last)
+
+    def displaylast(self):
+        if self.last:
+            return self.display(self.last)

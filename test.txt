@@ -111,8 +111,8 @@
   Sentence: You should be seriously considering the option to marry the girl who your
     family has searched for you
 - Questions: ['Who did That crazy old guy shut the door on?', 'Who works in a bank
-      which is state operated?', 'Who was his neighbour?', 'Who was his neighbour
-      who works in a bank which is state operated?', 'What is state operated?', 'What
+      which is state operated?', 'Who is his neighbour?', 'Who is his neighbour who
+      works in a bank which is state operated?', 'What is state operated?', 'What
       is a bank?', 'What is a bank which is state operated?']
   Sentence: That crazy old guy shut the door on his neighbour who works in a bank
     which is state operated
@@ -125,15 +125,16 @@
       music?']
   Sentence: I am certain he had been goofing around with women who have had bad taste
     in music
-- Questions: ['What will I place?', 'What is the bed?', 'What is the bed which I brought
-      from an online store next to the window which does not have tempered glass?',
-    'What does not have tempered glass?', 'What is the window?', 'What is the window
-      which does not have tempered glass?']
+- Questions: ['What will I place?', 'What did I bring from an online store next to
+      the window which does not have tempered glass?', 'What was the bed?', 'What
+      was the bed which I brought from an online store next to the window which does
+      not have tempered glass?', 'What does not have tempered glass?', 'What is the
+      window?', 'What is the window which does not have tempered glass?']
   Sentence: I will place the bed which I brought from an online store next to the
     window which does not have tempered glass
 - Questions: ['Who is The audience going to throw all these tomatoes at?', 'Who bored
-      them to death on Christmas eve?', 'Who is the artist?', 'Who is the artist who
-      bored them to death on Christmas eve?']
+      them to death on Christmas eve?', 'Who was the artist?', 'Who was the artist
+      who bored them to death on Christmas eve?']
   Sentence: The audience is going to throw all these tomatoes at the artist who bored
     them to death on Christmas eve
 - Questions: ['Who wish to pursue a career in literature?', 'Who are students?', 'Who

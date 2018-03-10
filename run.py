@@ -26,3 +26,8 @@ def testmultiple(sentences):
         else:
             failedfile.write(i)
     return
+
+
+sl = qg.showlast
+dl = qg.displaylast
+gl = qg.genqlistlast

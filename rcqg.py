@@ -71,13 +71,17 @@ class WHQuestionGenerator():
             result += self.expand(d, i + 1)
         return result
 
-    def filteratt(self, att, doc):
+    def _filteratt(self, att, doc):
         att = self.expand(att)
         if len(att) == 1:
             att = att[0]
         if type(att) == list:
-            return sum([self.filteratt(i, doc) for i in att], [])
+            return sum([self._filteratt(i, doc) for i in att], [])
         return list(filter(lambda tup: self.filt(att)(tup), doc))
+
+    def filteratt(self, att, doc):
+        return sorted(self._filteratt(att, doc),key =lambda x: x.i)
+
 
     def conjHandling(self, doc):
         sentential_conjunctions = []
@@ -123,8 +127,9 @@ class WHQuestionGenerator():
 
             #   return root.head.i
         def NounCousin(root):
+            Head_Noun_Chunk = root
             Root_children = self.filteratt({
-            'pos_':['NOUN','PROPN']
+            'pos_':['NOUN','PROPN','PRON']
             },list(root.children))
             for child in Root_children:
                 if child.dep_ != 'nsubj':
@@ -275,13 +280,19 @@ class WHQuestionGenerator():
                         yield ("%s %s?" % (questionwords[0], " ".join(converted)))
 
                     if len(presentsimple) > 0:
-                        presentsimple = presentsimple[0]
-                        end = (answer.start) if doc[answer.start].pos_ == "ADP" else answer.start - 1
-                        converted = [x.text for x in doc[loc_relative_clause:presentsimple.i]] + [
-                            presentsimple.lemma_] + [
-                                        x.text for x in doc[
-                                                        presentsimple.i + 1:end]]
-                        yield ("%s do %s?" % (questionwords[0], " ".join(converted)))
+
+                        if (presentsimple[0].lemma_ == "be"):
+                            noun = self.filteratt({
+                                'dep_': 'nsubj'
+                            }, presentsimple[0].children)[0]
+                            yield ("%s %s %s %s?" % (questionwords[0], presentsimple[0].text, getNounChunk(noun).text,doc[presentsimple+1:answer]))
+                        else:
+                            presentsimple = presentsimple[0]
+                            end = (answer.start) if doc[answer.start].pos_ == "ADP" else answer.start - 1
+                            converted = [x.text for x in doc[loc_relative_clause:presentsimple.i]] + [presentsimple.lemma_] + [
+                                x.text for x in doc[
+                                                presentsimple.i + 1:end]]
+                            yield ("%s do %s?" % (questionwords[0], " ".join(converted)))
 
                     if len(presentsimplethird) > 0:
                         if (presentsimplethird[0].lemma_ == "be"):

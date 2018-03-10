@@ -1,6 +1,7 @@
 import inspect
 import copy
 from spacy import displacy
+import ipdb
 
 
 def filetotext():
@@ -113,7 +114,15 @@ class WHQuestionGenerator():
 
     def genq(self, sentence):
         def without(start, end, doc):
-            return [x.text for x in doc[:start]] + [x.text for x in doc[end + 1:]]
+            startind = start
+            endind = end
+            for ind, val in enumerate(doc):
+                if val.i == start:
+                    startind = ind
+                if val.i == end:
+                    endind = ind
+
+            return [x.text for x in doc[:startind]] + [x.text for x in doc[endind + 1:]]
 
         def VerbChunk(root):
             aux_verb = self.filteratt({
@@ -357,9 +366,7 @@ class WHQuestionGenerator():
                             aux = self.filteratt({
                                 'dep_': ['aux', 'auxpass']
                             }, relclause)[0]
-                            converted = [aux.text] + without(aux.i, aux.i, doc[wpword.i:])
-                            print("hi", without(aux.i, aux.i, doc[loc_relative_clause: end]))
-
+                            converted = [aux.text] + without(aux.i, aux.i, doc[wpword.i + 1:])
                             yield ("%s %s?" % (questionwords[1], " ".join(converted)))
 
                         if len(presentsimple) > 0:

@@ -153,7 +153,6 @@ class WHQuestionGenerator():
                 
                 if Head_Noun_Chunk.dep_ == "ROOT":
                     return NounCousin(Head_Noun_Chunk)
-                    
                 elif Head_Noun_Chunk == Head_Noun_Chunk.head:
                     return original
                 Head_Noun_Chunk = Head_Noun_Chunk.head
@@ -173,9 +172,10 @@ class WHQuestionGenerator():
 
         def PPChunker(doc, Head_Noun_Chunk):
             end = Head_Noun_Chunk
-
             while True:
-                if Head_Noun_Chunk.head.text == "of" and Head_Noun_Chunk.head.head.pos_ in ["NOUN"]:
+                if Head_Noun_Chunk.dep_ == "ROOT":
+                    break
+                elif Head_Noun_Chunk.head.text == "of" and Head_Noun_Chunk.head.head.pos_ in ["NOUN"]:
                     Head_Noun_Chunk = Head_Noun_Chunk.head.head
                 else:
                     break
@@ -196,7 +196,19 @@ class WHQuestionGenerator():
             Rule 2: Using the embedded clause
             Rule 3: Relative clause modifying the NP Constituent
             '''
-            answer = PPChunker(doc, NounParent(wpword))
+
+            def subs_answer():
+                index = wpword.i
+                answer = getNounChunk(doc[index-1])
+                print("a",answer)
+                return answer
+
+            if wpword.head.dep_ == "ccomp":
+                answer = subs_answer()
+            else:
+                answer = PPChunker(doc, NounParent(wpword))
+            
+            print("A",answer)
             matrix = doc[loc_relative_clause:answer.start]
             relclause = doc[wpword.i:]
 
@@ -270,10 +282,11 @@ class WHQuestionGenerator():
                             noun = self.filteratt({
                                 'dep_': 'nsubj'
                             }, pasttenseverb[0].children)[0]
-                            yield ("%s %s %s?" % (questionwords[0], pasttenseverb[0].text, getNounChunk(noun).text))
+                            yield ("%s %s %s?" % (questionwords[0], pasttenseverb[0].text, " ".join(without(pasttenseverb[0].i ,pasttenseverb[0].i, doc[loc_relative_clause:answer.start]))))
+                        
                         else:
                             pasttenseverb = pasttenseverb[0]
-                            end = (answer.start) if doc[answer.start].pos_ == "ADP" else answer.start
+                            end = (answer.start) 
                             converted = [x.text for x in doc[loc_relative_clause:pasttenseverb.i]] + [
                                 pasttenseverb.lemma_] + [
                                             x.text for x in doc[
@@ -297,7 +310,7 @@ class WHQuestionGenerator():
                             yield ("%s %s %s %s?" % (questionwords[0], presentsimple[0].text, getNounChunk(noun).text,doc[presentsimple[0].i+1:answer.start]))
                         else:
                             presentsimple = presentsimple[0]
-                            end = (answer.start) if doc[answer.start].pos_ == "ADP" else answer.start - 1
+                            end = (answer.start) 
                             converted = [x.text for x in doc[loc_relative_clause:presentsimple.i]] + [presentsimple.lemma_] + [
                                 x.text for x in doc[
                                                 presentsimple.i + 1:end]]
@@ -312,7 +325,7 @@ class WHQuestionGenerator():
                             "%s %s %s?" % (questionwords[0], presentsimplethird[0].text, getNounChunk(noun).text))
                         else:
                             presentsimplethird = presentsimplethird[0]
-                            end = (answer.start) if doc[answer.start].pos_ == "ADP" else answer.start - 1
+                            end = (answer.start) 
                             converted = [x.text for x in doc[loc_relative_clause:presentsimplethird.i]] + [
                                 presentsimplethird.lemma_] + [x.text for x in doc[
                                                                               presentsimplethird.i + 1:end]]
@@ -432,7 +445,6 @@ class WHQuestionGenerator():
         return sum([list(self.genq(x.text)) for x in sentences], [])
 
     def genqlistlast(self):
-        print(self.last)
         if self.last:
             return self.genqlist(self.last)
 

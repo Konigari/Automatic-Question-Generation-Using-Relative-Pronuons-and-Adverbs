@@ -231,6 +231,7 @@ class WHQuestionGenerator():
                 'whose': ['Who', 'Whose', 'Who'],
                 'which': ['What', 'What', 'What'],
                 'that': ['What', 'What', 'What'],
+                'where': [False, 'Where', False],
                 'when': [False, 'When', False],
                 'how': [False, 'What', False, ],
                 'why': [False, 'What', False, ],

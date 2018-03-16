@@ -453,6 +453,7 @@ class WHQuestionGenerator():
     @lastdec
     def genqlist(self, sentence):
         sentence = sentence.strip('. \n')
+        sentence = "".join(sentence.split(','))
         doc = self.nlp(sentence)
         sentences = self.conjHandling(doc)
         return sum([list(self.genq(x.text)) for x in sentences], [])

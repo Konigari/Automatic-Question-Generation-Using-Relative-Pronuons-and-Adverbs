@@ -1,7 +1,10 @@
+import signal
+import sys
+
+import language_check
 import nltk
 import yaml
-import language_check
-import signal, sys
+from tqdm import tqdm
 
 tool = language_check.LanguageTool('en-US')
 
@@ -22,13 +25,14 @@ brown_tags = ['WDT', 'WP$', 'WPO', 'WPS', 'WQL', 'WRB']
 
 def brown(new_tags):
     sents = nltk.corpus.brown.tagged_sents()
-    filteredsents = (filter(lambda sent: next(filter(lambda x: (x[1] in new_tags), sent), False), sents))
-    filename = "brown_filtered.txt"
-    print(len(list(filteredsents)))
-    with open(filename, 'w') as file:
-        for i in filteredsents:
-            file.write(" ".join(nltk.untag(i)) + "\n")
-    file.close()
+    print(len(sents))
+    # filteredsents = (filter(lambda sent: next(filter(lambda x: (x[1] in new_tags), sent), False), sents))
+    # filename = "brown_filtered.txt"
+    # print(len(list(filteredsents)))
+    # with open(filename, 'w') as file:
+    #     for i in filteredsents:
+    #         file.write(" ".join(nltk.untag(i)) + "\n")
+    # file.close()
 
 
 def genbrownquestions():
@@ -42,7 +46,7 @@ def genbrownquestions():
     structuredfile = open('brown_manual_eval.txt', 'w')
     dump = []
 
-    def done(signal, frame):
+    def done(signal=None, frame=None):
         print("Ended")
         structuredfile.write(yaml.dump(dump))
         writefile.close()
@@ -54,9 +58,8 @@ def genbrownquestions():
     with open(filename, 'r') as file:
         print("started")
         count = 0
-        for filteredsent in file:
+        for filteredsent in tqdm(file):
             count += 1
-            print("Current count: ", count)
             try:
                 questions = qg.genqlist(filteredsent)
                 for question in questions:
@@ -67,7 +70,9 @@ def genbrownquestions():
                 })
             except:
                 failedfile.write(filteredsent)
+        print("Count: ", count)
         done()
+
 
 def grammarcheck():
     successfile = open('successgrammarbrown', 'w')

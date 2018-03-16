@@ -115,12 +115,18 @@ class WHQuestionGenerator():
     def genq(self, sentence):
         def without(start, end, doc):
             startind = start
-            endind = end
-            for ind, val in enumerate(doc):
-                if val.i == start:
-                    startind = ind
-                if val.i == end:
-                    endind = ind
+            if not end:
+                endind = doc[-1].i
+                for ind, val in enumerate(doc):
+                    if val.i == start:
+                        startind = ind
+            else:
+                endind = end
+                for ind, val in enumerate(doc):
+                    if val.i == start:
+                        startind = ind
+                    if val.i == end:
+                        endind = ind
 
             return [x.text for x in doc[:startind]] + [x.text for x in doc[endind + 1:]]
 
@@ -200,7 +206,6 @@ class WHQuestionGenerator():
             def subs_answer():
                 index = wpword.i
                 answer = getNounChunk(doc[index-1])
-                print("a",answer)
                 return answer
 
             if wpword.head.dep_ == "ccomp":
@@ -208,7 +213,6 @@ class WHQuestionGenerator():
             else:
                 answer = PPChunker(doc, NounParent(wpword))
             
-            print("A",answer)
             matrix = doc[loc_relative_clause:answer.start]
             relclause = doc[wpword.i:]
 
@@ -249,7 +253,10 @@ class WHQuestionGenerator():
                 # Rule 0
                 if len(root) > 0:
                     if self.filteratt({'dep_': ['nsubj', 'nsubjpass']}, list(root[0].children))[0].text in answer.text:
+                        # print("hi",questionwords[0] + " " + doc[VerbChunk(root[0]):].text + "?")
                         yield (questionwords[0] + " " + doc[VerbChunk(root[0]):].text + "?")
+
+                        # doc = without(VerbChunk(root[0]), False, doc)
 
                 # Rule 1
                 if questionwords[0]:
@@ -278,7 +285,6 @@ class WHQuestionGenerator():
                         'dep_': 'ROOT'
                     }, matrix)
                     if len(pasttenseverb) > 0:
-
                         if (pasttenseverb[0].lemma_ == "be"):
                             noun = self.filteratt({
                                 'dep_': 'nsubj'
@@ -440,7 +446,7 @@ class WHQuestionGenerator():
 
     @lastdec
     def genqlist(self, sentence):
-        sentence = sentence.strip('. ')
+        sentence = sentence.strip('. \n')
         doc = self.nlp(sentence)
         sentences = self.conjHandling(doc)
         return sum([list(self.genq(x.text)) for x in sentences], [])

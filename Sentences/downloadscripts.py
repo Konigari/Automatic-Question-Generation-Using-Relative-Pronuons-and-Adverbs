@@ -1,6 +1,7 @@
 import nltk
-
+import yaml
 import language_check
+import signal, sys
 
 tool = language_check.LanguageTool('en-US')
 
@@ -36,8 +37,20 @@ def genbrownquestions():
     nlp = spacy.load('en')
     filename = "brown_filtered.txt"
     qg = rcqg.WHQuestionGenerator(nlp)
-    failedfile = open('failedbrown', 'w')
-    writefile = open('brownquestions', 'w')
+    failedfile = open('brown_unabletoprocess.txt', 'w')
+    writefile = open('brown_questions.txt', 'w')
+    structuredfile = open('brown_manual_eval.txt', 'w')
+    dump = []
+
+    def done(signal, frame):
+        print("Ended")
+        structuredfile.write(yaml.dump(dump))
+        writefile.close()
+        failedfile.close()
+        file.close()
+        sys.exit(0)
+
+    signal.signal(signal.SIGINT, done)
     with open(filename, 'r') as file:
         print("started")
         count = 0
@@ -45,14 +58,16 @@ def genbrownquestions():
             count += 1
             print("Current count: ", count)
             try:
-                for question in qg.genqlist(filteredsent):
+                questions = qg.genqlist(filteredsent)
+                for question in questions:
                     writefile.write(question + '\n')
+                dump.append({
+                    'sentence': filteredsent,
+                    'questions': questions
+                })
             except:
                 failedfile.write(filteredsent)
-        writefile.close()
-        failedfile.close()
-        file.close()
-
+        done()
 
 def grammarcheck():
     successfile = open('successgrammarbrown', 'w')

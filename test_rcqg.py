@@ -1,6 +1,7 @@
-import rcqg
 import spacy
 import yaml
+
+import rcqg
 
 nlp = spacy.load('en')
 qg = rcqg.WHQuestionGenerator(nlp)
@@ -44,4 +45,5 @@ def test_rcqg():
         for j in qg.genqlist(i['Sentence']):
             counter += 1
             assert (j in i['Questions']), "Wrong Question" + i['Sentence']
-        assert (count == counter), "Wrong number of questions" + str(qg.genqlist(i['Sentence']) + i['Sentence'])
+        assert (count == counter), "Wrong number of questions" + str(qg.genqlist(i['Sentence'])) + "From Sentence: " + \
+                                   i['Sentence']

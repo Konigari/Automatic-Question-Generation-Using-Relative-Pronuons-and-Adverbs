@@ -1,20 +1,18 @@
-import copy
 import inspect
-
+import copy
 from spacy import displacy
+import ipdb
 
 
 def filetotext():
     return open("temp.txt", "r").read()
 
-
 class WHQuestionGenerator():
     last = False
-
     def __init__(self, nlp):
         self.nlp = nlp
 
-    def lastdec(fun=None):
+    def lastdec(fun):
         def newfun(self, x):
             self.last = x
             return fun(self, x)
@@ -42,8 +40,7 @@ class WHQuestionGenerator():
         doc = self.nlp(u_line)
         displacy.serve(doc, style='dep', port=8080)
 
-    @staticmethod
-    def props(obj):
+    def props(self, obj):
         pr = {}
         for name in dir(obj):
             value = getattr(obj, name)
@@ -51,8 +48,7 @@ class WHQuestionGenerator():
                 pr[name] = value
         return pr
 
-    @staticmethod
-    def serialize(obj):
+    def serialize(self, obj):
         return {
             'tag_': obj.tag_,
             'dep_': obj.dep_,
@@ -85,7 +81,7 @@ class WHQuestionGenerator():
         return list(filter(lambda tup: self.filt(att)(tup), doc))
 
     def filteratt(self, att, doc):
-        return sorted(self._filteratt(att, doc), key=lambda x: x.i)
+        return sorted(self._filteratt(att,doc),key =lambda x: x.i)
 
     def conjHandling(self, doc):
         sentential_conjunctions = []
@@ -100,8 +96,9 @@ class WHQuestionGenerator():
         for conjunction in reversed(sorted_conjunctions):
             # temp_doc = doc[conjunction.i:]
             noun_chunks = [c for c in doc[conjunction.i:].noun_chunks]
-            if noun_chunks[0].root.dep_ == "nsubj":
-                sentential_conjunctions.append(conjunction)
+            if len(noun_chunks)>0:
+                if noun_chunks[0].root.dep_ == "nsubj":
+                    sentential_conjunctions.append(conjunction)
             end = conjunction.i
         sentential_conjunctions = reversed(sentential_conjunctions)
         indices = [x.i for x in sentential_conjunctions]
@@ -113,72 +110,66 @@ class WHQuestionGenerator():
                 if i.i in indices:
                     return [doc[start:i.i]] + splitsentence(doc[i.i + 1:end + 1])
             return [sentence]
-
         return splitsentence(doc)
 
     def genq(self, sentence):
         def without(start, end, doc):
             startind = start
-            if not end:
-                endind = doc[-1].i
-                for ind, val in enumerate(doc):
-                    if val.i == start:
-                        startind = ind
-            else:
-                endind = end
-                for ind, val in enumerate(doc):
-                    if val.i == start:
-                        startind = ind
-                    if val.i == end:
-                        endind = ind
+            endind = end
+            for ind, val in enumerate(doc):
+                if val.i == start:
+                    startind = ind
+                if val.i == end:
+                    endind = ind
 
             return [x.text for x in doc[:startind]] + [x.text for x in doc[endind + 1:]]
 
         def VerbChunk(root):
             aux_verb = self.filteratt({
-                'dep_': ['aux', 'auxpass']
-            }, list(root.children))
+            'dep_' : ['aux','auxpass']
+            },list(root.children))
             if len(aux_verb) > 0:
                 return aux_verb[0].i
             else:
                 return root.i
-                # if root.head == aux or root.head == auxpass :
+            # if root.head == aux or root.head == auxpass :
 
-                #   return root.head.i
-
+            #   return root.head.i
         def NounCousin(root):
             Head_Noun_Chunk = root
             Root_children = self.filteratt({
-                'pos_': ['NOUN', 'PROPN', 'PRON']
-            }, list(root.children))
+            'pos_':['NOUN','PROPN','PRON']
+            },list(root.children))
             for child in Root_children:
                 if child.dep_ != 'nsubj':
                     Head_Noun_Chunk = child
             return Head_Noun_Chunk
+                
 
         def NounParent(index):
             original = index
             Head_Noun_Chunk = index.head
-            while (Head_Noun_Chunk.pos_ not in ['NOUN', 'PROPN']):
-
+            while (Head_Noun_Chunk.pos_ not in ['NOUN','PROPN']):
+                
                 if Head_Noun_Chunk.dep_ == "ROOT":
                     return NounCousin(Head_Noun_Chunk)
                 elif Head_Noun_Chunk == Head_Noun_Chunk.head:
                     return original
                 Head_Noun_Chunk = Head_Noun_Chunk.head
-            # print(Head_Noun_Chunk)
+            #print(Head_Noun_Chunk)
             return Head_Noun_Chunk
 
         def getNounChunk(noun):
             found = False
             for noun_chunk in doc.noun_chunks:
-                if noun_chunk.start <= noun.i <= noun_chunk.end:
+                if noun_chunk.start <= noun.i and noun_chunk.end >= noun.i:
                     found = True
                     result = noun_chunk
             if found:
                 return result
+            
             else:
-                return False
+                return doc[noun.i:noun.i+1]
 
         def PPChunker(doc, Head_Noun_Chunk):
             end = Head_Noun_Chunk
@@ -209,15 +200,17 @@ class WHQuestionGenerator():
 
             def subs_answer():
                 index = wpword.i
-                answer = getNounChunk(doc[index - 1])
+                
+                while(doc[index-1].pos_ not in ["NOUN","DET","PROPN","PRP"]):
+                    index = index - 1                    
+                answer = getNounChunk(doc[index-1])
                 return answer
 
             if wpword.head.dep_ == "ccomp":
                 answer = subs_answer()
             else:
                 answer = PPChunker(doc, NounParent(wpword))
-
-            matrix = doc[loc_relative_clause:answer.start]
+            matrix = doc[loc_relative_clause:wpword.i]
             relclause = doc[wpword.i:]
 
             hasanswer = {
@@ -238,17 +231,19 @@ class WHQuestionGenerator():
                 'whom': ['Whom', 'Whom', 'Who'],
                 'whose': ['Who', 'Whose', 'Who'],
                 'which': ['What', 'What', 'What'],
+                'what': ['What', 'What', False],
+                
                 'that': ['What', 'What', 'What'],
                 'where': [False, 'Where', False],
                 'when': [False, 'When', False],
                 'how': [False, 'What', False, ],
-                'why': [False, 'What', False, ],
+                'why': [False, 'Why', False, ],
                 'whatsoever': ['What', 'What', False],
                 'whomsoever': ['Who', 'Who', False]
             }
             if wpword.text.lower() in conversions.keys():
                 questionwords = conversions[wpword.text.lower()]
-                # Find Requirements
+                # Find Requirements - Special case where root comes after relative clause
                 root = self.filteratt({
                     'dep_': ['ROOT'],
                 }, doc[wpword.i:])
@@ -257,13 +252,11 @@ class WHQuestionGenerator():
                 # Rule 0
                 if len(root) > 0:
                     if self.filteratt({'dep_': ['nsubj', 'nsubjpass']}, list(root[0].children))[0].text in answer.text:
-                        # print("hi",questionwords[0] + " " + doc[VerbChunk(root[0]):].text + "?")
                         yield (questionwords[0] + " " + doc[VerbChunk(root[0]):].text + "?")
-
-                        # doc = without(VerbChunk(root[0]), False, doc)
 
                 # Rule 1
                 if questionwords[0]:
+                
                     pasttenseverb = self.filteratt({
                         'tag_': 'VBD',
                         'dep_': 'ROOT'
@@ -289,17 +282,16 @@ class WHQuestionGenerator():
                         'dep_': 'ROOT'
                     }, matrix)
                     if len(pasttenseverb) > 0:
+
                         if (pasttenseverb[0].lemma_ == "be"):
                             noun = self.filteratt({
                                 'dep_': 'nsubj'
                             }, pasttenseverb[0].children)[0]
-                            yield ("%s %s %s?" % (questionwords[0], pasttenseverb[0].text, " ".join(
-                                without(pasttenseverb[0].i, pasttenseverb[0].i,
-                                        doc[loc_relative_clause:answer.start]))))
-
+                            yield ("%s %s %s?" % (questionwords[0], pasttenseverb[0].text, " ".join(without(pasttenseverb[0].i ,pasttenseverb[0].i, doc[loc_relative_clause:answer.start]))))
+                        
                         else:
                             pasttenseverb = pasttenseverb[0]
-                            end = (answer.start)
+                            end = (answer.start) 
                             converted = [x.text for x in doc[loc_relative_clause:pasttenseverb.i]] + [
                                 pasttenseverb.lemma_] + [
                                             x.text for x in doc[
@@ -320,15 +312,13 @@ class WHQuestionGenerator():
                             noun = self.filteratt({
                                 'dep_': 'nsubj'
                             }, presentsimple[0].children)[0]
-                            yield ("%s %s %s %s?" % (questionwords[0], presentsimple[0].text, getNounChunk(noun).text,
-                                                     doc[presentsimple[0].i + 1:answer.start]))
+                            yield ("%s %s %s %s?" % (questionwords[0], presentsimple[0].text, getNounChunk(noun).text,doc[presentsimple[0].i+1:answer.start]))
                         else:
                             presentsimple = presentsimple[0]
-                            end = (answer.start)
-                            converted = [x.text for x in doc[loc_relative_clause:presentsimple.i]] + [
-                                presentsimple.lemma_] + [
-                                            x.text for x in doc[
-                                                            presentsimple.i + 1:end]]
+                            end = (answer.start) 
+                            converted = [x.text for x in doc[loc_relative_clause:presentsimple.i]] + [presentsimple.lemma_] + [
+                                x.text for x in doc[
+                                                presentsimple.i + 1:end]]
                             yield ("%s do %s?" % (questionwords[0], " ".join(converted)))
 
                     if len(presentsimplethird) > 0:
@@ -337,10 +327,10 @@ class WHQuestionGenerator():
                                 'dep_': 'nsubj'
                             }, presentsimplethird[0].children)[0]
                             yield (
-                                "%s %s %s?" % (questionwords[0], presentsimplethird[0].text, getNounChunk(noun).text))
+                            "%s %s %s?" % (questionwords[0], presentsimplethird[0].text, getNounChunk(noun).text))
                         else:
                             presentsimplethird = presentsimplethird[0]
-                            end = (answer.start)
+                            end = (answer.start) 
                             converted = [x.text for x in doc[loc_relative_clause:presentsimplethird.i]] + [
                                 presentsimplethird.lemma_] + [x.text for x in doc[
                                                                               presentsimplethird.i + 1:end]]
@@ -351,38 +341,40 @@ class WHQuestionGenerator():
                     # Find Requirements
                     pasttenseverb = self.filteratt({
                         'tag_': 'VBD',
-                        'dep_': 'relcl'
+                        'dep_': ['relcl','ccomp']
                     }, relclause)
                     presentcontinuousverb = self.filteratt({
                         'tag_': 'VBG',
-                        'dep_': 'relcl'
+                        'dep_': ['relcl','ccomp']
                     }, relclause)
                     pastparticiple = self.filteratt({
                         'tag_': 'VBN',
-                        'dep_': 'relcl'
+                        'dep_': ['relcl','ccomp']
                     }, relclause)
                     presentsimple = self.filteratt({
                         'tag_': 'VBP',
-                        'dep_': 'relcl'
+                        'dep_': ['relcl','ccomp']
                     }, relclause)
                     presentsimplethird = self.filteratt({
                         'tag_': 'VBZ',
-                        'dep_': 'relcl'
+                        'dep_': ['relcl','ccomp']
                     }, relclause)
-
+                    print(relclause,"asdddddddddddddd")
                     if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass":
                         # TODO - Mukul says its Hack , Co-authors disagree , Module overlap
 
                         if len(root) > 0:
                             yield ("%s %s?" % (
-                                questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:VerbChunk(root[0])]])))
+                            questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:VerbChunk(root[0])]])))
                         else:
                             yield ("%s %s?" % (questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:]])))
 
                     else:
                         #   # # Rules
                         if len(pasttenseverb) > 0:
+                            print("asssssssssssss")
                             pasttenseverb = pasttenseverb[0]
+                            print(pasttenseverb.lemma_,"asdddddddddddddd")
                             converted = [x.text for x in doc[wpword.i + 1:pasttenseverb.i]] + [pasttenseverb.lemma_] + [
                                 x.text
                                 for x in
@@ -416,25 +408,33 @@ class WHQuestionGenerator():
                     Head_Noun_Chunk = NounParent(wpword)
                     noun_chunk = PPChunker(doc, Head_Noun_Chunk).text
 
+
                     # Requirements
                     if not noun_chunk:
                         print("Subject modified by relative clause not found.")
+                    
                     else:
-
-                        if (Head_Noun_Chunk.tag_ == "NNS"):
-                            if len(pasttenseverb) > 0:
-                                yield ("%s were %s?" % (questionwords[2], noun_chunk))
-                            else:
-                                yield ("%s are %s?" % (questionwords[2], noun_chunk))
-                        elif (not Head_Noun_Chunk.tag_ == "NNS"):
-                            if len(pasttenseverb) > 0:
-                                yield ("%s was %s?" % (questionwords[2], noun_chunk))
-                            else:
-                                yield ("%s is %s?" % (questionwords[2], noun_chunk))
+                        #Generate rule 3 questions only when there is a proper noun as noun_chunk
+                        if(Head_Noun_Chunk.tag_ == "NNP"):
+                            if (Head_Noun_Chunk.tag_ == "NNS"):
+                                if len(pasttenseverb) > 0:
+                                    yield ("%s were %s?" % (questionwords[2], noun_chunk))
+                                else:
+                                    yield ("%s are %s?" % (questionwords[2], noun_chunk))
+                            elif (not Head_Noun_Chunk.tag_ == "NNS"):
+                                if len(pasttenseverb) > 0:
+                                    yield ("%s was %s?" % (questionwords[2], noun_chunk))
+                                else:
+                                    yield ("%s is %s?" % (questionwords[2], noun_chunk))
 
                     # Rule 4
                     if not noun_chunk:
                         print("Subject modified by relative clause not found.")
+
+                    elif(Head_Noun_Chunk.tag_ == "NNP"):
+                        break
+                    #Generate rule 4 questions only when there is no proper noun as noun_chunk
+
                     else:
 
                         if (Head_Noun_Chunk.tag_ == "NNS"):
@@ -448,12 +448,13 @@ class WHQuestionGenerator():
                             else:
                                 yield ("%s is %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:]))
 
+
+
             loc_relative_clause = wpword.i
 
     @lastdec
     def genqlist(self, sentence):
-        sentence = sentence.strip('. \n')
-        sentence = "".join(sentence.split(','))
+        sentence = sentence.strip('. ')
         doc = self.nlp(sentence)
         sentences = self.conjHandling(doc)
         return sum([list(self.genq(x.text)) for x in sentences], [])

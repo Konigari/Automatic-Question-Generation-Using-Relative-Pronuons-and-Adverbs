@@ -36,8 +36,7 @@
       law?', 'Who is in USA?', 'Who hates me?', 'Who is his mom?', 'Who is his mom
       who hates me is in USA?']
   Sentence: 'His friend who studies law , is fat and his mom who hates me is in USA '
-- Questions: ['Who does Mary love?', 'Who loves Ana?', 'Who is John?', 'Who is John
-      who loves Ana?']
+- Questions: ['Who does Mary love?', 'Who loves Ana?', 'Who is John?']
   Sentence: Mary loves John who loves Ana
 - Questions: ['Who did Mary love?', 'Who loved Ana?', 'Who was John?', 'Who was John
       who loved Ana?']
@@ -141,3 +140,5 @@
       are students who wish to pursue a career in literature?']
   Sentence: According to Janet, this classic novel would a perfect start for students
     who wish to pursue a career in literature
+- Questions: ['Who does Mary love?', 'Who loves Ana?', 'Who is a boy who loves Ana?']
+  Sentence: Mary loves a boy who loves Ana

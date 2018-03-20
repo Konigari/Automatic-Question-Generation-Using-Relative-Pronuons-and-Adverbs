@@ -372,9 +372,7 @@ class WHQuestionGenerator():
                     else:
                         #   # # Rules
                         if len(pasttenseverb) > 0:
-                            print("asssssssssssss")
                             pasttenseverb = pasttenseverb[0]
-                            print(pasttenseverb.lemma_,"asdddddddddddddd")
                             converted = [x.text for x in doc[wpword.i + 1:pasttenseverb.i]] + [pasttenseverb.lemma_] + [
                                 x.text
                                 for x in

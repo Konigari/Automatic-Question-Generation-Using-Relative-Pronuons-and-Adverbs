@@ -84,7 +84,10 @@ class WHQuestionGenerator():
         return sorted(self._filteratt(att,doc),key =lambda x: x.i)
 
     def conjHandling(self, doc):
+        if type(doc) == str:
+            doc = nlp(doc)
         sentential_conjunctions = []
+        print(doc)
         conjunctions = self.filteratt({
             'pos_': ["CCONJ", "PUNCT"],
         }, doc) + self.filteratt({
@@ -188,10 +191,12 @@ class WHQuestionGenerator():
         relativeclauseswh = self.filteratt({
             'tag_': ['WDT', 'WP$', 'WPO', 'WPS', 'WQL', 'WRB', 'WP'],
         }, doc)
-
+        print(relativeclauseswh)
         loc_relative_clause = 0
 
-        for wpword in relativeclauseswh:
+        for wpindex,wpword in enumerate(relativeclauseswh):
+            print(wpword)
+            print(wpindex)
             '''
             Rule 1: Using the matrix clause
             Rule 2: Using the embedded clause
@@ -230,13 +235,13 @@ class WHQuestionGenerator():
                 'who': ['Who', 'Who', 'Who'],
                 'whom': ['Whom', 'Whom', 'Who'],
                 'whose': ['Who', 'Whose', 'Who'],
-                'which': ['What', 'What', 'What'],
+                'which': [False, 'What' , 'What'],
                 'what': ['What', 'What', False],
                 
                 'that': ['What', 'What', 'What'],
                 'where': [False, 'Where', False],
                 'when': [False, 'When', False],
-                'how': [False, 'What', False, ],
+                'how': ['What', 'How', False, ],
                 'why': [False, 'Why', False, ],
                 'whatsoever': ['What', 'What', False],
                 'whomsoever': ['Who', 'Who', False]
@@ -359,7 +364,13 @@ class WHQuestionGenerator():
                         'tag_': 'VBZ',
                         'dep_': ['relcl','ccomp']
                     }, relclause)
-                    print(relclause,"asdddddddddddddd")
+                    
+                    # if wpindex+1 < len(relativeclauseswh):
+                    #     end = relativeclauseswh[wpindex+1].i
+                    # else:
+                    end = None
+                        
+
                     if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass":
                         # TODO - Mukul says its Hack , Co-authors disagree , Module overlap
 
@@ -367,7 +378,7 @@ class WHQuestionGenerator():
                             yield ("%s %s?" % (
                             questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:VerbChunk(root[0])]])))
                         else:
-                            yield ("%s %s?" % (questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:]])))
+                            yield ("%s %s?" % (questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:end]])))
 
                     else:
                         #   # # Rules
@@ -377,14 +388,14 @@ class WHQuestionGenerator():
                                 x.text
                                 for x in
                                 doc[
-                                pasttenseverb.i + 1:]]
+                                pasttenseverb.i + 1:end]]
                             yield ("%s did %s?" % (questionwords[1], " ".join(converted)))
 
                         if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0:
                             aux = self.filteratt({
                                 'dep_': ['aux', 'auxpass']
                             }, relclause)[0]
-                            converted = [aux.text] + without(aux.i, aux.i, doc[wpword.i + 1:])
+                            converted = [aux.text] + without(aux.i, aux.i, doc[wpword.i + 1:end])
                             yield ("%s %s?" % (questionwords[1], " ".join(converted)))
 
                         if len(presentsimple) > 0:
@@ -392,13 +403,13 @@ class WHQuestionGenerator():
                             converted = [x.text for x in doc[wpword.i + 1:presentsimple.i]] + [presentsimple.lemma_] + [
                                 x.text
                                 for x in doc[
-                                         presentsimple.i + 1:]]
+                                         presentsimple.i + 1:end]]
                             yield ("%s do %s?" % (questionwords[1], " ".join(converted)))
                         if len(presentsimplethird) > 0:
                             presentsimplethird = presentsimplethird[0]
                             converted = [x.text for x in doc[wpword.i + 1:presentsimplethird.i]] + [
                                 presentsimplethird.lemma_] + [x.text for x in doc[
-                                                                              presentsimplethird.i + 1:]]
+                                                                              presentsimplethird.i + 1:end]]
                             yield ("%s does %s?" % (questionwords[1], " ".join(converted)))
 
                 if questionwords[2]:
@@ -410,42 +421,38 @@ class WHQuestionGenerator():
                     # Requirements
                     if not noun_chunk:
                         print("Subject modified by relative clause not found.")
-                    
-                    else:
-                        #Generate rule 3 questions only when there is a proper noun as noun_chunk
-                        if(Head_Noun_Chunk.tag_ == "NNP"):
-                            if (Head_Noun_Chunk.tag_ == "NNS"):
-                                if len(pasttenseverb) > 0:
-                                    yield ("%s were %s?" % (questionwords[2], noun_chunk))
-                                else:
-                                    yield ("%s are %s?" % (questionwords[2], noun_chunk))
-                            elif (not Head_Noun_Chunk.tag_ == "NNS"):
-                                if len(pasttenseverb) > 0:
-                                    yield ("%s was %s?" % (questionwords[2], noun_chunk))
-                                else:
-                                    yield ("%s is %s?" % (questionwords[2], noun_chunk))
-
-                    # Rule 4
-                    if not noun_chunk:
-                        print("Subject modified by relative clause not found.")
-
-                    elif(Head_Noun_Chunk.tag_ == "NNP"):
-                        break
-                    #Generate rule 4 questions only when there is no proper noun as noun_chunk
-
-                    else:
-
+                        
+                    elif(Head_Noun_Chunk.tag_ != "NNP"):
+                        if wpindex+1 < len(relativeclauseswh):
+                            end = relativeclauseswh[wpindex+1].i
+                        else:
+                            end = None
+                        
                         if (Head_Noun_Chunk.tag_ == "NNS"):
                             if len(pasttenseverb) > 0:
-                                yield ("%s were %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:]))
+                                yield ("%s were %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:end]))
                             else:
-                                yield ("%s are %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:]))
+                                yield ("%s are %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:end]))
                         else:
                             if len(pasttenseverb) > 0:
-                                yield ("%s was %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:]))
+                                yield ("%s was %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:end]))
                             else:
-                                yield ("%s is %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:]))
+                                yield ("%s is %s %s? " % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:end]))
 
+                    else:
+                        #Generate rule 3 questions only when there is a proper noun as noun_chunk
+                        if (Head_Noun_Chunk.tag_ == "NNS"):
+                            if len(pasttenseverb) > 0:
+                                yield ("%s were %s?" % (questionwords[2], noun_chunk))
+                            else:
+                                yield ("%s are %s?" % (questionwords[2], noun_chunk))
+                        elif (not Head_Noun_Chunk.tag_ == "NNS"):
+                            if len(pasttenseverb) > 0:
+                                yield ("%s was %s?" % (questionwords[2], noun_chunk))
+                            else:
+                                yield ("%s is %s? " % (questionwords[2], noun_chunk))
+                    
+                    
 
 
             loc_relative_clause = wpword.i

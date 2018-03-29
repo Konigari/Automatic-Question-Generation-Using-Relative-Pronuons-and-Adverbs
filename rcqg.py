@@ -87,7 +87,6 @@ class WHQuestionGenerator():
         if type(doc) == str:
             doc = self.nlp(doc)
         sentential_conjunctions = []
-        print(doc)
         conjunctions = self.filteratt({
             'pos_': ["CCONJ", "PUNCT"],
         }, doc) + self.filteratt({
@@ -253,7 +252,7 @@ class WHQuestionGenerator():
                     end = answer.start
                 else:
                     end = wpword.i
-                
+                    
                 questionwords = conversions[wpword.text.lower()]
                 # Find Requirements - Special case where root comes after relative clause
                 root = self.filteratt({
@@ -378,7 +377,6 @@ class WHQuestionGenerator():
                     else:
                         end = None
                         
-                    print("hereeeeeeeeeeeeeeeeee")
 
                     if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass":
                         # TODO - Mukul says its Hack , Co-authors disagree , Module overlap
@@ -391,7 +389,6 @@ class WHQuestionGenerator():
 
                     else:
                         #   # # Rules
-                        print("hereeeeeeeeeeeeeeeeee")
                         
                         if len(pasttenseverb) > 0:
                             pasttenseverb = pasttenseverb[0]

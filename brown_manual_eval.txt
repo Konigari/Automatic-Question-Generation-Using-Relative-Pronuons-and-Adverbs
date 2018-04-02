@@ -1,0 +1,3461 @@
+- questions: ['What deserves the praise and thanks of the City of Atlanta '''' for
+      the manner in which the election was conducted .
+
+      ?', 'What had over - all charge of the election , ``?', 'What was the City Executive
+      Committee?']
+  sentence: 'The jury further said in term-end presentments that the City Executive
+    Committee , which had over-all charge of the election , `` deserves the praise
+    and thanks of the City of Atlanta '''' for the manner in which the election was
+    conducted .
+
+    '
+- questions: ['What had The September - October term jury been charged by Fulton Superior
+      Court Judge Durwood Pye to investigate reports of possible `` irregularities
+      '''' in?', "What was won by Mayor - nominate Ivan Allen Jr. . \n?", 'What is
+      the hard-fought primary which was won by Mayor-nominate Ivan Allen Jr. .
+
+      ?']
+  sentence: 'The September-October term jury had been charged by Fulton Superior Court
+    Judge Durwood Pye to investigate reports of possible `` irregularities '''' in
+    the hard-fought primary which was won by Mayor-nominate Ivan Allen Jr. .
+
+    '
+- questions: ['What did The grand jury comment on a number of other topics , among
+      them?', "What did it say `` are well operated and follow generally accepted\
+      \ practices which inure to the best interest of both governments '' . \n?",
+    "What do it said `` be well operated and follow generally accepted practices which\
+      \ inure to the best interest of both governments '' . \n?", 'What were the Atlanta
+      and Fulton County purchasing departments which it said `` are well operated
+      and follow generally accepted practices which inure to the best interest of
+      both governments '''' .
+
+      ?', "What inure to the best interest of both governments '' . \n?", 'What are
+      generally accepted practices which inure to the best interest of both governments
+      '''' .
+
+      ?']
+  sentence: 'The grand jury commented on a number of other topics , among them the
+    Atlanta and Fulton County purchasing departments which it said `` are well operated
+    and follow generally accepted practices which inure to the best interest of both
+    governments '''' .
+
+    '
+- questions: []
+  sentence: 'However , the jury said it believes `` these two offices should be combined
+    to achieve greater efficiency and reduce the cost of administration '''' .
+
+    '
+- questions: ['What has the State Welfare Department `` seen fit to distribute these
+      funds through the welfare departments of all the counties in the state with?',
+    "What receives none of this money . \n?", 'What is the exception of Fulton County?']
+  sentence: '`` This is one of the major items in the Fulton County general assistance
+    program '''' , the jury said , but the State Welfare Department `` has seen fit
+    to distribute these funds through the welfare departments of all the counties
+    in the state with the exception of Fulton County , which receives none of this
+    money .
+
+    '
+- questions: ['What did The jury also comment on?', "What has been under fire for\
+      \ its practices in the appointment of appraisers , guardians and administrators\
+      \ and the awarding of fees and compensation . \n?", 'What is commented on the
+      Fulton ordinary''s court which has been under fire for its practices in the
+      appointment of appraisers , guardians and administrators and the awarding of
+      fees and compensation .
+
+      ?']
+  sentence: 'The jury also commented on the Fulton ordinary''s court which has been
+    under fire for its practices in the appointment of appraisers , guardians and
+    administrators and the awarding of fees and compensation .
+
+    '
+- questions: ['What do Fulton legislators `` work with city officials to pass?', "What\
+      \ will permit the establishment of a fair and equitable '' pension plan for\
+      \ city employes . \n?", 'What is enabling legislation that will permit the establishment
+      of a fair and equitable '''' pension plan for city employes .
+
+      ?']
+  sentence: 'Fulton legislators `` work with city officials to pass enabling legislation
+    that will permit the establishment of a fair and equitable '''' pension plan for
+    city employes .
+
+    '
+- questions: ['Who ?', 'Who is a candidate in the Sept. 13 primary?']
+  sentence: 'He will be succeeded by Ivan Allen Jr. , who became a candidate in the
+    Sept. 13 primary after Mayor Hartsfield announced that he would not run for reelection
+    .
+
+    '
+- questions: ['What did State Party Chairman James W. Dorsey add?', 'What is State
+      Party Chairman James W. Dorsey that enthusiasm was picking up for a state rally
+      to be held Sept. 8 in Savannah at which newly elected Texas Sen. John Tower
+      will be the featured speaker .
+
+      ?']
+  sentence: 'State Party Chairman James W. Dorsey added that enthusiasm was picking
+    up for a state rally to be held Sept. 8 in Savannah at which newly elected Texas
+    Sen. John Tower will be the featured speaker .
+
+    '
+- questions: ['What is The largest hurdle?', "What says that before making a first\
+      \ race , one of two alternative courses must be taken : 1 \n?", 'What is a state
+      law which says that before making a first race , one of two alternative courses
+      must be taken : 1
+
+      ?']
+  sentence: 'The largest hurdle the Republicans would have to face is a state law
+    which says that before making a first race , one of two alternative courses must
+    be taken : 1
+
+    '
+- questions: ['What must The Republicans hold a primary under the county unit system
+      --?', "What does the party oppose in its platform . \n?", 'What is a system
+      which the party opposes in its platform .
+
+      ?']
+  sentence: 'The Republicans must hold a primary under the county unit system -- a
+    system which the party opposes in its platform .
+
+    '
+- questions: ['Who ?', 'Who are years .
+
+      ?']
+  sentence: 'He will be succeeded by Rob Ledford of Gainesville , who has been an
+    assistant more than three years .
+
+    '
+- questions: ["Where did some of the highway bond money it approve will follow shortly\
+      \ . \n?"]
+  sentence: 'The Georgia Legislature will wind up its 1961 session Monday and head
+    for home -- where some of the highway bond money it approved will follow shortly
+    .
+
+    '
+- questions: ['What is Before adjournment Monday afternoon , the Senate expected to
+      approve a study of the number of legislators allotted to rural and urban areas
+      to determine?', "What should adjustments be made . \n?"]
+  sentence: 'Before adjournment Monday afternoon , the Senate is expected to approve
+    a study of the number of legislators allotted to rural and urban areas to determine
+    what adjustments should be made .
+
+    '
+- questions: ['What does The department apparently intend to make the Rural Roads
+      Authority a revolving?', "What would new bonds be issued every time a portion\
+      \ of the old ones are paid off by tax authorities . \n?", 'What is fund under
+      which new bonds would be issued every time a portion of the old ones are paid
+      off by tax authorities .
+
+      ?']
+  sentence: 'The department apparently intends to make the Rural Roads Authority a
+    revolving fund under which new bonds would be issued every time a portion of the
+    old ones are paid off by tax authorities .
+
+    '
+- questions: []
+  sentence: 'The Highway Department source told The Constitution , however , that
+    Vandiver has not been consulted yet about the plans to issue the new rural roads
+    bonds .
+
+    '
+- questions: ['What did Pelham say his resolution would seek to set aside?', "What\
+      \ did the House vote through 87 - 31 . \n?", 'What was the privilege resolution
+      which the House voted through 87-31 .
+
+      ?']
+  sentence: 'While emphasizing that technical details were not fully worked out ,
+    Pelham said his resolution would seek to set aside the privilege resolution which
+    the House voted through 87-31 .
+
+    '
+- questions: ['Who ?', 'Who is Felix Bush?']
+  sentence: 'The new school superintendent is Harry Davis , a veteran agriculture
+    teacher , who defeated Felix Bush , a school principal and chairman of the Miller
+    County Democratic Executive Committee .
+
+    '
+- questions: []
+  sentence: 'The campaign leading to the election was not so quiet , however .
+
+    '
+- questions: ['What is watered down considerably since its rejection by two previous
+      Legislatures , in a public hearing before the House Committee on Revenue and
+      Taxation .
+
+      ?']
+  sentence: 'Daniel personally led the fight for the measure , which he had watered
+    down considerably since its rejection by two previous Legislatures , in a public
+    hearing before the House Committee on Revenue and Taxation .
+
+    '
+- questions: ['What did He tell the committee the measure would merely provide means
+      of enforcing?', 'What has been on the books?', 'What is the escheat law which
+      has been on the books?']
+  sentence: 'He told the committee the measure would merely provide means of enforcing
+    the escheat law which has been on the books `` since Texas was a republic ''''
+    .
+
+    '
+- questions: ['What said he drafted personally , would force banks , insurance firms
+      , pipeline companies and other corporations to report such property to the state
+      treasurer .
+
+      ?', "What did Daniel said he draft personally , would force banks , insurance\
+      \ firms , pipeline companies and other corporations to report such property\
+      \ to the state treasurer . \n?", 'What was Daniel he drafted personally , would
+      force banks , insurance firms , pipeline companies and other corporations to
+      report such property to the state treasurer .
+
+      ?']
+  sentence: 'The bill , which Daniel said he drafted personally , would force banks
+    , insurance firms , pipeline companies and other corporations to report such property
+    to the state treasurer .
+
+    '
+- questions: []
+  sentence: 'Dewey Lawrence , a Tyler lawyer representing the Texas Bankers Association
+    , sounded the opposition keynote when he said it would force banks to violate
+    their contractual obligations with depositors and undermine the confidence of
+    bank customers .
+
+    '
+- questions: ['What would Operating budget for the day schools in the five counties
+      of Dallas , Harris , Bexar , Tarrant and El Paso?', 'What would be a savings
+      of $ 157,460 yearly after the first year ''s capital outlay of $ 88,000 was
+      absorbed?', 'What is be $451,500 , which would be a savings of $157,460 yearly
+      after the first year''s capital outlay of $88,000 was absorbed?']
+  sentence: 'Operating budget for the day schools in the five counties of Dallas ,
+    Harris , Bexar , Tarrant and El Paso would be $451,500 , which would be a savings
+    of $157,460 yearly after the first year''s capital outlay of $88,000 was absorbed
+    , Parkhouse told the Senate .
+
+    '
+- questions: ["Why should he thinks Berry 's proposed constitutional amendment be\
+      \ rejected . \n?", "Why does he think Berry 's proposed constitutional amendment\
+      \ should be rejected . \n?"]
+  sentence: 'While details are still to be worked out , Ratcliff said he expects to
+    tell home folks in Dallas why he thinks Berry''s proposed constitutional amendment
+    should be rejected .
+
+    '
+- questions: ['What is expected to give it a favorable report?', 'What heard his local
+      option proposal?', 'What was A House committee which heard his local option
+      proposal is expected to give it a favorable report?']
+  sentence: 'A House committee which heard his local option proposal is expected to
+    give it a favorable report , although the resolution faces hard sledding later
+    .
+
+    '
+- questions: ['What did The third amend the enabling act for?', "What was a special\
+      \ constitutional amendment previously adopted . \n?", 'What is creation of the
+      Lamar county Hospital District?']
+  sentence: 'The third amended the enabling act for creation of the Lamar county Hospital
+    District , for which a special constitutional amendment previously was adopted
+    .
+
+    '
+- questions: ['Who would One , by Sen. Louis Crump of San Saba , aid?', "Who pay a\
+      \ group of miscellaneous excise taxes by eliminating the requirement that each\
+      \ return be notarized . \n?", 'Who are more than 17,000 retailers who pay a
+      group of miscellaneous excise taxes by eliminating the requirement that each
+      return be notarized .
+
+      ?']
+  sentence: 'One , by Sen. Louis Crump of San Saba , would aid more than 17,000 retailers
+    who pay a group of miscellaneous excise taxes by eliminating the requirement that
+    each return be notarized .
+
+    '
+- questions: ['What would retailers sign a certificate of correctness ,?', 'What is
+      violation of which would carry a penalty of one to five years in prison , plus
+      a $1,000 fine .
+
+      ?']
+  sentence: 'Instead , retailers would sign a certificate of correctness , violation
+    of which would carry a penalty of one to five years in prison , plus a $1,000
+    fine .
+
+    '
+- questions: ['Who ?', 'Who is their own annual licensing fee , from the $12 annual
+      occupation license on brokers in such as stocks and bonds .
+
+      ?']
+  sentence: 'The other bill , by Sen. A. M. Aikin Jr. of Paris , would relieve real
+    estate brokers , who pay their own annual licensing fee , from the $12 annual
+    occupation license on brokers in such as stocks and bonds .
+
+    '
+- questions: ['What did State representatives decide Thursday against taking a poll
+      on?']
+  sentence: '-- State representatives decided Thursday against taking a poll on what
+    kind of taxes Texans would prefer to pay .
+
+    '
+- questions: ['Who was absent .
+
+      ?', 'Who ?', 'Who is who absent .
+
+      ?']
+  sentence: 'All Dallas members voted with Roberts , except Rep. Bill Jones , who
+    was absent .
+
+    '
+- questions: ['What do other large cities get?', "What Cotten felt could better be\
+      \ spent providing water for rural Texas . \n?", 'What was money which Cotten
+      felt could better be spent providing water for rural Texas .
+
+      ?']
+  sentence: 'Cotten construed this as a veiled effort by Parkhouse to help Dallas
+    and other large cities get money which Cotten felt could better be spent providing
+    water for rural Texas .
+
+    '
+- questions: ['Who ?', 'Who are Education courses , is not permitted to teach in the
+      public schools?']
+  sentence: '`` A person with a master''s degree in physics , chemistry , math or
+    English , yet who has not taken Education courses , is not permitted to teach
+    in the public schools '''' , said Grover .
+
+    '
+- questions: ['Who ?', 'Who is retire at the close of the present school term .
+
+      ?']
+  sentence: 'Dr. Clark will succeed Dr. J. R. McLemore , who will retire at the close
+    of the present school term .
+
+    '
+- questions: ['What must We solve?', 'What have forced these people to depend upon
+      ADC for subsistence?', 'What are the problems which have forced these people
+      to depend upon ADC for subsistence?']
+  sentence: '`` We must solve the problems which have forced these people to depend
+    upon ADC for subsistence '''' , Martin said .
+
+    '
+- questions: []
+  sentence: 'Bellows made the disclosure when he asked Judge Parsons to grant his
+    client , Alan Clements , 30 , a separate trial .
+
+    '
+- questions: []
+  sentence: 'It is impossible to get a fair trial when some of the defendants made
+    statements involving themselves and others '''' .
+
+    '
+- questions: ['Whom did The President spend much of the week - end at his summer home
+      on Cape Cod writing the first drafts of portions of the address with?', "Whom\
+      \ did he talk by telephone . \n?", 'Who were the help of White House aids in
+      Washington with whom he talked by telephone .
+
+      ?']
+  sentence: 'The President spent much of the week-end at his summer home on Cape Cod
+    writing the first drafts of portions of the address with the help of White House
+    aids in Washington with whom he talked by telephone .
+
+    '
+- questions: ['Who charged?', 'Who ?', 'Who is who ?']
+  sentence: 'The last 10 cases in the investigation of the Nov. 8 election were dismissed
+    yesterday by Acting Judge John M. Karns , who charged that the prosecution obtained
+    evidence `` by unfair and fundamentally illegal means '''' .
+
+    '
+- questions: ['Who ?', 'Who is a City judge in East St. Louis sitting in Cook County
+      court .
+
+      ?']
+  sentence: '`` Actually , the abuse of the process may have constituted a contempt
+    of the Criminal court of Cook county , altho vindication of the authority of that
+    court is not the function of this court '''' , said Karns , who is a City judge
+    in East St. Louis sitting in Cook County court .
+
+    '
+- questions: ['What had Wexler charged the precinct judges in these cases with?',
+    "What would votes be taken from one candidate and given to another . \n?", 'What
+      is `` complementary '''' miscount of the vote , in which votes would be taken
+      from one candidate and given to another .
+
+      ?']
+  sentence: 'Wexler had charged the precinct judges in these cases with `` complementary
+    '''' miscount of the vote , in which votes would be taken from one candidate and
+    given to another .
+
+    '
+- questions: ["Who are covered by social security or railroad retirement programs\
+      \ . \n?", 'Who is a mammoth new medical care program whereby social security
+      taxes on 70 million American workers would be raised to pay the hospital and
+      some other medical bills of 14.2 million Americans over 65 who are covered by
+      social security or railroad retirement programs .
+
+      ?']
+  sentence: '-- President Kennedy today proposed a mammoth new medical care program
+    whereby social security taxes on 70 million American workers would be raised to
+    pay the hospital and some other medical bills of 14.2 million Americans over 65
+    who are covered by social security or railroad retirement programs .
+
+    '
+- questions: ['Who could A patient receive up to 300 days paid - for nursing home
+      care under?', "Who use none or only part of the hospital - care credit . \n?",
+    'Who is a `` unit formula '''' allowing more of such care for those who use none
+      or only part of the hospital-care credit .
+
+      ?']
+  sentence: 'A patient could receive up to 300 days paid-for nursing home care under
+    a `` unit formula '''' allowing more of such care for those who use none or only
+    part of the hospital-care credit .
+
+    '
+- questions: ['Who did He say his plan is designed to `` meet?', "Who have no wish\
+      \ to receive care at the taxpayers ' expense , but who are nevertheless staggered\
+      \ by the drain on their savings -- or those of their children -- caused by an\
+      \ extended hospital stay '' . \n?", 'Who are the needs of those millions who
+      have no wish to receive care at the taxpayers'' expense , but who are nevertheless
+      staggered by the drain on their savings -- or those of their children -- caused
+      by an extended hospital stay '''' .
+
+      ?', "Who are nevertheless staggered by the drain on their savings -- or those\
+      \ of their children -- caused by an extended hospital stay '' . \n?", 'Who is
+      He his plan is designed to `` meet the needs of those millions who have no wish
+      to receive care at the taxpayers'' expense , but who are nevertheless staggered
+      by the drain on their savings -- or those of their children -- caused by an
+      extended hospital stay '''' .
+
+      ?']
+  sentence: 'He said his plan is designed to `` meet the needs of those millions who
+    have no wish to receive care at the taxpayers'' expense , but who are nevertheless
+    staggered by the drain on their savings -- or those of their children -- caused
+    by an extended hospital stay '''' .
+
+    '
+- questions: ['Who criticized the President''s plan .
+
+      ?', 'Who last year opposed placing aged - care under the social security system?',
+    'Who were Legislators who last year opposed placing aged-care under the social
+      security system criticized the President''s plan .
+
+      ?']
+  sentence: 'Legislators who last year opposed placing aged-care under the social
+    security system criticized the President''s plan .
+
+    '
+- questions: ['Who backed a similar plan last year?', 'Who was the message .
+
+      ?']
+  sentence: 'Those who backed a similar plan last year hailed the message .
+
+    '
+- questions: []
+  sentence: 'This has been a working session of an organization that , by its very
+    nature , can only proceed along its route step by step and without dramatic changes
+    .
+
+    '
+- questions: ['Who have never , or not for a long time ,?', 'Who are such problems
+      .
+
+      ?']
+  sentence: 'This atmosphere of understanding has been particularly noticeable where
+    relations are concerned between the `` colonialist '''' powers and those who have
+    never , or not for a long time , had such problems .
+
+    '
+- questions: ['Who intellectually and emotionally disapprove of the circumstances
+      that have brought these troubles about ,?', 'Who are the difficulties , changes
+      , and tragedies facing them , and other allies who intellectually and emotionally
+      disapprove of the circumstances that have brought these troubles about , has
+      been conspicuous by its absence .
+
+      ?', 'What have brought these troubles about ,?', 'What are the circumstances
+      that have brought these troubles about , has been conspicuous by its absence
+      .
+
+      ?']
+  sentence: 'The nightmare of a clash between those in trouble in Africa , exacerbated
+    by the difficulties , changes , and tragedies facing them , and other allies who
+    intellectually and emotionally disapprove of the circumstances that have brought
+    these troubles about , has been conspicuous by its absence .
+
+    '
+- questions: ['What did The Secretary of State himself , in his first speech , give?',
+    "What has preoccupied the new administration in the past four months . \n?", 'What
+      are some idea of the tremendous march of events inside and outside the United
+      States that has preoccupied the new administration in the past four months .
+
+      ?']
+  sentence: 'The Secretary of State himself , in his first speech , gave some idea
+    of the tremendous march of events inside and outside the United States that has
+    preoccupied the new administration in the past four months .
+
+    '
+- questions: []
+  sentence: 'But where the core of NATO is concerned , the Secretary of State has
+    not only reiterated the United States'' profound attachment to the alliance ,
+    `` cornerstone '''' of its foreign policy , but has announced that five nuclear
+    submarines will eventually be at NATO''s disposal in European waters .
+
+    '
+- questions: []
+  sentence: 'The secretary''s greatest achievement is perhaps the rekindling of NATO
+    realization that East-West friction , wherever it take place around the globe
+    , is in essence the general conflict between two entirely different societies
+    , and must be treated as such without regard to geographical distance or lack
+    of apparent connection .
+
+    '
+- questions: []
+  sentence: 'The annual spring meeting has given an impetus in three main directions
+    : more , deeper , and more timely political consultation within the alliance ,
+    the use of the Organization for Economic Cooperation and Development ( when ratified
+    ) as a method of coordinating aid to the underdeveloped countries , and the need
+    for strengthening conventional forces as well as the maintenance of the nuclear
+    deterrent .
+
+    '
+- questions: ['What do State Department officials explain , now is mainly interested
+      in setting up?', "What will prevent Laos from being used as a base for Communist\
+      \ attacks on neighboring Thailand and South Viet Nam . \n?", 'What is an international
+      inspection system which will prevent Laos from being used as a base for Communist
+      attacks on neighboring Thailand and South Viet Nam .
+
+      ?']
+  sentence: 'The United States , State Department officials explain , now is mainly
+    interested in setting up an international inspection system which will prevent
+    Laos from being used as a base for Communist attacks on neighboring Thailand and
+    South Viet Nam .
+
+    '
+- questions: ['What was He critical of what he feels is?', "What he feels is President\
+      \ Kennedy 's tendency to be too conciliatory . \n?"]
+  sentence: 'He was critical of what he feels is President Kennedy''s tendency to
+    be too conciliatory .
+
+    '
+- questions: []
+  sentence: 'One Republican senator told this correspondent that he was constantly
+    being asked why he didn''t attack the Kennedy administration on this score .
+
+    '
+- questions: ['What had President Kennedy blended?', "What respected , generally ,\
+      \ the opinions voiced both by Mr. Nixon and the professors . \n?", 'What is
+      a program that respected , generally , the opinions voiced both by Mr. Nixon
+      and the professors .
+
+      ?']
+  sentence: 'Until the Cuban fiasco and the Communist military victories in Laos ,
+    almost any observer would have said that President Kennedy had blended a program
+    that respected , generally , the opinions voiced both by Mr. Nixon and the professors
+    .
+
+    '
+- questions: []
+  sentence: '( Some SEATO nations disagreed , however .
+
+    '
+- questions: ['Who did Mr. Hawksley say he believed there are?', "Who would be willing\
+      \ to take the full - time CD job . \n?", 'Who are a number of qualified city
+      residents who would be willing to take the full-time CD job .
+
+      ?']
+  sentence: 'Mr. Hawksley said he believed there are a number of qualified city residents
+    who would be willing to take the full-time CD job .
+
+    '
+- questions: ['What would come to the city in having a full - time director?', 'What
+      is One advantage that would come to the city in having a full-time director?']
+  sentence: 'One advantage that would come to the city in having a full-time director
+    , he said , is that East Providence would become eligible to apply to the federal
+    government for financial aid in purchasing equipment needed for a sound civil
+    defense program .
+
+    '
+- questions: ['What would not more than one person in a hundred?']
+  sentence: 'Speaking of the present status of civil defense in the city , Mr. Hawksley
+    said he would be willing to bet that not more than one person in a hundred would
+    know what to do or where to go in the event of an enemy attack .
+
+    '
+- questions: ['What did Mr. Hawksley say?']
+  sentence: 'Mr. Hawksley said he was not critical of city residents for not knowing
+    what to do or where to assemble in case of an air attack .
+
+    '
+- questions: ['What did The governor write Miss Grant that he has been concerned for
+      some time `` with?', "What confronts our local and state law enforcement officers\
+      \ as a result of the laws regulating Sunday sales '' . \n?", 'What is the continuous
+      problem which confronts our local and state law enforcement officers as a result
+      of the laws regulating Sunday sales '''' .
+
+      ?']
+  sentence: 'The governor wrote Miss Grant that he has been concerned for some time
+    `` with the continuous problem which confronts our local and state law enforcement
+    officers as a result of the laws regulating Sunday sales '''' .
+
+    '
+- questions: ['What ?', 'What is added ?']
+  sentence: 'The small shops `` must be retained , for they provide essential service
+    to the community '''' , according to the resolution , which added that they ``
+    also are the source of livelihood for thousands of our neighbors '''' .
+
+    '
+- questions: []
+  sentence: 'That , he added , was when he was `` a very young man , a machinist and
+    toolmaker by trade .
+
+    '
+- questions: ['Whom steered me off the Socialist track .
+
+      ?', "Whom did I study law steered me off the Socialist track . \n?", 'Who was
+      The lawyer with whom I studied law steered me off the Socialist track .
+
+      ?']
+  sentence: 'The lawyer with whom I studied law steered me off the Socialist track
+    .
+
+    '
+- questions: []
+  sentence: 'He said that when he was a Socialist in 1910 , the party called for government
+    operation of all utilities and the pooling of all resources .
+
+    '
+- questions: []
+  sentence: 'He said he favors wage increases for workers -- `` but manufacturers
+    are caught in a profit squeeze '''' -- and raises should only come when the public
+    is conditioned to higher prices , he added .
+
+    '
+- questions: ['What was A petition bearing the signatures of more than 1,700 Johnston
+      taxpayers presented to the town council last?', "What is hoped will be the first\
+      \ step in obtaining a home rule charter for the town . \n?"]
+  sentence: 'A petition bearing the signatures of more than 1,700 Johnston taxpayers
+    was presented to the town council last night as what is hoped will be the first
+    step in obtaining a home rule charter for the town .
+
+    '
+- questions: ['What states that they must be referred to the chairman of the board
+      of canvassers for verification of the signatures within 10 days?', 'What governs
+      home rule charter petitions?', 'What is The law which governs home rule charter
+      petitions states that they must be referred to the chairman of the board of
+      canvassers for verification of the signatures within 10 days?']
+  sentence: 'The law which governs home rule charter petitions states that they must
+    be referred to the chairman of the board of canvassers for verification of the
+    signatures within 10 days and Mr. Martinelli happens to hold that post .
+
+    '
+- questions: ['What did A difference of opinion arise between Mr. Martinelli and John
+      P. Bourcier , town solicitor , over?', "What is the vote handled . \n?", 'What
+      is the exact manner in which the vote is handled .
+
+      ?']
+  sentence: 'A difference of opinion arose between Mr. Martinelli and John P. Bourcier
+    , town solicitor , over the exact manner in which the vote is handled .
+
+    '
+- questions: []
+  sentence: 'He said that the group has no candidates for the charter commission in
+    mind at present , but that it will undoubtedly endorse candidates when the time
+    comes .
+
+    '
+- questions: ['What did he indicate , `` and to tell them what this will mean for?']
+  sentence: '`` Our most immediate goal is to increase public awareness of the movement
+    '''' , he indicated , `` and to tell them what this will mean for the town ''''
+    .
+
+    '
+- questions: ['What was Misunderstanding of the real meaning of a home rule charter
+      cited as?', "What has caused the Citizens Group to obtain signatures under what\
+      \ were termed `` false pretenses '' . \n?", 'What is a factor which has caused
+      the Citizens Group to obtain signatures under what were termed `` false pretenses
+      '''' .
+
+      ?', "What were termed `` false pretenses '' . \n?"]
+  sentence: 'Misunderstanding of the real meaning of a home rule charter was cited
+    as a factor which has caused the Citizens Group to obtain signatures under what
+    were termed `` false pretenses '''' .
+
+    '
+- questions: ['Who plead guilty to minor traffic offenses to pay fines at the local
+      police station?', 'Who are motorists who plead guilty to minor traffic offenses
+      to pay fines at the local police station may be taken at Monday''s special North
+      Providence Town Council meeting .
+
+      ?']
+  sentence: 'Action on a new ordinance permitting motorists who plead guilty to minor
+    traffic offenses to pay fines at the local police station may be taken at Monday''s
+    special North Providence Town Council meeting .
+
+    '
+- questions: []
+  sentence: 'Mitchell was for using it , Jones against , and Sen. Wayne Dumont Jr.
+    R-Warren did not mention it when the three Republican gubernatorial candidates
+    spoke at staggered intervals before 100 persons at the Park Hotel .
+
+    '
+- questions: ['What is It?']
+  sentence: 'Hughes said Monday , `` It is the apparent intention of the Republican
+    Party to campaign on the carcass of what they call Eisenhower Republicanism ,
+    but the heart stopped beating and the lifeblood congealed after Eisenhower retired
+    .
+
+    '
+- questions: []
+  sentence: '`` How can a man with any degree of common decency charge this '''' ?
+    ?
+
+    '
+- questions: ['What did He then launch?']
+  sentence: 'He then launched into what the issues should be in the campaign .
+
+    '
+- questions: ["Where does he stand on the tax issue '' . \n?"]
+  sentence: 'The state is now faced with the immediate question of raising new taxes
+    whether on utilities , real estate or motor vehicles , he said , `` and I challenge
+    Mitchell to tell the people where he stands on the tax issue '''' .
+
+    '
+- questions: []
+  sentence: '`` I find it hard to understand how anyone seeking a position in public
+    life could demonstrate such poor judgment and bad taste .
+
+    '
+- questions: ['Who is It?', "Who has proven he can not answer any questions about\
+      \ New Jersey 's problems . \n?", 'Who is a sagging candidate who has proven
+      he cannot answer any questions about New Jersey''s problems .
+
+      ?']
+  sentence: 'It is a desperate effort to prop up a sagging candidate who has proven
+    he cannot answer any questions about New Jersey''s problems .
+
+    '
+- questions: ["Who is a lawyer . \n?", 'Who is one who is a lawyer .
+
+      ?']
+  sentence: '`` My experience as public safety commissioner '''' , Roos said , ``
+    has shown me that the office of sheriff is best filled by a man with law enforcement
+    experience , and preferably one who is a lawyer .
+
+    '
+- questions: []
+  sentence: 'He promised nearly 200 Democratic county committee members at the meeting
+    in the Puddingstone Inn : `` When I come back here after the November election
+    you''ll think , '' You''re my man -- you''re the kind of governor we''re glad
+    we elected '' '''' .
+
+    '
+- questions: ['What must We Democrats resolve our issues on?', 'What is right?', 'What
+      ?']
+  sentence: 'He said , `` We Democrats must resolve our issues on the test of what
+    is right and just , and not what is expedient at the time '''' .
+
+    '
+- questions: ['What would Hughes not comment on tax reforms or?', "What are the Republican\
+      \ candidates involved . \n?", 'What are other issues in which the Republican
+      candidates are involved .
+
+      ?']
+  sentence: 'Hughes would not comment on tax reforms or other issues in which the
+    Republican candidates are involved .
+
+    '
+- questions: ['What did He say?', 'What stand he takes it would be misconstrued?']
+  sentence: 'He said no matter what stand he takes it would be misconstrued that he
+    was sympathetic to one or the other of the Republicans .
+
+    '
+- questions: []
+  sentence: '`` After the primary '''' , he promised , `` I''ll be explicit on where
+    I stand to bring you a strong , dynamic administration .
+
+    '
+- questions: ['Who were honored yesterday by their colleagues .
+
+      ?', 'Who are retiring -- voluntarily -- this year?', 'Who are Fifteen members
+      of the Republican State Committee who are retiring -- voluntarily -- this year
+      were honored yesterday by their colleagues .
+
+      ?']
+  sentence: '-- Fifteen members of the Republican State Committee who are retiring
+    -- voluntarily -- this year were honored yesterday by their colleagues .
+
+    '
+- questions: ['Who ?', 'Who is stepping down after 35 years on the committee .
+
+      ?']
+  sentence: 'A special presentation was made to Mrs. Geraldine Thompson of Red Bank
+    , who is stepping down after 35 years on the committee .
+
+    '
+- questions: ['What did organization Democrats see in the program an opportunity to
+      end?', "What has been going on for the last three years . \n?", 'What is the
+      bitter internal fight within the Democratic party that has been going on for
+      the last three years .
+
+      ?']
+  sentence: 'Some anti-organization Democrats saw in the program an opportunity to
+    end the bitter internal fight within the Democratic party that has been going
+    on for the last three years .
+
+    '
+- questions: ['Who lives in the Bronx , from this year''s ticket .
+
+      ?', 'Who ?', 'Who is who in the Bronx , from this year''s ticket .
+
+      ?']
+  sentence: 'In talks with Mr. Buckley last week in Washington , the Mayor apparently
+    received the Bronx leader''s assent to dropping Controller Lawrence E. Gerosa
+    , who lives in the Bronx , from this year''s ticket .
+
+    '
+- questions: ['Who lives in Queens , to replace Abe Stark , the incumbent , as the
+      candidate for President of the City Council and Mr. Beame?', 'Who ?', 'Who is
+      who in Queens , to replace Abe Stark , the incumbent , as the candidate for
+      President of the City Council and Mr. Beame?', 'Who lives in Brooklyn , to replace
+      Mr. Gerosa as the candidate for Controller .
+
+      ?', 'Who ?', 'Who is who in Brooklyn , to replace Mr. Gerosa as the candidate
+      for Controller .
+
+      ?']
+  sentence: 'The Mayor declined in two interviews with reporters yesterday to confirm
+    or deny the reports that he had decided to run and wanted Mr. Screvane , who lives
+    in Queens , to replace Abe Stark , the incumbent , as the candidate for President
+    of the City Council and Mr. Beame , who lives in Brooklyn , to replace Mr. Gerosa
+    as the candidate for Controller .
+
+    '
+- questions: ['What is to plunder them '''' .
+
+      ?', 'What is the object of which is to plunder them '''' .
+
+      ?']
+  sentence: 'These voters view the political process as a secret conspiracy , the
+    object of which is to plunder them '''' .
+
+    '
+- questions: ['What is Corruption?', "What were widely identified as the locale of\
+      \ Edwin O'Connor 's novel , `` The Last Hurrah '' . \n?", 'What is a recent
+      development in the city and state that were widely identified as the locale
+      of Edwin O''Connor''s novel , `` The Last Hurrah '''' .
+
+      ?']
+  sentence: 'Corruption is hardly a recent development in the city and state that
+    were widely identified as the locale of Edwin O''Connor''s novel , `` The Last
+    Hurrah '''' .
+
+    '
+- questions: ['Who ?', 'Who is siding with Speaker Sam Rayburn''s forces in the Rules
+      Committee in moving bills to the floor .
+
+      ?']
+  sentence: 'The panel''s action depends on the return of Representative James W.
+    Trimble , Democrat of Arkansas , who has been siding with Speaker Sam Rayburn''s
+    forces in the Rules Committee in moving bills to the floor .
+
+    '
+- questions: []
+  sentence: 'The Democratic leadership , however , hopes to pass it sometime this
+    week .
+
+    '
+- questions: ['What provides for forty-year mortgages at low down-payments for moderate-income
+      families .
+
+      ?', 'What was passed last Monday by the Senate ,?', 'What is The $6,100,000,000
+      measure , which was passed last Monday by the Senate , provides for forty-year
+      mortgages at low down-payments for moderate-income families .
+
+      ?']
+  sentence: 'The $6,100,000,000 measure , which was passed last Monday by the Senate
+    , provides for forty-year mortgages at low down-payments for moderate-income families
+    .
+
+    '
+- questions: ["Where do two Northern Democratic members who usually vote with the\
+      \ Administration are balking because of the religious controversy . \n?", 'Who
+      are balking because of the religious controversy .
+
+      ?', 'Who usually vote with the Administration?', 'Who are two Northern Democratic
+      members who usually vote with the Administration are balking because of the
+      religious controversy .
+
+      ?']
+  sentence: 'The education bill appears to be temporarily stalled in the Rules Committee
+    , where two Northern Democratic members who usually vote with the Administration
+    are balking because of the religious controversy .
+
+    '
+- questions: ['What has been submitted for Congressional approval , $ 26,000,000?',
+    'What is the $40,000,000 budget that has been submitted for Congressional approval
+      , $26,000,000 would be spent through universities and private voluntary agencies
+      .
+
+      ?']
+  sentence: 'In the $40,000,000 budget that has been submitted for Congressional approval
+    , $26,000,000 would be spent through universities and private voluntary agencies
+    .
+
+    '
+- questions: ["When to he came pay his hotel bill that the usual rate had been doubled\
+      \ . \n?", "What had the usual rate been doubled . \n?", 'What is month in Ghana
+      an American missionary discovered when he came to pay his hotel bill that the
+      usual rate had been doubled .
+
+      ?']
+  sentence: 'Last month in Ghana an American missionary discovered when he came to
+    pay his hotel bill that the usual rate had been doubled .
+
+    '
+- questions: ['What is Indonesia?', "What are receiving Soviet aid . \n?", 'What are
+      the twenty under-developed countries of Asia , Africa and Latin America that
+      are receiving Soviet aid .
+
+      ?']
+  sentence: 'Indonesia is one of the twenty under-developed countries of Asia , Africa
+    and Latin America that are receiving Soviet aid .
+
+    '
+- questions: ['What would be to take jobs from European nations and give more to such
+      countries as India .
+
+      ?', 'What puts a premium on population instead of economic strength , as in
+      the past ,?', 'What is One effect of the proposal , which puts a premium on
+      population instead of economic strength , as in the past , would be to take
+      jobs from European nations and give more to such countries as India .
+
+      ?']
+  sentence: 'One effect of the proposal , which puts a premium on population instead
+    of economic strength , as in the past , would be to take jobs from European nations
+    and give more to such countries as India .
+
+    '
+- questions: ['What did The three leaders of Laos agree today to begin negotiations
+      tomorrow on forming?', "What would unite the war - ridden kingdom . \n?", 'What
+      is a coalition government that would unite the war-ridden kingdom .
+
+      ?']
+  sentence: '-- The three leaders of Laos agreed today to begin negotiations tomorrow
+    on forming a coalition government that would unite the war-ridden kingdom .
+
+    '
+- questions: ['Who was Their joint statement welcomed by?', "Who will attend tomorrow\
+      \ the nineteenth plenary session of the fourteen - nation conference on the\
+      \ future of Laos . \n?", 'Who are the Western delegations who will attend tomorrow
+      the nineteenth plenary session of the fourteen-nation conference on the future
+      of Laos .
+
+      ?']
+  sentence: 'Their joint statement was welcomed by the Western delegations who will
+    attend tomorrow the nineteenth plenary session of the fourteen-nation conference
+    on the future of Laos .
+
+    '
+- questions: ['What did The three Laotians agree upon a six - point agenda for?',
+    "What are to last three days . \n?", 'What are their talks , which are to last
+      three days .
+
+      ?']
+  sentence: 'The three Laotians agreed upon a six-point agenda for their talks , which
+    are to last three days .
+
+    '
+- questions: ['What did The Princess say?', "What would be decided if no agreement\
+      \ was reached after three days . \n?"]
+  sentence: 'The Princess said it was too early to say what would be decided if no
+    agreement was reached after three days .
+
+    '
+- questions: ['What did the statement say , would deal only with?', "What would guide\
+      \ the three factors in their search for a coalition Government . \n?", 'What
+      are principles that would guide the three factors in their search for a coalition
+      Government .
+
+      ?']
+  sentence: 'The meetings in Zurich , the statement said , would deal only with principles
+    that would guide the three factors in their search for a coalition Government
+    .
+
+    '
+- questions: ['Who resigned .
+
+      ?', 'Who ?', 'Who is who .
+
+      ?']
+  sentence: 'Pfaff succeeds Martin Burke , who resigned .
+
+    '
+- questions: ["Where does J. Edgar Hoover preside over the federal bureau of investigation\
+      \ . \n?"]
+  sentence: 'Also the department of justice building is located where J. Edgar Hoover
+    presides over the federal bureau of investigation .
+
+    '
+- questions: ['What do Street car tracks run down the center of Pennsylvania , powered
+      with?', "What are underground . \n?", 'What are lines that are underground .
+
+      ?']
+  sentence: 'Street car tracks run down the center of Pennsylvania , powered with
+    lines that are underground .
+
+    '
+- questions: ['What is that of Gen. Andrew Jackson , hero of the Battle of New Orleans
+      .
+
+      ?', 'What stands out over the others?', 'What is the one that stands out over
+      the others is that of Gen. Andrew Jackson , hero of the Battle of New Orleans
+      .
+
+      ?']
+  sentence: 'In this historic square are several statues , but the one that stands
+    out over the others is that of Gen. Andrew Jackson , hero of the Battle of New
+    Orleans .
+
+    '
+- questions: ['Who have been observing the political scene a long time?', 'Who is
+      a long time ?']
+  sentence: 'Even for those who have been observing the political scene a long time
+    , no script from the past is worth very much in gazing into the state''s immediate
+    political future .
+
+    '
+- questions: ['Who is This?', "Who operates the helm of the state government and is\
+      \ the elected leader of its two million inhabitants -- Gov. Ross Barnett . \n\
+      ?", 'Who is the unpredictability of the man who operates the helm of the state
+      government and is the elected leader of its two million inhabitants -- Gov.
+      Ross Barnett .
+
+      ?']
+  sentence: 'This is largely because of the unpredictability of the man who operates
+    the helm of the state government and is the elected leader of its two million
+    inhabitants -- Gov. Ross Barnett .
+
+    '
+- questions: ['Who came into office with no previous experience in public administration
+      , has surrounded himself with confusion which not only keeps his foes guessing
+      but his friends as well .
+
+      ?', 'Who ?', 'Who is who into office with no previous experience in public administration
+      , has surrounded himself with confusion which not only keeps his foes guessing
+      but his friends as well .
+
+      ?', 'What did who come into office with no previous experience in public administration
+      , has surrounded himself with?', "What not only keeps his foes guessing but\
+      \ his friends as well . \n?", 'What is confusion which not only keeps his foes
+      guessing but his friends as well .
+
+      ?']
+  sentence: 'Barnett , who came into office with no previous experience in public
+    administration , has surrounded himself with confusion which not only keeps his
+    foes guessing but his friends as well .
+
+    '
+- questions: ['What is it?', 'What is direction the Barnett administration will take
+      in the coming year .
+
+      ?']
+  sentence: 'Consequently , it is uncertain after nearly 12 months in office just
+    which direction the Barnett administration will take in the coming year .
+
+    '
+- questions: ['What do Some predict the administration will settle down during 1961
+      and iron out?', "What has it had thus far . \n?", 'What are the rough edges
+      which it has had thus far .
+
+      ?']
+  sentence: 'Some predict the administration will settle down during 1961 and iron
+    out the rough edges which it has had thus far .
+
+    '
+- questions: ['Who has The builtin headache of the Barnett regime thus far been?',
+    "Who feel they were given commitments by Barnett at some stage of his eight -\
+      \ year quest for the governor 's office . \n?", 'Who is the steady stream of
+      job-seekers and others who feel they were given commitments by Barnett at some
+      stage of his eight-year quest for the governor''s office .
+
+      ?']
+  sentence: 'The builtin headache of the Barnett regime thus far has been the steady
+    stream of job-seekers and others who feel they were given commitments by Barnett
+    at some stage of his eight-year quest for the governor''s office .
+
+    '
+- questions: ['What is the highly sensitive problem of cutting the state''s congressional
+      districts from six to five to eliminate one congressional seat .
+
+      ?', 'What may make it necessary to have a session?', 'What is The issue which
+      may make it necessary to have a session is the highly sensitive problem of cutting
+      the state''s congressional districts from six to five to eliminate one congressional
+      seat .
+
+      ?']
+  sentence: 'The issue which may make it necessary to have a session is the highly
+    sensitive problem of cutting the state''s congressional districts from six to
+    five to eliminate one congressional seat .
+
+    '
+- questions: ["What have lawmakers from the Delta held in the Legislature . \n?",
+    'What is the longstanding power which lawmakers from the Delta have held in the
+      Legislature .
+
+      ?']
+  sentence: 'With eyes focused on the third congressional district , the historic
+    Delta district , and Congressman Frank E. Smith as the one most likely to go ,
+    the redistricting battle will put to a test the longstanding power which lawmakers
+    from the Delta have held in the Legislature .
+
+    '
+- questions: ['Who is it?', "Who did not support the party ticket will be stripped\
+      \ of the usual patronage which flows to congressmen . \n?", 'Who are the four
+      congressmen from Mississippi who did not support the party ticket will be stripped
+      of the usual patronage which flows to congressmen .
+
+      ?', "What flows to congressmen . \n?", 'What is the usual patronage which flows
+      to congressmen .
+
+      ?']
+  sentence: 'Reports are that it is more than probable that the four congressmen from
+    Mississippi who did not support the party ticket will be stripped of the usual
+    patronage which flows to congressmen .
+
+    '
+- questions: ["Why was $ 28 million needed for a grant - in - aid program . \n?"]
+  sentence: 'The administration could not say why $28 million was needed for a grant-in-aid
+    program .
+
+    '
+- questions: []
+  sentence: 'The tax bill will be up for reconsideration Wednesday in the House when
+    the Legislature reconvenes .
+
+    '
+- questions: ['What does the administration view that $ 28 million?']
+  sentence: 'It is difficult to be certain how the administration views that $28 million
+    , since the views of one leader may not be the same as the views of another one
+    .
+
+    '
+- questions: ['What is It?', 'What do most try to avoid?', 'What is one that most
+      try to avoid?']
+  sentence: 'It is one that most try to avoid , as long as they can see an alternative
+    approach to the problem .
+
+    '
+- questions: ['Who might This be?', 'Who have been squeezed out by the trims to exert
+      pressure on the Legislature?', 'Who is done to arouse those who have been squeezed
+      out by the trims to exert pressure on the Legislature?']
+  sentence: 'This might be done to arouse those who have been squeezed out by the
+    trims to exert pressure on the Legislature , so it would be more receptive to
+    a tax proposal later in the year .
+
+    '
+- questions: ['What did City Controller Alexander Hemphill charge Tuesday that the
+      bids on the Frankford Elevated repair project were rigged to?', "What had ``\
+      \ an inside track '' with the city . \n?", 'What was the advantage of a private
+      contracting company which had `` an inside track '''' with the city .
+
+      ?']
+  sentence: 'City Controller Alexander Hemphill charged Tuesday that the bids on the
+    Frankford Elevated repair project were rigged to the advantage of a private contracting
+    company which had `` an inside track '''' with the city .
+
+    '
+- questions: ['What did the Hughes Steel Erection Co. contract to do the work at an
+      impossibly low cost with?', "What was far less than the `` legitimate '' bids\
+      \ of competing contractors . \n?", 'What was a bid that was far less than the
+      `` legitimate '''' bids of competing contractors .
+
+      ?']
+  sentence: 'Hemphill said that the Hughes Steel Erection Co. contracted to do the
+    work at an impossibly low cost with a bid that was far less than the `` legitimate
+    '''' bids of competing contractors .
+
+    '
+- questions: ['What was The Controller ''s charge of rigging the latest development
+      in?', "What also brought these disclosures Tuesday : \n?", 'What was an investigation
+      which also brought these disclosures Tuesday :
+
+      ?']
+  sentence: 'The Controller''s charge of rigging was the latest development in an
+    investigation which also brought these disclosures Tuesday :
+
+    '
+- questions: ['What is repaired ?']
+  sentence: 'The city paid for work on 75 , of which no more than 21 were repaired
+    , Hemphill charged .
+
+    '
+- questions: ['What listed the same officers as Hughes ,?', 'What was A. Belanger?']
+  sentence: 'The bid from A. Belanger and Sons of Cambridge , Mass. , which listed
+    the same officers as Hughes , was $600 per joint .
+
+    '
+- questions: ['Who ?', 'Who is the meeting ?']
+  sentence: 'Douglas M. Pratt , president of the PTC , who attended the meeting ,
+    said the transit company is reviewing the work on the El .
+
+    '
+- questions: ['Who do We want to find out?', 'Who knew about it?', 'Who was We to
+      find out who knew about it?']
+  sentence: '`` We want to find out who knew about it '''' , Pratt said .
+
+    '
+- questions: ['Who was The increase also opposed by Leonard Kaplan , spokesman for
+      the Home Builders Association of Philadelphia , on?', "Who operate apartment\
+      \ houses . \n?", 'Who are behalf of association members who operate apartment
+      houses .
+
+      ?']
+  sentence: 'The increase also was opposed by Leonard Kaplan , spokesman for the Home
+    Builders Association of Philadelphia , on behalf of association members who operate
+    apartment houses .
+
+    '
+- questions: ['Who formerly?', 'Who are pedigreed dogs .
+
+      ?']
+  sentence: 'A proposal to raise dog license fees drew an objection from Councilwoman
+    Virginia Knauer , who formerly raised pedigreed dogs .
+
+    '
+- questions: ['Who ?', 'Who is no defense to manslaughter and hit-run charges , was
+      fined $500 by Judge Warren K. Hess , and placed on two years'' probation providing
+      he does not drive during that time .
+
+      ?']
+  sentence: 'Barnard , who pleaded no defense to manslaughter and hit-run charges
+    , was fined $500 by Judge Warren K. Hess , and placed on two years'' probation
+    providing he does not drive during that time .
+
+    '
+- questions: ['What did The commission also approve?', "What would eliminate traffic\
+      \ hazards for pedestrians in the project . \n?", 'What is a novel plan that
+      would eliminate traffic hazards for pedestrians in the project .
+
+      ?']
+  sentence: 'The commission also approved a novel plan that would eliminate traffic
+    hazards for pedestrians in the project .
+
+    '
+- questions: ['What does The second agreement permit the authority to sell a 520-acre
+      tract west of Stage 1 Residential to Philadelphia Builders Eastwick Corp. ,
+      a firm composed of?', "What is interested in developing part of the project\
+      \ . \n?", 'What are 10 Philadelphia area builders , which is interested in developing
+      part of the project .
+
+      ?']
+  sentence: 'The second agreement permits the authority to sell a 520-acre tract west
+    of Stage 1 Residential to Philadelphia Builders Eastwick Corp. , a firm composed
+    of 10 Philadelphia area builders , which is interested in developing part of the
+    project .
+
+    '
+- questions: ['What does The plan call for dividing the project into?', "What would\
+      \ be barred to vehicular traffic . \n?", 'What are 16 sectors which would be
+      barred to vehicular traffic .
+
+      ?']
+  sentence: 'The plan calls for dividing the project into 16 sectors which would be
+    barred to vehicular traffic .
+
+    '
+- questions: ['What does It provide for a series of landscaped walkways and?', "What\
+      \ would eventually run through the center of the entire two - and - a - half\
+      \ - mile length of the project . \n?", 'What is a central esplanade that would
+      eventually run through the center of the entire two-and-a-half-mile length of
+      the project .
+
+      ?']
+  sentence: 'It provides for a series of landscaped walkways and a central esplanade
+    that would eventually run through the center of the entire two-and-a-half-mile
+    length of the project .
+
+    '
+- questions: ["What on original plans ran through the center of the development .\
+      \ \n?", 'What were The esplanade Grovers Ave. , which on original plans ran
+      through the center of the development .
+
+      ?']
+  sentence: 'The esplanade eliminates Grovers Ave. , which on original plans ran through
+    the center of the development .
+
+    '
+- questions: []
+  sentence: '-- The president of the Kansas City local of the International Association
+    of Fire Fighters was severly injured today when a bomb tore his car apart as he
+    left home for work .
+
+    '
+- questions: []
+  sentence: '`` I''d just turned on the ignition when there was a big flash and I
+    was lying on the driveway '''' , he said .
+
+    '
+- questions: ['What has Gladden been an outspoken critic of the present city administration
+      and led his union ''s battle against?', "What began organizing city firemen\
+      \ in 1959 . \n?", 'What were the teamsters , which began organizing city firemen
+      in 1959 .
+
+      ?']
+  sentence: 'Gladden has been an outspoken critic of the present city administration
+    and led his union''s battle against the teamsters , which began organizing city
+    firemen in 1959 .
+
+    '
+- questions: ['What contested indecisive elections on Oct. 15?', 'What were the leaders
+      of four parties which contested indecisive elections on Oct. 15 was reached
+      after almost 18 hours of political bargaining under the threat of an army coup
+      d''etat .
+
+      ?']
+  sentence: 'An agreement between the leaders of four parties which contested indecisive
+    elections on Oct. 15 was reached after almost 18 hours of political bargaining
+    under the threat of an army coup d''etat .
+
+    '
+- questions: ['What has ruled Turkey since the overthrow of Premier Adnan Menderes
+      17 months ago?', 'What is the military junta which has ruled Turkey since the
+      overthrow of Premier Adnan Menderes 17 months ago?']
+  sentence: 'By-passing the military junta which has ruled Turkey since the overthrow
+    of Premier Adnan Menderes 17 months ago , the army general staff , led by Gen.
+    Cedvet Sunay , had set a deadline for the parties to join in a national coalition
+    government .
+
+    '
+- questions: ['What did Party leaders come out of the final meeting apparently satisfied
+      and stated that complete agreement had been reached on a solution to the crisis
+      created by?', "What left no party with enough strength to form a government\
+      \ on its own . \n?", 'What were the elections which left no party with enough
+      strength to form a government on its own .
+
+      ?']
+  sentence: 'Party leaders came out of the final meeting apparently satisfied and
+    stated that complete agreement had been reached on a solution to the crisis created
+    by the elections which left no party with enough strength to form a government
+    on its own .
+
+    '
+- questions: ['Who will Ierulli replace?', "Who has been called to active military\
+      \ service but is expected back on the job by March 31 . \n?", 'Who is Desmond
+      D. Connall?']
+  sentence: 'Ierulli will replace Desmond D. Connall who has been called to active
+    military service but is expected back on the job by March 31 .
+
+    '
+- questions: ['Who ?', 'Who is been in office in Washington , D. C. , for 13 months
+      spoke at the council''s annual meeting at the Multnomah Hotel .
+
+      ?']
+  sentence: 'Martin , who has been in office in Washington , D. C. , for 13 months
+    spoke at the council''s annual meeting at the Multnomah Hotel .
+
+    '
+- questions: ['What must We persuade them to enjoy?', 'What , if not identical , is
+      congenial with ours?', 'What is a way of life which , if not identical , is
+      congenial with ours?']
+  sentence: '`` We must persuade them to enjoy a way of life which , if not identical
+    , is congenial with ours '''' , he said but adding that if they do not develop
+    the kind of society they themselves want it will lack ritiuality and loyalty .
+
+    '
+- questions: ['Where has after 15 years of Soviet rule it become necessary to build
+      a wall to keep the people in?']
+  sentence: 'He cited East Germany where after 15 years of Soviet rule it has become
+    necessary to build a wall to keep the people in , and added , `` so long as people
+    rebel , we must not give up '''' .
+
+    '
+- questions: ['What must The United States?']
+  sentence: 'The United States must plan to absorb the exported goods of the country
+    , at what he termed a `` social cost '''' .
+
+    '
+- questions: ['What did Martin say the government has been working to establish firmer
+      prices on?', "What may involve the total income of one country . \n?", 'What
+      are primary products which may involve the total income of one country .
+
+      ?']
+  sentence: 'Martin said the government has been working to establish firmer prices
+    on primary products which may involve the total income of one country .
+
+    '
+- questions: ['Who is whose advice it should follow .
+
+      ?']
+  sentence: 'But there seemed to be some difference of opinion as to how far the board
+    should go , and whose advice it should follow .
+
+    '
+- questions: []
+  sentence: 'Chairman C. Richard Mears pointed out that perhaps this was not strictly
+    a school board problem , in case of atomic attack , but that the board would cooperate
+    so far as possible to get the children to where the parents wanted them to go
+    .
+
+    '
+- questions: []
+  sentence: 'Dr. Melvin W. Barnes , superintendent , said he thought the schools were
+    waiting for some leadership , perhaps on the national level , to make sure that
+    whatever steps of planning they took would `` be more fruitful '''' , and that
+    he had found that other school districts were not as far along in their planning
+    as this district .
+
+    '
+- questions: ['What do we need to hear some voice on?', 'What would make some sense?',
+    'What is the national level that would make some sense?', 'What is some confidence
+      in following .
+
+      ?']
+  sentence: 'I think everybody is agreed that we need to hear some voice on the national
+    level that would make some sense and in which we would have some confidence in
+    following .
+
+    '
+- questions: ['Who kept reiterating her request?', 'Who ?', 'Who is who reiterating
+      her request?']
+  sentence: 'Mrs. Molvar , who kept reiterating her request that they `` please take
+    a stand '''' , said , `` We must have faith in somebody -- on the local level
+    , and it wouldn''t be possible for everyone to rush to a school to get their children
+    '''' .
+
+    '
+- questions: ["Where did there be lots of cars `` might not be realistic and would\
+      \ not work '' . \n?"]
+  sentence: 'Dr. Barnes said that there seemed to be feeling that evacuation plans
+    , even for a high school where there were lots of cars `` might not be realistic
+    and would not work '''' .
+
+    '
+- questions: ['What was defeated by district voters in January .
+
+      ?', 'What would have provided some $ 3.5 million for construction of the two
+      900-student schools?', 'What is A bond issue which would have provided some
+      $3.5 million for construction of the two 900-student schools was defeated by
+      district voters in January .
+
+      ?']
+  sentence: 'A bond issue which would have provided some $3.5 million for construction
+    of the two 900-student schools was defeated by district voters in January .
+
+    '
+- questions: ['What did The Assemblies of God has been a bulwark for fundamentalism
+      in these modern days and has , without compromise , stand for?', "What have\
+      \ men in the past been willing to give their lives '' . \n?", 'What are the
+      great truths of the Bible for which men in the past have been willing to give
+      their lives '''' .
+
+      ?']
+  sentence: 'At the adoption , the Rev. T. F. Zimmerman , general superintendent ,
+    commented , `` The Assemblies of God has been a bulwark for fundamentalism in
+    these modern days and has , without compromise , stood for the great truths of
+    the Bible for which men in the past have been willing to give their lives ''''
+    .
+
+    '
+- questions: []
+  sentence: 'however , the first belief stood for entire revision with a new third
+    point added to the list .
+
+    '
+- questions: ['Who may a person join?', "Who do all of the conspirators be '' . \n\
+      ?", 'Who is a conspiracy without knowing who all of the conspirators are ''''
+      .
+
+      ?']
+  sentence: 'In denying motions for dismissal , Judge Powell stated that mass trials
+    have been upheld as proper in other courts and that `` a person may join a conspiracy
+    without knowing who all of the conspirators are '''' .
+
+    '
+- questions: ['What replied :
+
+      ?', 'What is federal prosecutor A. Lawrence Burbank :
+
+      ?']
+  sentence: 'Schwab also declared there is no proof of Weinstein''s entering a conspiracy
+    to use the U.S. mails to defraud , to which federal prosecutor A. Lawrence Burbank
+    replied :
+
+    '
+- questions: ['What is deferred ?']
+  sentence: 'In the afternoon , defense attorneys began the presentation of their
+    cases with opening statements , some of which had been deferred until after the
+    government had called witnesses and presented its case .
+
+    '
+- questions: ['Who figures to be in the middle of Oriole plans for a drive on the
+      1961 American League pennant ,?', 'Who is the big righthander who figures to
+      be in the middle of Oriole plans for a drive on the 1961 American League pennant
+      , held the A''s scoreless while yielding three scattered hits .
+
+      ?']
+  sentence: 'Over the first five frames , Jack Fisher , the big righthander who figures
+    to be in the middle of Oriole plans for a drive on the 1961 American League pennant
+    , held the A''s scoreless while yielding three scattered hits .
+
+    '
+- questions: ['What was ?', "What proved to be the winning run . \n?"]
+  sentence: 'Then Heywood Sullivan , Kansas City catcher , singled up the middle and
+    Throneberry was across with what proved to be the winning run .
+
+    '
+- questions: []
+  sentence: 'Keegan , a 6-foot-3-inch 158-pounder , gave up the Orioles'' last two
+    safeties over the final three frames , escaping a load of trouble in the ninth
+    when the Birds threatened but failed to tally .
+
+    '
+- questions: ["When did Breeding , along with Robinson , the two Birds who get a pair\
+      \ of hits , doubled to right center , moved to third on Russ Snyder 's single\
+      \ to right and crossed on Kunkel 's wild pitch into the dirt in front of the\
+      \ plate . \n?", "Who got a pair of hits , doubled to right center , moved to\
+      \ third on Russ Snyder 's single to right and crossed on Kunkel 's wild pitch\
+      \ into the dirt in front of the plate . \n?", 'Who was the two Birds who got
+      a pair of hits , doubled to right center , moved to third on Russ Snyder''s
+      single to right and crossed on Kunkel''s wild pitch into the dirt in front of
+      the plate .
+
+      ?']
+  sentence: 'The Orioles got a run in the first inning when Breeding , along with
+    Robinson , the two Birds who got a pair of hits , doubled to right center , moved
+    to third on Russ Snyder''s single to right and crossed on Kunkel''s wild pitch
+    into the dirt in front of the plate .
+
+    '
+- questions: []
+  sentence: 'Jim Gentile bounced a hard shot off Kunkel''s glove and beat it out for
+    a single , and when Lumpe grabbed the ball and threw it over first baseman Throneberry''s
+    head Brandt took third and Gentile second on the error .
+
+    '
+- questions: []
+  sentence: 'When Robinson tried to stretch his blow into a triple , he was cut down
+    in a close play at third , Tuttle to Andy Carey .
+
+    '
+- questions: ['What did Carey single on?', "What did Robinson cut across to field\
+      \ and threw wide to first . \n?", 'What was Carey on a slow-bouncing ball to
+      short which Robinson cut across to field and threw wide to first .
+
+      ?']
+  sentence: 'Carey singled on a slow-bouncing ball to short which Robinson cut across
+    to field and threw wide to first .
+
+    '
+- questions: ['Who ?', 'Who is tomorrow for a night game and a single test Sunday
+      afternoon .
+
+      ?']
+  sentence: 'If the Orioles are to break their losing streak within the next two days
+    , it will have to be at the expense of the American League champion New York Yankees
+    , who come in here tomorrow for a night game and a single test Sunday afternoon
+    .
+
+    '
+- questions: []
+  sentence: '-- The flavor of Baltimore''s Florida Grapefruit League news ripened
+    considerably late today when the Orioles were advised that Ron Hansen has fulfilled
+    his obligations under the Army''s military training program and is ready for belated
+    spring training .
+
+    '
+- questions: ['Who ?', 'Who is the 1960 Oriole high of 22 homers and drove in 86 runs
+      on a
+
+      ?']
+  sentence: 'Hansen , who slugged the 1960 Oriole high of 22 homers and drove in 86
+    runs on a
+
+    '
+- questions: ['Who posted a 15 - 1 record last year for the Yanks '' Auburn ( N.Y.
+      ) farm club of the Class - D New York - Pennsylvania League ,?', 'Who was a
+      rookie righthander who posted a 15-1 record last year for the Yanks'' Auburn
+      ( N.Y. ) farm club of the Class-D New York-Pennsylvania League , are the probable
+      rival pitchers .
+
+      ?']
+  sentence: 'Ryne Duren and Roland Sheldon , a rookie righthander who posted a 15-1
+    record last year for the Yanks'' Auburn ( N.Y. ) farm club of the Class-D New
+    York-Pennsylvania League , are the probable rival pitchers .
+
+    '
+- questions: ['Who was in a mood to celebrate .
+
+      ?', 'Who ?', 'Who is who in a mood to celebrate .
+
+      ?']
+  sentence: 'It was the first of two doubles by Robinson , who was in a mood to celebrate
+    .
+
+    '
+- questions: []
+  sentence: 'Their flight was delayed , Dunn said , when a boarding ramp inflicted
+    some minor damage to the wing of the plane .
+
+    '
+- questions: ['What ?', 'What was had what seemed to be a substantial lead in the
+      early stages , tired rapidly nearing the wire and was able to save place money
+      only a head in front of Glen T. Hallowell''s Milties Miss .
+
+      ?', 'What did which have what seemed to be a substantial lead in the early stages
+      , tired rapidly nearing the wire and was able to save place money only a head
+      in front of?', "What seemed to be a substantial lead in the early stages , tired\
+      \ rapidly nearing the wire and was able to save place money only a head in front\
+      \ of Glen T. Hallowell 's Milties Miss . \n?"]
+  sentence: 'Richard M. Forbes''s Paget , which had what seemed to be a substantial
+    lead in the early stages , tired rapidly nearing the wire and was able to save
+    place money only a head in front of Glen T. Hallowell''s Milties Miss .
+
+    '
+- questions: ['Who ?', 'Who is month in New York with a clocking of 1.09.3 , wiped
+      out Mills''s early pace and beat the young Big 10 quarter-mile king by 5 yards
+      .
+
+      ?']
+  sentence: 'Kerr , who set the world record earlier this month in New York with a
+    clocking of 1.09.3 , wiped out Mills''s early pace and beat the young Big 10 quarter-mile
+    king by 5 yards .
+
+    '
+- questions: []
+  sentence: 'The crowd at the twenty-first annual K. of C. Games , final indoor meet
+    of the season , got a thrill a few minutes earlier when a slender , bespectacled
+    woman broke the one-week-old world record in the half-mile run .
+
+    '
+- questions: ['Who has two children ,?', 'Who is a 27-year-old housewife who has two
+      children , finished in 2.21.6 .
+
+      ?']
+  sentence: 'Mrs. Grace Butcher , of nearby Chardon , a 27-year-old housewife who
+    has two children , finished in 2.21.6 .
+
+    '
+- questions: ['Who ranks fourth in Southwest Conference scoring after three games
+      .
+
+      ?', 'Who does n''t even know the team ''s plays , Eldon Moritz ,?', 'Who is
+      A Texas halfback who doesn''t even know the team''s plays , Eldon Moritz , ranks
+      fourth in Southwest Conference scoring after three games .
+
+      ?']
+  sentence: '-- A Texas halfback who doesn''t even know the team''s plays , Eldon
+    Moritz , ranks fourth in Southwest Conference scoring after three games .
+
+    '
+- questions: ['What ''s he?', "What will be heavily favored Saturday over Oklahoma\
+      \ in the Cotton Bowl . \n?", 'What are the most valuable members of the Longhorn
+      team that will be heavily favored Saturday over Oklahoma in the Cotton Bowl
+      .
+
+      ?']
+  sentence: 'Moritz doesn''t even have a nose guard or hip pads but he''s one of the
+    most valuable members of the Longhorn team that will be heavily favored Saturday
+    over Oklahoma in the Cotton Bowl .
+
+    '
+- questions: ['What is Moritz listed on the Longhorn roster as a right halfback ,?',
+    "What did he letter on the 1956 team . \n?", 'What was the position at which he
+      lettered on the 1956 team .
+
+      ?']
+  sentence: 'Moritz is listed on the Longhorn roster as a right halfback , the position
+    at which he lettered on the 1956 team .
+
+    '
+- questions: []
+  sentence: 'Last year , when he worked out at halfback all season , he didn''t get
+    into a single game .
+
+    '
+- questions: ['What did He kick several while playing at Stamford High School , including?',
+    "What beat Anson , 3 - 0 , in a 1953 district game . \n?", 'What was one that
+      beat Anson , 3-0 , in a 1953 district game .
+
+      ?']
+  sentence: 'He kicked several while playing at Stamford High School , including one
+    that beat Anson , 3-0 , in a 1953 district game .
+
+    '
+- questions: []
+  sentence: 'His statistical record that year , when Texas won only one game and lost
+    nine , was far from impressive : he carried the ball three times for a net gain
+    of 10 yards , punted once for 39 yards and caught one pass for 13 yards .
+
+    '
+- questions: []
+  sentence: 'Moritz , however , kicks only about 10 or 12 extra points during each
+    practice session .
+
+    '
+- questions: []
+  sentence: 'Tailback James Saxton already has surpassed his rushing total for his
+    brilliant sophomore season , when he netted 271 yards on 55 carries ; ;
+
+    '
+- questions: ['When was Royal informed?']
+  sentence: 'Last week , when Royal was informed that three Longhorns were among the
+    conference''s top four in rushing , he said : `` That won''t last long '''' .
+
+    '
+- questions: ['What did he cause?', "What set up our touchdown . \n?", 'What was he
+      the fumble that set up our touchdown .
+
+      ?']
+  sentence: 'And he caused the fumble that set up our touchdown .
+
+    '
+- questions: ['What was The Air Force ''s , and the game ''s , final play ,?', "What\
+      \ did Gannon intercept on his own 44 and returned 22 yards . \n?", 'What was
+      a long pass by quarterback Bob McNaughton which Gannon intercepted on his own
+      44 and returned 22 yards .
+
+      ?']
+  sentence: 'The Air Force''s , and the game''s , final play , was a long pass by
+    quarterback Bob McNaughton which Gannon intercepted on his own 44 and returned
+    22 yards .
+
+    '
+- questions: ['Who ?', 'Who is treatment for a leg injury suffered in the Raiders''
+      38-7 loss to Texas A & M Because of its important game with Arkansas coming
+      up Saturday?']
+  sentence: '-- Held out of Texas Tech''s sweat-suits drill Monday at Lubbock was
+    tackle Richard Stafford , who is undergoing treatment for a leg injury suffered
+    in the Raiders'' 38-7 loss to Texas A & M Because of its important game with Arkansas
+    coming up Saturday , Baylor worked out in the rain Monday -- mud or no mud .
+
+    '
+- questions: ['Who ?', 'Who is a hand in the Owl''s game with LSU , was back working
+      out with Rice Monday?']
+  sentence: 'End Gene Raesz , who broke a hand in the Owl''s game with LSU , was back
+    working out with Rice Monday , and John Nichols , sophomore guard , moved back
+    into action after a week''s idleness with an ankle injury .
+
+    '
+- questions: ['Who ?', 'Who is become one of the game''s greatest collectors of quarterbacks
+      , apparently now has found a productive pair in two ex-National Football Leaguers
+      , M. C. Reynolds and Warren Rabb .
+
+      ?']
+  sentence: 'Buffalo coach Buster Ramsey , who has become one of the game''s greatest
+    collectors of quarterbacks , apparently now has found a productive pair in two
+    ex-National Football Leaguers , M. C. Reynolds and Warren Rabb .
+
+    '
+- questions: []
+  sentence: 'The Texans made themselves a comforting break on the opening kickoff
+    when Denver''s Al Carmichael was jarred loose from the ball when Dave Grayson
+    , the speedy halfback , hit him and Guard Al Reynolds claimed it for Dallas .
+
+    '
+- questions: ['What have the major leagues ordered?', "What are in progress at Massachusetts\
+      \ Institute of Technology . \n?", 'What are their own tests , which are in progress
+      at Massachusetts Institute of Technology .
+
+      ?']
+  sentence: 'Not satisfied with various unofficial checks on the liveliness of baseballs
+    currently in use , the major leagues have ordered their own tests , which are
+    in progress at Massachusetts Institute of Technology .
+
+    '
+- questions: []
+  sentence: 'The Bears added two more in the fifth when McAuliffe dropped a double
+    into the leftfield corner , Paschal doubled down the rightfield line and Cooke
+    singled off Phil Shartzer''s glove .
+
+    '
+- questions: []
+  sentence: 'Nischwitz was working on a 3-hitter when the Indians bunched three of
+    their eight hits for two runs in the sixth .
+
+    '
+- questions: ['Who was Among the spectators?', "Who is Mrs. Don Rudolph when off the\
+      \ stage . \n?", 'Who is the noted exotic dancer , Patti Waggin who is Mrs. Don
+      Rudolph when off the stage .
+
+      ?']
+  sentence: 'Among the spectators was the noted exotic dancer , Patti Waggin who is
+    Mrs. Don Rudolph when off the stage .
+
+    '
+- questions: ['What just eluded the diving Minnie Minoso in left field ,?', 'What
+      is drove in Jim Lemon with the winning run with two out in the last of the ninth
+      to give the Minnesota Twins a 6-5 victory over the Chicago White Sox Monday
+      .
+
+      ?']
+  sentence: '-- Billy Gardner''s line double , which just eluded the diving Minnie
+    Minoso in left field , drove in Jim Lemon with the winning run with two out in
+    the last of the ninth to give the Minnesota Twins a 6-5 victory over the Chicago
+    White Sox Monday .
+
+    '
+- questions: []
+  sentence: 'The Twins tied the score in the sixth inning when Reno Bertoia beat out
+    a high chopper to third base and scored on Lenny Green''s double to left .
+
+    '
+- questions: []
+  sentence: '`` I know when my reflexes are gone and I''m not going to be any 25th
+    man on the ball club '''' .
+
+    '
+- questions: []
+  sentence: 'He took a midnight train out of Cleveland Saturday , without an official
+    word to anybody , and has stayed away from newsmen on his train trip across the
+    nation to Reno , Nev. , where his wife , former Olympic Diving Champion Zoe Ann
+    Olsen , awaited .
+
+    '
+- questions: ['Who did I tell him?', 'Who did I be?', 'Who was him who I was?']
+  sentence: '`` I told him who I was and he was quite cold .
+
+    '
+- questions: ['What did I tell him what?', 'What had Liston said?']
+  sentence: 'I told him what Liston had said and he said Liston was a double-crosser
+    and said anything he ( Liston ) got was through a keyhole .
+
+    '
+- questions: ['Who ?', 'Who is Jensen?']
+  sentence: 'Liston is Bill Liston , baseball writer for the Boston Traveler , who
+    quoted Jensen as saying :
+
+    '
+- questions: ['Who was It a real stimulant to a lot of?', "Who have moved past the\
+      \ 2-score - year milestone . \n?", 'Who is a lot of guys I know who have moved
+      past the 2-score-year milestone .
+
+      ?']
+  sentence: 'It was a real stimulant to a lot of guys I know who have moved past the
+    2-score-year milestone .
+
+    '
+- questions: ['Who ?', 'Who is day and popped one over the clubhouse .
+
+      ?']
+  sentence: '`` Spahnie doesn''t know how to merely go through the motions '''' ,
+    remarked Enos Slaughter , another all-out guy , who played rightfield that day
+    and popped one over the clubhouse .
+
+    '
+- questions: ['What is This?', 'What boils down to a matter of opinion?', 'What is
+      an issue which boils down to a matter of opinion?']
+  sentence: 'This is an issue which boils down to a matter of opinion , depending
+    on whether you''re an American or National fan and anti or pro-Yankee .
+
+    '
+- questions: []
+  sentence: 'The record books , however , would favor the Giants'' ace .
+
+    '
+- questions: ['Who found the formula in Milwaukee''s park .
+
+      ?', 'Who had been anemic with the bat in their windy Candlestick Park suddenly?',
+    'Who is The Giants who had been anemic with the bat in their windy Candlestick
+      Park suddenly found the formula in Milwaukee''s park .
+
+      ?']
+  sentence: 'The Giants who had been anemic with the bat in their windy Candlestick
+    Park suddenly found the formula in Milwaukee''s park .
+
+    '
+- questions: []
+  sentence: 'It will forever be a baseball mystery how a team will suddenly start
+    hitting after a distressing slump .
+
+    '
+- questions: []
+  sentence: 'The Denver-area TV audience was privileged to see Mays'' four home runs
+    , thanks to a new arrangement made by Bob Howsam that the games are not to be
+    blacked out when his Bears are playing at home .
+
+    '
+- questions: []
+  sentence: 'The last couple of years the Bears management got the business from the
+    `` Living Room Athletic Club '''' when games were cut off .
+
+    '
+- questions: []
+  sentence: 'There are two more Sunday afternoons when the situation will arise .
+
+    '
+- questions: ['What is It?', "What does baseball more harm than good , especially\
+      \ at the minor league level . \n?", 'What is an irritable rule that does baseball
+      more harm than good , especially at the minor league level .
+
+      ?']
+  sentence: 'It is an irritable rule that does baseball more harm than good , especially
+    at the minor league level .
+
+    '
+- questions: ["What did many fans purposely stay away from Bears Stadium last year\
+      \ because of the television policy . \n?"]
+  sentence: 'You would be surprised how many fans purposely stayed away from Bears
+    Stadium last year because of the television policy .
+
+    '
+- questions: []
+  sentence: 'Momentarily the Reds were back in the ball game , trailing only 6-3 ,
+    but the drive fizzled when John Edwards fouled out with men on second and third
+    and two out .
+
+    '
+- questions: ['Who retired at the end of last season .
+
+      ?', 'Who ?', 'Who is who at the end of last season .
+
+      ?']
+  sentence: 'He succeeds Buck Shaw , who retired at the end of last season .
+
+    '
+- questions: ['What was The appointment announced at?', "What did Skorich say he would\
+      \ retain two members of Shaw 's staff -- Jerry Williams and Charlie Gauer .\
+      \ \n?", 'What was a news conference at which Skorich said he would retain two
+      members of Shaw''s staff -- Jerry Williams and Charlie Gauer .
+
+      ?']
+  sentence: 'The appointment was announced at a news conference at which Skorich said
+    he would retain two members of Shaw''s staff -- Jerry Williams and Charlie Gauer
+    .
+
+    '
+- questions: ['Who led the Eagles to the title ,?', 'Who was the quarterback who led
+      the Eagles to the title , was signed by the Vikings last Wednesday .
+
+      ?']
+  sentence: 'Van Brocklin , the quarterback who led the Eagles to the title , was
+    signed by the Vikings last Wednesday .
+
+    '
+- questions: []
+  sentence: 'Skorich , however , is a strong advocate of a balanced attack -- split
+    between running and passing .
+
+    '
+- questions: ['Who is 39 years old , played football at Cincinnati University and
+      then had a three-year professional career as a lineman under Jock Sutherland
+      with the Pittsburgh Steelers .
+
+      ?', 'Who ?', 'Who is who 39 years old , played football at Cincinnati University
+      and then had a three-year professional career as a lineman under Jock Sutherland
+      with the Pittsburgh Steelers .
+
+      ?']
+  sentence: 'Skorich , who is 39 years old , played football at Cincinnati University
+    and then had a three-year professional career as a lineman under Jock Sutherland
+    with the Pittsburgh Steelers .
+
+    '
+- questions: ['Who did Shaw and Skorich head?', "Who received an engrossed copy of\
+      \ an official city citation and a pair of silver cufflinks shaped like a football\
+      \ . \n?", 'Who were a group of players , coaches and team officials who received
+      an engrossed copy of an official city citation and a pair of silver cufflinks
+      shaped like a football .
+
+      ?']
+  sentence: 'Shaw and Skorich headed a group of players , coaches and team officials
+    who received an engrossed copy of an official city citation and a pair of silver
+    cufflinks shaped like a football .
+
+    '
+- questions: ['Who beat the Yankees in the final series game , will receive the Babe
+      Ruth Award as the outstanding player in the 1960 world series .
+
+      ?', 'Who is whose homer beat the Yankees in the final series game , will receive
+      the Babe Ruth Award as the outstanding player in the 1960 world series .
+
+      ?']
+  sentence: 'Mazeroski , whose homer beat the Yankees in the final series game , will
+    receive the Babe Ruth Award as the outstanding player in the 1960 world series
+    .
+
+    '
+- questions: ['What is A crowd of 1,400 expected for?', "What will be followed by\
+      \ the show in which the writers will lampoon baseball personalities in skit\
+      \ , dance and song . \n?", 'What are the ceremonies , which will be followed
+      by the show in which the writers will lampoon baseball personalities in skit
+      , dance and song .
+
+      ?', 'What is the show in which the writers will lampoon baseball personalities
+      in skit , dance and song .
+
+      ?']
+  sentence: 'A crowd of 1,400 is expected for the ceremonies , which will be followed
+    by the show in which the writers will lampoon baseball personalities in skit ,
+    dance and song .
+
+    '
+- questions: ['What to Named by Mayor Wagner three years ago head?', 'What included
+      James A. Farley , Bernard Gimbel and Clint Blume?', 'What was a committee that
+      included James A. Farley , Bernard Gimbel and Clint Blume?']
+  sentence: 'Named by Mayor Wagner three years ago to head a committee that included
+    James A. Farley , Bernard Gimbel and Clint Blume , Shea worked relentlessly .
+
+    '
+- questions: []
+  sentence: 'When that failed , he enlisted Branch Rickey''s aid in the formation
+    of a third major league , the Continental , with New York as the key franchise
+    .
+
+    '
+- questions: ['What was He heralded as `` Sportsman of the Year '''' by Sports Illustrated
+      , and last night was acclaimed in Rochester as the `` Professional Athlete of
+      the Year '''' ,?', "What earned for him the $ 10,000 diamond - studded Hickok\
+      \ Belt . \n?", 'What is a distinction that earned for him the $10,000 diamond-studded
+      Hickok Belt .
+
+      ?']
+  sentence: 'He was heralded as `` Sportsman of the Year '''' by Sports Illustrated
+    , and last night was acclaimed in Rochester as the `` Professional Athlete of
+    the Year '''' , a distinction that earned for him the $10,000 diamond-studded
+    Hickok Belt .
+
+    '
+- questions: ['What did he also achieve?', "What endeared him to every duffer who\
+      \ ever flubbed a shot . \n?", 'What was something that endeared him to every
+      duffer who ever flubbed a shot .
+
+      ?', "Who ever flubbed a shot . \n?", 'Who was every duffer who ever flubbed
+      a shot .
+
+      ?']
+  sentence: 'But he also achieved something that endeared him to every duffer who
+    ever flubbed a shot .
+
+    '
+- questions: ['Who did it also stay?', "Who were meditating the abandonment of a sport\
+      \ whose frustrations were driving them to despair . \n?", 'Who are the hands
+      of thousands of brooding incompetents who were meditating the abandonment of
+      a sport whose frustrations were driving them to despair .
+
+      ?', "Whose were frustrations driving them to despair . \n?", 'Who are whose
+      frustrations were driving them to despair .
+
+      ?']
+  sentence: 'And it also stayed the hands of thousands of brooding incompetents who
+    were meditating the abandonment of a sport whose frustrations were driving them
+    to despair .
+
+    '
+- questions: ['What was It neither a spirit of self - sacrifice nor a yen to encourage?',
+    "What motivated Arnold . \n?", 'What was the downtrodden that motivated Arnold
+      .
+
+      ?']
+  sentence: 'It was neither a spirit of self-sacrifice nor a yen to encourage the
+    downtrodden that motivated Arnold .
+
+    '
+- questions: ['What became He merely victimized by?', "What respects no one and aggravates\
+      \ all . \n?", 'What is a form of athletics that respects no one and aggravates
+      all .
+
+      ?']
+  sentence: 'He merely became victimized by a form of athletics that respects no one
+    and aggravates all .
+
+    '
+- questions: []
+  sentence: 'From the standpoint of the army of duffers , however , this was easily
+    the most heartening exhibition they had had since Ben Hogan fell upon evil ways
+    during his heyday and scored an 11 in the Texas open .
+
+    '
+- questions: ['Who achieved a 19 in the United States Open .
+
+      ?', 'Who ?', 'Who is who a 19 in the United States Open .
+
+      ?']
+  sentence: 'The idol of the hackers , of course , is Ray Ainsley , who achieved a
+    19 in the United States Open .
+
+    '
+- questions: ['Who ?', 'Who is his lunch during another Open and tried to blast his
+      way out of a rock-strewn gully .
+
+      ?']
+  sentence: 'Their secondary hero is another pro , Willie Chisholm , who drank his
+    lunch during another Open and tried to blast his way out of a rock-strewn gully
+    .
+
+    '
+- questions: ['Who tried to keep count .
+
+      ?', 'Who ?', 'Who is who to keep count .
+
+      ?']
+  sentence: 'Willie''s partner was Long Jim Barnes , who tried to keep count .
+
+    '
+- questions: []
+  sentence: '`` How many is that , Jim '''' ? ?
+
+    '
+- questions: ['Who is Arnold?', "Who knows the code as thoroughly as the man who wrote\
+      \ the book . \n?", 'Who was one golfer who knows the code as thoroughly as the
+      man who wrote the book .
+
+      ?', "Who wrote the book . \n?", 'Who was the man who wrote the book .
+
+      ?']
+  sentence: 'If there had been , he would have found a loophole , because Arnold is
+    one golfer who knows the code as thoroughly as the man who wrote the book .
+
+    '
+- questions: ['What did His first shot in the Open last year land in?', "What flowed\
+      \ along the right side of the fairway . \n?", 'What was a brook that flowed
+      along the right side of the fairway .
+
+      ?']
+  sentence: 'His first shot in the Open last year landed in a brook that flowed along
+    the right side of the fairway .
+
+    '
+- questions: ['Who ?', 'Who is this suddenly hot potato in a very playable lie .
+
+      ?']
+  sentence: 'A spectator picked up the ball and handed it to a small boy , who dropped
+    this suddenly hot potato in a very playable lie .
+
+    '
+- questions: ["Where had it originally entered the stream . \n?"]
+  sentence: 'Joe naturally ruled that a ball be dropped from alongside the spot where
+    it had originally entered the stream .
+
+    '
+- questions: []
+  sentence: '`` I knew it all along '''' , confessed Arnold with a grin , `` but I
+    just happened to think how much nicer it would be to drop one way up there ''''
+    .
+
+    '
+- questions: ['Who plays golf with a serious intensity?', 'Who is a serious young
+      man who plays golf with a serious intensity?']
+  sentence: 'For a serious young man who plays golf with a serious intensity , Palmer
+    has such an inherent sense of humor that it relieves the strain and keeps his
+    nerves from jangling like banjo strings .
+
+    '
+- questions: ["When does he is sure he be right . \n?"]
+  sentence: 'He''ll even bull head-on into the rules when he is sure he''s right .
+
+    '
+- questions: ["What did he first win the Masters in 1958 . \n?"]
+  sentence: 'That''s how he first won the Masters in 1958 .
+
+    '
+- questions: []
+  sentence: '`` You must play it where it lies '''' .
+
+    '
+- questions: ['Who did say Arnold ,?', "Who knows the rules . \n?", 'Who is a man
+      who knows the rules .
+
+      ?']
+  sentence: '`` You''re wrong '''' , said Arnold , a man who knows the rules .
+
+    '
+- questions: ['Who was Arnold Palmer?', "Who had nothing in common with the duffers\
+      \ . \n?", 'Who was some god-like creature who had nothing in common with the
+      duffers .
+
+      ?']
+  sentence: 'Until a few weeks ago , however , Arnold Palmer was some god-like creature
+    who had nothing in common with the duffers .
+
+    '
+- questions: ['What are expected to continue through Saturday , concern television
+      ,?', 'What are the meetings , which are expected to continue through Saturday
+      , concern television , rules changes , professional football''s hall of fame
+      , players'' benefits and constitutional amendments .
+
+      ?']
+  sentence: 'Other items on the agenda during the meetings , which are expected to
+    continue through Saturday , concern television , rules changes , professional
+    football''s hall of fame , players'' benefits and constitutional amendments .
+
+    '
+- questions: []
+  sentence: 'However , this would require a lengthening of the season from thirteen
+    to fourteen weeks .
+
+    '
+- questions: ['Who ?', 'Who is the Pirates as much trouble?']
+  sentence: 'Tonight at 8 o''clock the Cardinals , who gave the Pirates as much trouble
+    as anyone did in 1960 , breaking even with them , will get their first 1961 shot
+    at baseball''s world champions .
+
+    '
+- questions: ['What has brought four losses in the five games on the current home
+      stand ,?', 'What is a pitching slump that has brought four losses in the five
+      games on the current home stand , moved Gibson to the Wednesday night starting
+      assignment .
+
+      ?']
+  sentence: 'Manager Hemus , eager to end a pitching slump that has brought four losses
+    in the five games on the current home stand , moved Gibson to the Wednesday night
+    starting assignment .
+
+    '
+- questions: ['Who ?', 'Who is playing without captain Kenny Boyer in tonight''s game
+      at Busch Stadium .
+
+      ?']
+  sentence: 'Harvey Haddix , set back by the flu this season , will start against
+    his former Cardinal mates , who might be playing without captain Kenny Boyer in
+    tonight''s game at Busch Stadium .
+
+    '
+- questions: ['Who will be the unhappiest over the news?', 'Who is Pirate who will
+      be the unhappiest over the news?', 'Who will Musial probably sit out most of
+      the series is?', "Who was beaten by The Man twice last season on dramatic home\
+      \ runs . \n?", 'Who is Bob Friend?']
+  sentence: 'Perhaps the Pirate who will be the unhappiest over the news that Musial
+    probably will sit out most of the series is Bob Friend , who was beaten by The
+    Man twice last season on dramatic home runs .
+
+    '
+- questions: []
+  sentence: 'The Pirates jumped off to an 11-3 start by May 1 last year , when the
+    Redbirds as well as the Dodgers held them even over the season .
+
+    '
+- questions: ['What was the ''55 Dodger team .
+
+      ?', 'What got off to a hot start and made a runaway of the race?', 'What was
+      the only National League club that got off to a hot start and made a runaway
+      of the race was the ''55 Dodger team .
+
+      ?']
+  sentence: 'Since 1949 , the only National League club that got off to a hot start
+    and made a runaway of the race was the ''55 Dodger team .
+
+    '
+- questions: ['Who did Speakers at a Tipoff Club dinner deal lavish praise to?', 'Who
+      , in the words of Coach John Benington , `` had more confidence in themselves?',
+    'Who were a group of St. Louis University players who , in the words of Coach
+      John Benington , `` had more confidence in themselves?']
+  sentence: 'Speakers at a Tipoff Club dinner dealt lavish praise to a group of St.
+    Louis University players who , in the words of Coach John Benington , `` had more
+    confidence in themselves than I did '''' .
+
+    '
+- questions: ['Who was In addition , a special award given to Bob ( Bevo ) Nordmann
+      ,?', "Who missed much of the season because of a knee injury . \n?", 'Who was
+      the 6-foot-10 center who missed much of the season because of a knee injury
+      .
+
+      ?']
+  sentence: 'In addition , a special award was given to Bob ( Bevo ) Nordmann , the
+    6-foot-10 center who missed much of the season because of a knee injury .
+
+    '
+- questions: ['What did Benington say?', "What did this team had be a little different\
+      \ . \n?"]
+  sentence: '`` You often hear people talk about team spirit and that sort of thing
+    '''' , Benington said in a conversation after the ceremonies , `` but what this
+    team had was a little different .
+
+    '
+- questions: ['What did They know?']
+  sentence: 'They knew what they could do and it was often a little more than I thought
+    they could do .
+
+    '
+- questions: ["Where is it usually is the coach who supposed to deliver the fight\
+      \ talk . \n?", 'Who is it?', "Who is supposed to deliver the fight talk . \n\
+      ?", 'Who is the coach who is supposed to deliver the fight talk .
+
+      ?']
+  sentence: '`` Several times I found the players pepping me up , where it usually
+    is the coach who is supposed to deliver the fight talk .
+
+    '
+- questions: ['Who were introduced by Bob Broeg , sports editor of the Post-Dispatch
+      .
+
+      ?', 'Who shared the most - valuable honors?', 'Who was The trio who shared the
+      most-valuable honors were introduced by Bob Broeg , sports editor of the Post-Dispatch
+      .
+
+      ?']
+  sentence: 'The trio who shared the most-valuable honors were introduced by Bob Broeg
+    , sports editor of the Post-Dispatch .
+
+    '
+- questions: ['What did Mrs. Benington admire?']
+  sentence: 'Mrs. Benington admired Gordon''s spirit and did what she could to persuade
+    her husband that the boy might help the team .
+
+    '
+- questions: ['What was Nordmann sitting on?']
+  sentence: 'Within a week after the injury , suffered in St. Louis''s victory in
+    the final game of the Kentucky tournament , Nordmann was sitting on the Bill''s
+    bench doing what he could to help Benington .
+
+    '
+- questions: ['What compiled a 21 - 9 record and finished as runner - up in the National
+      Invitation Tournament?', 'What was the team that compiled a 21-9 record and
+      finished as runner-up in the National Invitation Tournament were : Art Hambric
+      , Donnell Reid , Bill Nordmann , Dave Harris , Dave Luechtefeld and George Latinovich
+      .
+
+      ?']
+  sentence: 'Other lettermen from the team that compiled a 21-9 record and finished
+    as runner-up in the National Invitation Tournament were : Art Hambric , Donnell
+    Reid , Bill Nordmann , Dave Harris , Dave Luechtefeld and George Latinovich .
+
+    '
+- questions: ['What did This team set?', 'What could be valuable in the future?',
+    'What is a precedent that could be valuable in the future?']
+  sentence: '`` This team set a precedent that could be valuable in the future ''''
+    , Benington pointed out .
+
+    '
+- questions: []
+  sentence: 'If it''s true that contented cows give more milk , why shouldn''t happy
+    ball players produce more base hits ? ?
+
+    '
+- questions: ['What has Mays , the terror of the Giants , had?', "What would be considered\
+      \ the ultimate by most players , but not by -- or for -- Willie . \n?", 'What
+      are seasons that would be considered the ultimate by most players , but not
+      by -- or for -- Willie .
+
+      ?']
+  sentence: 'Like the Yankees'' slugger , Mays , the terror of the Giants , has had
+    seasons that would be considered the ultimate by most players , but not by --
+    or for -- Willie .
+
+    '
+- questions: []
+  sentence: 'His best years were 1954 when he hit with 41 homers and ''55 when he
+    belted 51 home runs , drove in 127 and stole 24 bases .
+
+    '
+- questions: ["What 're they handled , just as long as their names are spelled correctly\
+      \ on the first and fifteenth of each month . \n?"]
+  sentence: 'Yes , we know , they''re professionals , men paid to play , and they
+    shouldn''t care how they''re handled , just as long as their names are spelled
+    correctly on the first and fifteenth of each month .
+
+    '
+- questions: ['What is Stan Musial?', "What enabled him to put out the same for seven\
+      \ managers , reserving his opinions , but not his effort . \n?", 'What was the
+      disposition that enabled him to put out the same for seven managers , reserving
+      his opinions , but not his effort .
+
+      ?']
+  sentence: 'For that matter , Stan Musial is rare , possessing the disposition that
+    enabled him to put out the same for seven managers , reserving his opinions ,
+    but not his effort .
+
+    '
+- questions: ["When did the kid want to pop his bubble gum and sow his oats . \n?"]
+  sentence: 'Stengel probably preached too much in the early days when the kid wanted
+    to pop his bubble gum and sow his oats .
+
+    '
+- questions: ['Who now?', 'Who are the sights on and off Broadway?']
+  sentence: 'Inheriting a more mature Mantle , who now has seen the sights on and
+    off Broadway , Ralph Houk quietly bestowed , no pun intended , the mantle of authority
+    on Mickey .
+
+    '
+- questions: []
+  sentence: 'And what leadership a proud Mantle has given so far .
+
+    '
+- questions: []
+  sentence: 'Next to Leo Durocher , Dark taught Mays the most when he was a grass-green
+    rookie rushed up to the Polo Grounds 10 years ago this month , to help the Giants
+    win a dramatic pennant .
+
+    '
+- questions: ['Who are to be married at 4:30 p.m. tomorrow in the Lake Forest home
+      of her brother , J. Hampton Monroe , and Mrs. Monroe .
+
+      ?', 'Who ?', 'Who is who to be married at 4:30 p.m. tomorrow in the Lake Forest
+      home of her brother , J. Hampton Monroe , and Mrs. Monroe .
+
+      ?']
+  sentence: 'Romantic news concerns Mrs. Joan Monroe Armour and F. Lee H. Wendell
+    , who are to be married at 4:30 p.m. tomorrow in the Lake Forest home of her brother
+    , J. Hampton Monroe , and Mrs. Monroe .
+
+    '
+- questions: ['Who ?', 'Who is returning from a winter holiday in Sarasota , Fla.
+      , for the occasion ; ;
+
+      ?']
+  sentence: 'the bridegroom''s parents , the Barrett Wendells , who are returning
+    from a winter holiday in Sarasota , Fla. , for the occasion ; ;
+
+    '
+- questions: ['Who ?', 'Who is arrive from Boston .
+
+      ?']
+  sentence: 'and his brother , Mr. Wendell Jr. , and his wife , who will arrive from
+    Boston .
+
+    '
+- questions: []
+  sentence: 'However , Mr. Parichy and his bride will go to Vero Beach on their wedding
+    trip , and will stay in the John G. Beadles'' beach house .
+
+    '
+- questions: ['What is Luke ''s Fashion show still ringing in her ears , its director
+      , Helen Tieken Geraghty ( Mrs. Maurice P. Geraghty ) taking off tomorrow on?',
+    "What should earn her even greater acclaim as director of entertainment for next\
+      \ summer 's International Trade fair . \n?", 'What is a 56 day world trip which
+      should earn her even greater acclaim as director of entertainment for next summer''s
+      International Trade fair .
+
+      ?']
+  sentence: 'With loud huzzahs for the artistic success of the Presbyterian-St. Luke''s
+    Fashion show still ringing in her ears , its director , Helen Tieken Geraghty
+    ( Mrs. Maurice P. Geraghty ) is taking off tomorrow on a 56 day world trip which
+    should earn her even greater acclaim as director of entertainment for next summer''s
+    International Trade fair .
+
+    '
+- questions: []
+  sentence: 'The last obstacle in Mrs. Geraghty''s globe-girdling trip was smoothed
+    out when a representative of Syria called upon her to explain that his brother
+    would meet her at the border of that country -- so newly separated from Egypt
+    and the United Arab Republic that she hadn''t been able to obtain a visa .
+
+    '
+- questions: []
+  sentence: 'It won''t be a `` tea '''' , however , but more of an international folk
+    song festival , with singers from Chicago''s foreign groups to sing Christmas
+    songs from around the world .
+
+    '
+- questions: ['Whom is He?', "Whom did the Burkes meet last year in Europe . \n?",
+    'Who was son of the Guglielmo Rostagnos of Florence whom the Burkes met last year
+      in Europe .
+
+      ?']
+  sentence: 'He is Aldo Rostagno , son of the Guglielmo Rostagnos of Florence whom
+    the Burkes met last year in Europe .
+
+    '
+- questions: ['Who is with a publishing firm , translates many books from English
+      into Italian .
+
+      ?', 'Who ?', 'Who is who with a publishing firm , translates many books from
+      English into Italian .
+
+      ?']
+  sentence: 'Her fiance , who is with a publishing firm , translates many books from
+    English into Italian .
+
+    '
+- questions: []
+  sentence: 'Everybody has a different idea on the ethics and morals of driving away
+    neighbors , when and if .
+
+    '
+- questions: ['Who did fund raising group , fill me in on?', "Who are using phones\
+      \ to solicit funds for Danny 's St. Jude hospital in Memphis . \n?", 'Who are
+      the low-down phonies who are using phones to solicit funds for Danny''s St.
+      Jude hospital in Memphis .
+
+      ?']
+  sentence: 'George Simon , exec director of Danny Thomas A. L. S. A. C. ( Aiding
+    Leukemia Stricken American Children ) fund raising group , filled me in on the
+    low-down phonies who are using phones to solicit funds for Danny''s St. Jude hospital
+    in Memphis .
+
+    '
+- questions: []
+  sentence: 'The only current event they''re staging is the big show at the Stadium
+    Nov. 25 , when Danny will entertain thousands of underprivileged kids .
+
+    '
+- questions: []
+  sentence: 'Give generously when you buy candy today for the Brain Research Foundation
+    .
+
+    '
+- questions: ['Who ?', 'Who is quite a showman and boss of Chicago''s new pro basketball
+      Packers , is debuting a new International club , for the exclusive use of season
+      ticket holders , in the Stock Yards Inn .
+
+      ?']
+  sentence: 'Dave Trager , who is quite a showman and boss of Chicago''s new pro basketball
+    Packers , is debuting a new International club , for the exclusive use of season
+    ticket holders , in the Stock Yards Inn .
+
+    '
+- questions: ["When do the Packs meet St. Louis in their season home opener . \n?"]
+  sentence: 'Jump off is tomorrow night when the Packs meet St. Louis in their season
+    home opener .
+
+    '
+- questions: ['Who ?', 'Who is meet with the probate advisory board of the Chicago
+      Bar association , for suggestions on how to handle the opening of safety deposit
+      boxes?']
+  sentence: 'A cheer here for Francis Lorenz , state treasurer , who will meet with
+    the probate advisory board of the Chicago Bar association , for suggestions on
+    how to handle the opening of safety deposit boxes after somebody dies .
+
+    '
+- questions: ['Who ?', 'Who is Saturday?']
+  sentence: 'Music for dancing will be furnished by Allen Uhles and his orchestra
+    , who will play each Saturday during June .
+
+    '
+- questions: ['Who ?', 'Who is her birthday on Tuesday .
+
+      ?']
+  sentence: 'Mrs. J. Edward Hackstaff and Mrs. Paul Luette are planning a luncheon
+    next week in honor of Mrs. J. Clinton Bowman , who celebrates her birthday on
+    Tuesday .
+
+    '
+- questions: ['What will There be a stag dinner Friday?', "What will precede the opening\
+      \ of the 1961 golf season . \n?", 'What is evening at the Denver Country Club
+      which will precede the opening of the 1961 golf season .
+
+      ?']
+  sentence: 'There will be a stag dinner Friday evening at the Denver Country Club
+    which will precede the opening of the 1961 golf season .
+
+    '
+- questions: ['Who is a `` civilian '''' with the Army .
+
+      ?', 'Who came to Denver three years ago from Buffalo , N.Y. ,?', 'Who was haired
+      woman who came to Denver three years ago from Buffalo , N.Y. , is a `` civilian
+      '''' with the Army .
+
+      ?']
+  sentence: 'The pert , gray-haired woman who came to Denver three years ago from
+    Buffalo , N.Y. , is a `` civilian '''' with the Army .
+
+    '
+- questions: ['What is National Salvation Army Week?', 'What is Her day early , but
+      no matter how many pressing letters there are to be written ( and during May
+      , which is National Salvation Army Week?']
+  sentence: 'Her day starts early , but no matter how many pressing letters there
+    are to be written ( and during May , which is National Salvation Army Week , there
+    are plenty ) , schedules to be made or problems to be solved , Mrs. Marr''s office
+    is always open and the welcome mat is out .
+
+    '
+- questions: []
+  sentence: 'That is where we turn in the good old summertime .
+
+    '
+- questions: ['What does no other nation offer its vacationing motorists such variety
+      and beauty of scene ,?', 'What are such an excellent network of roads on which
+      to enjoy it and such decent , far-flung over-night accommodations .
+
+      ?']
+  sentence: 'I hope it can be said without boasting that no other nation offers its
+    vacationing motorists such variety and beauty of scene , such an excellent network
+    of roads on which to enjoy it and such decent , far-flung over-night accommodations
+    .
+
+    '
+- questions: ['What was the Royal Motel in?', "What offered the comfort and security\
+      \ of a storm cellar . \n?", 'What was Shamrock the only one that offered the
+      comfort and security of a storm cellar .
+
+      ?']
+  sentence: 'But the Royal Motel in Shamrock was the only one that offered the comfort
+    and security of a storm cellar .
+
+    '
+- questions: ['Who can only marvel at the great size and the luxury of the relatively
+      new and fast-grossing motel business .
+
+      ?', 'Who can remember the old `` tourists accommodated '''' signs on farm houses
+      and village homes before World War 2 ,?', 'Who are Motorists like myself who
+      can remember the old `` tourists accommodated '''' signs on farm houses and
+      village homes before World War 2 , can only marvel at the great size and the
+      luxury of the relatively new and fast-grossing motel business .
+
+      ?']
+  sentence: 'Motorists like myself who can remember the old `` tourists accommodated
+    '''' signs on farm houses and village homes before World War 2 , can only marvel
+    at the great size and the luxury of the relatively new and fast-grossing motel
+    business .
+
+    '
+- questions: ['Who will Oxnard , Calif. , be the home of the Rev. Robert D. Howard
+      and his bride ,?', "Who were married Saturday at the Munger Place Methodist\
+      \ Church . \n?", 'Who is the former Miss Judith Ellen Gay?']
+  sentence: 'Oxnard , Calif. , will be the home of the Rev. Robert D. Howard and his
+    bride , the former Miss Judith Ellen Gay , who were married Saturday at the Munger
+    Place Methodist Church .
+
+    '
+- questions: ['Who ?', 'Who is the son of Alton John Mason of Shreveport , La. , and
+      the late Mrs. Henry Cater Parmer , was president of Alpha Tau Omega and a member
+      of Delta Sigma Pi at Lamar Tech , and did graduate work at Rhodes University
+      in Grahamstown , South Africa , on a Rotary Fellowship .
+
+      ?']
+  sentence: 'Her husband , who is the son of Alton John Mason of Shreveport , La.
+    , and the late Mrs. Henry Cater Parmer , was president of Alpha Tau Omega and
+    a member of Delta Sigma Pi at Lamar Tech , and did graduate work at Rhodes University
+    in Grahamstown , South Africa , on a Rotary Fellowship .
+
+    '
+- questions: ['Who ?', 'Who is Arlington State College?']
+  sentence: 'Miss Shirley Joan Meredith , a former student of North Texas State University
+    , was married Saturday to Larry W. Mills , who has attended Arlington State College
+    .
+
+    '
+- questions: ['Who ?', 'Who is live at 8861 Gaston after a wedding trip to New Orleans
+      , La.
+
+      ?']
+  sentence: 'The First Christian Church of Pampa was the setting for the wedding last
+    Sunday of Miss Marcile Marie Glison and Thomas Earl Loving Jr. , who will live
+    at 8861 Gaston after a wedding trip to New Orleans , La.
+
+    '
+- questions: ['What do The women have a reputation for giving?', "What are different\
+      \ and are fun and this year 's promises to follow in this fine tradition . \n\
+      ?", 'What are parties that are different and are fun and this year''s promises
+      to follow in this fine tradition .
+
+      ?']
+  sentence: 'The women have a reputation for giving parties that are different and
+    are fun and this year''s promises to follow in this fine tradition .
+
+    '
+- questions: ['What does say?', "What do we expect to offer them . \n?"]
+  sentence: 'The Louisiana city is known , of course , for its fine food , good music
+    and its colorful hospitality `` and , when guests arrive at Philmont that night
+    '''' , says Mrs. Grinsfelder , `` that is exactly what we expect to offer them
+    .
+
+    '
+- questions: ['Who is Mrs. Henry Louchheim?', "Who knows good food . \n?", 'Who is
+      a globetrotter who knows good food .
+
+      ?']
+  sentence: 'As for food , Mrs. Henry Louchheim , chairman of this phase , is a globetrotter
+    who knows good food .
+
+    '
+- questions: ['What will There be masses of flowers , reproductions of the handsome
+      old buildings with their grillwork and?', "What are typical of New Orleans .\
+      \ \n?", 'What are other things that are typical of New Orleans .
+
+      ?']
+  sentence: 'There will be masses of flowers , reproductions of the handsome old buildings
+    with their grillwork and other things that are typical of New Orleans .
+
+    '
+- questions: []
+  sentence: 'The gala is the Thrift Shop''s annual bundle party and , as all Thrift
+    Shop friends know , that means the admission is a bundle of used clothing in good
+    condition , contributions of household equipment , bric-a-brac and such to stock
+    the shelves at the shop''s headquarters at 1213 Walnut St. .
+
+    '
+- questions: ["Where may the donations be deposited between now and the date of the\
+      \ big event . \n?"]
+  sentence: 'For the convenience of guests bundle centers have been established throughout
+    the city and suburbs where the donations may be deposited between now and the
+    date of the big event .
+
+    '
+- questions: ['Who are welcomed .
+
+      ?', 'Who would like to come to the party only during the dancing time?', 'Who
+      are Members of the young set who would like to come to the party only during
+      the dancing time are welcomed .
+
+      ?']
+  sentence: 'Members of the young set who would like to come to the party only during
+    the dancing time are welcomed .
+
+    '
+- questions: ['What is Some idea of the competence of the women indicated in?', "What\
+      \ totals $ 840,000 . \n?", 'What is the contribution made by them during the
+      past 25 years that totals $840,000 .
+
+      ?']
+  sentence: 'Some idea of the competence of the women is indicated in the contribution
+    made by them during the past 25 years that totals $840,000 .
+
+    '
+- questions: []
+  sentence: 'Louis Glazer is chairman of the men''s committee that , among other jobs
+    , takes over part of the responsibility for staffing the shop during its evening
+    hours .
+
+    '
+- questions: ['What is Mrs. Robert O. Spurdle?', "What includes Mrs. James A. Moody\
+      \ , Mrs. Frank C. Wilkinson , Mrs. Ethel Coles , Mrs. Harold G. Lacy , Mrs.\
+      \ Albert W. Terry , Mrs. Henry M. Chance , 2d , Mrs. Robert O. Spurdle , Jr.\
+      \ , Mrs. Harcourt N. Trimble , Jr. , Mrs. John A. Moller , Mrs. Robert Zeising\
+      \ , Mrs. William G. Kilhour , Mrs. Hughes Cauffman , Mrs. John L. Baringer and\
+      \ Mrs. Clyde Newman . \n?", 'What is chairman of the committee , which includes
+      Mrs. James A. Moody , Mrs. Frank C. Wilkinson , Mrs. Ethel Coles , Mrs. Harold
+      G. Lacy , Mrs. Albert W. Terry , Mrs. Henry M. Chance , 2d , Mrs. Robert O.
+      Spurdle , Jr. , Mrs. Harcourt N. Trimble , Jr. , Mrs. John A. Moller , Mrs.
+      Robert Zeising , Mrs. William G. Kilhour , Mrs. Hughes Cauffman , Mrs. John
+      L. Baringer and Mrs. Clyde Newman .
+
+      ?']
+  sentence: 'Mrs. Robert O. Spurdle is chairman of the committee , which includes
+    Mrs. James A. Moody , Mrs. Frank C. Wilkinson , Mrs. Ethel Coles , Mrs. Harold
+    G. Lacy , Mrs. Albert W. Terry , Mrs. Henry M. Chance , 2d , Mrs. Robert O. Spurdle
+    , Jr. , Mrs. Harcourt N. Trimble , Jr. , Mrs. John A. Moller , Mrs. Robert Zeising
+    , Mrs. William G. Kilhour , Mrs. Hughes Cauffman , Mrs. John L. Baringer and Mrs.
+    Clyde Newman .
+
+    '
+- questions: []
+  sentence: 'The Troop is proud of its camping-out program -- on year-round schedule
+    and was continued even when sub-zero temperatures were registered during the past
+    winter .
+
+    '
+- questions: ['Who has Mr. Shoettle agreed to do?', "Who wins the door prize . \n?",
+    'Who is a portrait of the family of the person who wins the door prize .
+
+      ?']
+  sentence: 'Mr. Shoettle has agreed to do a portrait of the family of the person
+    who wins the door prize .
+
+    '
+- questions: []
+  sentence: 'Mr. Wall is a student at Tulane university , where he is a member of
+    Delta Kappa Epsilon fraternity .
+
+    '
+- questions: ['What have Their Majesties , The Queen of Carnival and The Queen of
+      Comus , jointly issued invitations for Shrove Tuesday evening at midnight at?',
+    'What is which time they will entertain in the grand ballroom of a downtown hotel
+      following the balls of Rex and Comus .
+
+      ?']
+  sentence: 'Their Majesties , The Queen of Carnival and The Queen of Comus , have
+    jointly issued invitations for Shrove Tuesday evening at midnight at which time
+    they will entertain in the grand ballroom of a downtown hotel following the balls
+    of Rex and Comus .
+
+    '
+- questions: ['What will Debutante Miss Lady Helen Hardy be feted at luncheon this?',
+    'What is Tuesday?']
+  sentence: 'Debutante Miss Lady Helen Hardy will be feted at luncheon this Tuesday
+    at which the hostess will be Mrs. Edwin Socola of Waveland , Miss. .
+
+    '
+- questions: ['What will Another debutante , Miss Virginia Richmond , also be the
+      honoree this?', 'What is Wednesday?']
+  sentence: 'Another debutante , Miss Virginia Richmond , will also be the honoree
+    this Wednesday at luncheon at which Mrs. John Dane , will be hostess entertaining
+    at a downtown hotel .
+
+    '
+- questions: ['Who ?', 'Who is Sweet Briar College?']
+  sentence: 'Miss Katherine Vickery , who attends Sweet Briar College in Virginia
+    , will rejoin her father , Dr. Eugene Vickery , at the family home in Richmond
+    pl. Wednesday for part of the Carnival festivities .
+
+    '
+- questions: ['What was The large municipal hall ablaze with?', "What shown out from\
+      \ the bright array of chic ballgowns worn by those participating in the `` maskers\
+      \ ' dances '' . \n?", 'What was color , which shown out from the bright array
+      of chic ballgowns worn by those participating in the `` maskers'' dances ''''
+      .
+
+      ?']
+  sentence: 'The large municipal hall was ablaze with color , which shown out from
+    the bright array of chic ballgowns worn by those participating in the `` maskers''
+    dances '''' .
+
+    '
+- questions: ['What will The reduction in expenses affect employees in?', "What does\
+      \ the B. & O. operate . \n?", 'What are the thirteen states in which the B.
+      & O. operates .
+
+      ?']
+  sentence: 'The reduction in expenses will affect employees in the thirteen states
+    in which the B. & O. operates .
+
+    '
+- questions: ['What did The spokesman say?']
+  sentence: 'The spokesman said the number to be furloughed cannot be estimated since
+    the lay-offs must be carried out in each area depending on what men are most needed
+    on the job .
+
+    '
+- questions: []
+  sentence: 'The victim was beaten when he attempted to stop the bandit .
+
+    '
+- questions: ['Who was armed with a automatic , entered the taxi at Pennsylvania Avenue
+      and Gold Street .
+
+      ?', 'Who ?', 'Who is who armed with a automatic , entered the taxi at Pennsylvania
+      Avenue and Gold Street .
+
+      ?']
+  sentence: 'He said the assailant , who was armed with a automatic , entered the
+    taxi at Pennsylvania Avenue and Gold Street .
+
+    '
+- questions: ['What was A baby burned to death and two other children were seriously
+      injured last night in?', "What damaged their one - room Anne Arundel county\
+      \ home . \n?", 'What was a fire which damaged their one-room Anne Arundel county
+      home .
+
+      ?']
+  sentence: 'A baby was burned to death and two other children were seriously injured
+    last night in a fire which damaged their one-room Anne Arundel county home .
+
+    '
+- questions: []
+  sentence: 'Police said the children''s mother , Mrs. Eleanor Somerville , was visiting
+    next door when the fire occurred .
+
+    '
+- questions: ["Who said what . \n?", 'Who is no more question about who said what
+      .
+
+      ?']
+  sentence: '-- The Anne Arundel county school superintendent has asked that the Board
+    of Education return to the practice of recording its proceedings mechanically
+    so that there will be no more question about who said what .
+
+    '
+- questions: ['What did Mrs. Williams have?', "What she said contained about nine\
+      \ or ten discrepancies between her memory of Dr. Jenkins 's conversation and\
+      \ how they were written up for the board 's approval . \n?", 'What was a list
+      which she said contained about nine or ten discrepancies between her memory
+      of Dr. Jenkins''s conversation and how they were written up for the board''s
+      approval .
+
+      ?', "What were they written up for the board 's approval . \n?"]
+  sentence: 'Mrs. Williams had a list which she said contained about nine or ten discrepancies
+    between her memory of Dr. Jenkins''s conversation and how they were written up
+    for the board''s approval .
+
+    '
+- questions: ['What ''ll I write?', "What do you tell me to '' . \n?"]
+  sentence: 'I''ll write what you tell me to '''' .
+
+    '
+- questions: ['What do The Board of County Commissioners , the Sanitary Commission
+      , the Planning and Zoning Board and other county official bodies use recording
+      machines for all public business in order to prevent?', "What actually happened\
+      \ at their meetings . \n?"]
+  sentence: 'The Board of County Commissioners , the Sanitary Commission , the Planning
+    and Zoning Board and other county official bodies use recording machines for all
+    public business in order to prevent law suits and other misunderstandings about
+    what actually happened at their meetings .
+
+    '
+- questions: []
+  sentence: 'Dr. Jenkins notes , however , that most of the school boards in the State
+    do not do so .
+
+    '
+- questions: ['Who ?', 'Who are police and an ambulance .
+
+      ?']
+  sentence: 'He called Vincent L. Piraro , proprietor of the shop , who summoned police
+    and an ambulance .
+
+    '
+- questions: ['What did The vice president of the City Council complain yesterday
+      that there are `` deficiencies '''' in?', "What should be corrected as soon\
+      \ as possible . \n?", 'What is the city''s snow clearing program which should
+      be corrected as soon as possible .
+
+      ?']
+  sentence: 'The vice president of the City Council complained yesterday that there
+    are `` deficiencies '''' in the city''s snow clearing program which should be
+    corrected as soon as possible .
+
+    '
+- questions: ['Who ?', 'Who is the Administration floor leader , also criticized Bernard
+      L. Werner , public works director , for `` halting snow operations '''' on Tuesday
+      night after the Sunday storm .
+
+      ?']
+  sentence: 'The Councilman , who is the Administration floor leader , also criticized
+    Bernard L. Werner , public works director , for `` halting snow operations ''''
+    on Tuesday night after the Sunday storm .
+
+    '
+- questions: []
+  sentence: 'What he did , Mr. Werner said , was let manual laborers go home Tuesday
+    night for some rest .
+
+    '
+- questions: ['What did Mr. Schaefer also recommend that?', "What is parking banned\
+      \ on key streets and cars are required to use snow tires or chains on them ,\
+      \ should be `` strictly enforced '' . \n?", 'What is the snow emergency route
+      plan , under which parking is banned on key streets and cars are required to
+      use snow tires or chains on them , should be `` strictly enforced '''' .
+
+      ?']
+  sentence: 'Mr. Schaefer also recommended that the snow emergency route plan , under
+    which parking is banned on key streets and cars are required to use snow tires
+    or chains on them , should be `` strictly enforced '''' .
+
+    '
+- questions: ['What do they not leave behind?', "What eventually freezes . \n?", 'What
+      is a thin layer of snow which eventually freezes .
+
+      ?']
+  sentence: 'Recounting personal observations of clearance work , the Councilman cited
+    instances of inefficient use of equipment or supplies by poorly trained workers
+    and urged that plow blades be set so they do not leave behind a thin layer of
+    snow which eventually freezes .
+
+    '
+- questions: ['Who has been sent to Spring Grove State Hospital for detention .
+
+      ?', 'Who were murdered early today in their Chesapeake Bay - front home ,?',
+    'Who is The 15-year-old adopted son of a Washington attorney and his wife , who
+      were murdered early today in their Chesapeake Bay-front home , has been sent
+      to Spring Grove State Hospital for detention .
+
+      ?']
+  sentence: '-- The 15-year-old adopted son of a Washington attorney and his wife
+    , who were murdered early today in their Chesapeake Bay-front home , has been
+    sent to Spring Grove State Hospital for detention .
+
+    '
+- questions: []
+  sentence: 'Soon after 10 A.M. , when police reached the 1-1/2-story brick home in
+    the Franklin Manor section , 15 miles south of here on the bay , in response to
+    a call from the Dresbach''s other son , Lee , 14 , they found Mrs. Dresbach''s
+    body on the first-floor bedroom floor .
+
+    '
+- questions: ['Who will Mr. Simpkins move into the post being vacated by Thomas B.
+      Finan , earlier named Attorney General to succeed?', "Who will be elevated to\
+      \ an associate judgeship on the Maryland Court of Appeals . \n?", 'Who is C.
+      Ferdinand Sybert?']
+  sentence: 'Mr. Simpkins will move into the post being vacated by Thomas B. Finan
+    , earlier named Attorney General to succeed C. Ferdinand Sybert , who will be
+    elevated to an associate judgeship on the Maryland Court of Appeals .
+
+    '
+- questions: ['What began about six years ago ,?', 'What were apartments , which began
+      about six years ago , has more than tripled within that span of time .
+
+      ?']
+  sentence: 'The share of the new housing market enjoyed by apartments , which began
+    about six years ago , has more than tripled within that span of time .
+
+    '
+- questions: ['What are rising consumer income among?', "What have encouraged builders\
+      \ to concentrate in the apartment - building field . \n?", 'What are the factors
+      that have encouraged builders to concentrate in the apartment-building field
+      .
+
+      ?']
+  sentence: 'While availability of mortgage money has been a factor in encouraging
+    apartment construction , the generally high level of prosperity in the past few
+    years plus rising consumer income are among the factors that have encouraged builders
+    to concentrate in the apartment-building field .
+
+    '
+- questions: ['What have balconies .
+
+      ?', 'What are reached by walking up a single flight of stairs ,?', 'What are
+      Others , which are reached by walking up a single flight of stairs , have balconies
+      .
+
+      ?']
+  sentence: 'Others , which are reached by walking up a single flight of stairs ,
+    have balconies .
+
+    '
+- questions: []
+  sentence: 'Its power unit , however , was derived from the reactor of the more modern
+    American nuclear submarine Skipjack .
+
+    '
+- questions: ['What are They accused of whisking secrets out of?', "What did they\
+      \ keep guard . \n?", 'What were naval strongrooms over which they kept guard
+      .
+
+      ?']
+  sentence: 'They are accused of whisking secrets out of naval strongrooms over which
+    they kept guard .
+
+    '
+- questions: ["Who call themselves Peter Kroger , bookseller , and wife , Joyce .\
+      \ \n?", 'Who is A shadowy couple who call themselves Peter Kroger , bookseller
+      , and wife , Joyce .
+
+      ?']
+  sentence: 'A shadowy couple who call themselves Peter Kroger , bookseller , and
+    wife , Joyce .
+
+    '
+- questions: ['Who once?', 'Who is a candy shop .
+
+      ?']
+  sentence: 'Her young British lawyer , James Dunlop , pleaded that she was sorely
+    needed at her Portland home by her widowed mother , 80 , her maiden aunt , also
+    80 and bedridden for 20 years , and her uncle , 76 , who once ran a candy shop
+    .
+
+    '
+- questions: ["Where did Klaus Fuchs , the naturalized British German born scientist\
+      \ who succeed in giving American and British atomic bomb secrets to Russia and\
+      \ thereby changed world history during the 1950s , was sentenced to 14 years\
+      \ in prison . \n?", "Where was Klaus Fuchs , the naturalized British German\
+      \ born scientist who succeeded in giving American and British atomic bomb secrets\
+      \ to Russia and thereby changed world history during the 1950s , sentenced to\
+      \ 14 years in prison . \n?", "Who succeeded in giving American and British atomic\
+      \ bomb secrets to Russia and thereby changed world history during the 1950s\
+      \ , was sentenced to 14 years in prison . \n?", 'Who was the naturalized British
+      German born scientist who succeeded in giving American and British atomic bomb
+      secrets to Russia and thereby changed world history during the 1950s , was sentenced
+      to 14 years in prison .
+
+      ?']
+  sentence: 'The trial will be held , probably the first week of March , in the famous
+    Old Bailey central criminal court where Klaus Fuchs , the naturalized British
+    German born scientist who succeeded in giving American and British atomic bomb
+    secrets to Russia and thereby changed world history during the 1950s , was sentenced
+    to 14 years in prison .
+
+    '
+- questions: ['Who ?', 'Who is history in the 1960s .
+
+      ?']
+  sentence: 'Fourteen years is the maximum penalty now faced by the new five , who
+    may have altered history in the 1960s .
+
+    '
+- questions: []
+  sentence: 'He said that drawings of the Dreadnought and printed details about the
+    ship were found reproduced in an undeveloped roll of film taken from Lonsdale
+    when he was arrested with the two civil servants outside the Old Vic theater Saturday
+    afternoon , Jan. 7 .
+
+    '
+- questions: ['Who increased from three to four?', 'Who today?', 'Who is who increased
+      from three to four?']
+  sentence: 'The British defending lawyers , who today increased from three to four
+    , demanded to know if they could make the information involved seem of little
+    value to a jury , the chances of their clients would improve .
+
+    '
+- questions: ['What did the American government decide to end?', 'What had been imposed?',
+    'What is a ban on sharing military secrets with Britain that had been imposed?']
+  sentence: 'Britain began designing the ship in 1956 but got nowhere until the American
+    government decided to end a ban on sharing military secrets with Britain that
+    had been imposed after Fuchs blabbed .
+
+    '
+- questions: ['What was The Skipjack a second generation atomic sub , much advanced
+      on?', "What preceded it . \n?", 'What was the Nautilus?']
+  sentence: 'The Skipjack was a second generation atomic sub , much advanced on the
+    Nautilus and the other four which preceded it .
+
+    '
+- questions: ['What would a list of questions found in Miss Gee ''s purse , if completed
+      and handed back , have given the Kremlin a complete picture `` of?', "What are\
+      \ we doing in research and development for the future '' . \n?"]
+  sentence: 'The navy captain disclosed also that a list of questions found in Miss
+    Gee''s purse would , if completed and handed back , have given the Kremlin a complete
+    picture `` of our current anti-submarine effort and would have shown what we are
+    doing in research and development for the future '''' .
+
+    '
+- questions: ["What was , twice on two days after the ring nabbed , a transmitter\
+      \ near Moscow was heard calling , using signals , times and wavelengths specified\
+      \ on codes found hidden in cigaret lighters in Lonsdale 's apartment and the\
+      \ Krogers ' house and also fastened to the transmitter lid . \n?"]
+  sentence: 'Six radiomen told how , twice on two days after the ring was nabbed ,
+    a transmitter near Moscow was heard calling , using signals , times and wavelengths
+    specified on codes found hidden in cigaret lighters in Lonsdale''s apartment and
+    the Krogers'' house and also fastened to the transmitter lid .
+
+    '
+- questions: ['What did Sokol say , `` they were told they would have to get to know?',
+    'What were narcotics sold?', 'What are certain areas of Chicago in which narcotics
+      were sold?']
+  sentence: '`` When they became members of the city police narcotics unit '''' ,
+    Sokol said , `` they were told they would have to get to know certain areas of
+    Chicago in which narcotics were sold and they would have to get to know people
+    in the narcotics racket .
+
+    '
+- questions: []
+  sentence: 'Although federal and city narcotic agents sometimes worked together ,
+    Sokol continued , rivalries developed when they were `` aiming at the same criminals
+    '''' .
+
+    '
+- questions: ['Who ?', 'Who are 25 years in the Dwight reformatory for women for the
+      murder in 1935 of her son-in-law , Ervin Lang , then 28 , appealed for a parole
+      at a hearing yesterday before two Illinois pardon and parole board members ,
+      John M. Bookwalter and Joseph Carpentier .
+
+      ?']
+  sentence: 'Mrs. Blanche Dunkel , 60 , who has spent 25 years in the Dwight reformatory
+    for women for the murder in 1935 of her son-in-law , Ervin Lang , then 28 , appealed
+    for a parole at a hearing yesterday before two Illinois pardon and parole board
+    members , John M. Bookwalter and Joseph Carpentier .
+
+    '
+- questions: ["When did he attempted to end the relationship that the murder take\
+      \ place . \n?", "What did the murder take place . \n?", 'What was the relationship
+      that the murder took place .
+
+      ?']
+  sentence: 'It was when he attempted to end the relationship that the murder took
+    place .
+
+    '
+- questions: ["What does his father , William L. Jr. , be president . \n?", 'What
+      is Evanston?']
+  sentence: 'Stickney is a salesman for Plee-Zing , Inc. , 2544 Green Bay Rd. , Evanston
+    , a food brokerage and grocery chain firm , of which his father , William L. Jr.
+    , is president .
+
+    '
+- questions: ["Where has he been held since his arrest last July , without a word\
+      \ to his court - appointed attorney , Jack Walker , or his guard . \n?"]
+  sentence: 'He returned to his cell in the county jail , where he has been held since
+    his arrest last July , without a word to his court-appointed attorney , Jack Walker
+    , or his guard .
+
+    '
+- questions: ['Who did The verdict bring vindication to?', 'Who was tried for the
+      same crime in December?', 'Who is the dead woman''s stepson , Vincent Hengesbach
+      , 54 , who was tried for the same crime in December?']
+  sentence: 'The verdict brought vindication to the dead woman''s stepson , Vincent
+    Hengesbach , 54 , who was tried for the same crime in December , 1958 , and released
+    when the jury failed to reach a verdict .
+
+    '
+- questions: ['Who ?', 'Who is living on welfare recently?', 'What did say he hopes
+      to rebuild?', "What was settled by his grandfather in Westphalia , 27 miles\
+      \ southwest of here . \n?", 'What is the farm which was settled by his grandfather
+      in Westphalia , 27 miles southwest of here .
+
+      ?']
+  sentence: 'Hengesbach , who has been living on welfare recently , said he hopes
+    to rebuild the farm which was settled by his grandfather in Westphalia , 27 miles
+    southwest of here .
+
+    '
+- questions: ['What was retracted before the trial .
+
+      ?', 'What was the only evidence against him ,?', 'What was the confession ,
+      which was the only evidence against him , was retracted before the trial .
+
+      ?']
+  sentence: 'However , the confession , which was the only evidence against him ,
+    was retracted before the trial .
+
+    '
+- questions: ['Who ?', 'Who are both the Hengesbach and Pohl cases ?', 'What did say
+      he did not know what would be done about two arson charges pending against?',
+    "What would be done about two arson charges pending against Pohl . \n?"]
+  sentence: 'Assistant Prosecutor Fred Lewis , who tried both the Hengesbach and Pohl
+    cases , said he did not know what would be done about two arson charges pending
+    against Pohl .
+
+    '
+- questions: ['What did Walker say he was considering filing a motion for?', 'What
+      would contend?', 'What is a new trial which would contend?']
+  sentence: 'Walker said he was considering filing a motion for a new trial which
+    would contend that the verdict was against the weight of the evidence and that
+    there were several errors in trial procedure .
+
+    '
+- questions: ['What was canvassed at the request of Walker after the verdict was announced
+      .
+
+      ?', 'What was locked up in a motel overnight ,?', 'What is The jury , which
+      was locked up in a motel overnight , was canvassed at the request of Walker
+      after the verdict was announced .
+
+      ?']
+  sentence: 'The jury , which was locked up in a motel overnight , was canvassed at
+    the request of Walker after the verdict was announced .
+
+    '
+- questions: ['Who died yesterday as the aftermath to a fire that also killed one
+      of the children?', 'Whose did mother died yesterday as the aftermath to a fire
+      that also kill one of the children?', 'Who was whose mother died yesterday as
+      the aftermath to a fire that also killed one of the children?', 'What did whose
+      mother die yesterday as the aftermath to?', 'What also killed one of the children?',
+    'What was a fire that also killed one of the children?']
+  sentence: 'A Sterling Township family of six surviving children , whose mother died
+    yesterday as the aftermath to a fire that also killed one of the children , found
+    today they had the help of hundreds of neighbors and school friends .
+
+    '
+- questions: ['What did Mrs. Eleanor Kowalski , 42 , die yesterday afternoon in Holy
+      Cross Hospital of burns suffered in?', "What followed a bottled gas explosion\
+      \ Saturday night at the flat of her widowed mother , Mrs. Mary Pankowski , in\
+      \ the adjoining suburb of Warren . \n?", 'What was a fire that followed a bottled
+      gas explosion Saturday night at the flat of her widowed mother , Mrs. Mary Pankowski
+      , in the adjoining suburb of Warren .
+
+      ?']
+  sentence: 'Mrs. Eleanor Kowalski , 42 , died yesterday afternoon in Holy Cross Hospital
+    of burns suffered in a fire that followed a bottled gas explosion Saturday night
+    at the flat of her widowed mother , Mrs. Mary Pankowski , in the adjoining suburb
+    of Warren .
+
+    '
+- questions: ['Who rested together today in closed caskets at the Lyle Elliott Funeral
+      Home , 31730 Mound , Warren .
+
+      ?', 'Who will be buried side by side in Mt. Olivet Cemetery ,?', 'Who is The
+      mother and daughter , who will be buried side by side in Mt. Olivet Cemetery
+      , rested together today in closed caskets at the Lyle Elliott Funeral Home ,
+      31730 Mound , Warren .
+
+      ?']
+  sentence: 'The mother and daughter , who will be buried side by side in Mt. Olivet
+    Cemetery , rested together today in closed caskets at the Lyle Elliott Funeral
+    Home , 31730 Mound , Warren .
+
+    '
+- questions: ['What ?', 'What is occurred ?']
+  sentence: 'Mrs. Pankowski , 61 , remained in Holy Cross Hospital as a result of
+    the explosion , which occurred while Mrs. Kowalski fueled a cook stove in the
+    grandmother''s small upstairs flat at 2274 Eight Mile Road East .
+
+    '
+- questions: ['What did Assistant Fire Chief Chester Cornell say gas fumes apparently
+      were ignited by?', 'What is a candle which one of the three Kowalski girls present
+      held for her mother , because the flat lacked electricity .
+
+      ?']
+  sentence: 'Assistant Fire Chief Chester Cornell said gas fumes apparently were ignited
+    by a candle which one of the three Kowalski girls present held for her mother
+    , because the flat lacked electricity .
+
+    '
+- questions: ['Who seldom worked last winter , already?', 'Who was a roofer who seldom
+      worked last winter , already was in arrears on their recently purchased split-level
+      home when the tragedy staggered him with medical and funeral bills .
+
+      ?']
+  sentence: 'Kowalski , a roofer who seldom worked last winter , already was in arrears
+    on their recently purchased split-level home when the tragedy staggered him with
+    medical and funeral bills .
+
+    '
+- questions: ['What did Houghton say 6 p.m. Friday had been set for a canvass of all
+      480 homes in?', "What is located northeast of Dequindre and 14 Mile Road East\
+      \ . \n?", 'What is the subdivision , which is located northeast of Dequindre
+      and 14 Mile Road East .
+
+      ?']
+  sentence: 'Houghton said 6 p.m. Friday had been set for a canvass of all 480 homes
+    in the subdivision , which is located northeast of Dequindre and 14 Mile Road
+    East .
+
+    '
+- questions: []
+  sentence: 'Kimmell said he and Ralph were helping children across Belvidere at Kercheval
+    Monday afternoon when a car heading north on Belvidere stopped belatedly inside
+    the pedestrian crosswalk .
+
+    '
+- questions: []
+  sentence: 'Kimmell ordered the driver to back up , watched the children safely across
+    and was approaching the car when it suddenly `` took off at high speed '''' ,
+    he said , narrowly missing him .
+
+    '
+- questions: ['Who ?', 'Who is his no-driving probation for another year and ordered
+      him to spend 15 days in the Detroit House of Correction .
+
+      ?']
+  sentence: 'He was found guilty of reckless driving yesterday by Traffic Judge George
+    T. Murphy , who continued his no-driving probation for another year and ordered
+    him to spend 15 days in the Detroit House of Correction .
+
+    '
+- questions: ['What did the royal Laotian government decide today to ask its `` friends
+      and neighbors '''' for?', "What did it call a new rebel offensive threatening\
+      \ the southeast Asian kingdom . \n?"]
+  sentence: 'In Vientiane , the royal Laotian government decided today to ask its
+    `` friends and neighbors '''' for help in fighting what it called a new rebel
+    offensive threatening the southeast Asian kingdom .
+
+    '
+- questions: ['What led up to the appeal?', 'What were the attacks which led up to
+      the appeal?']
+  sentence: 'The minister , describing the attacks which led up to the appeal , said
+    that 60,000 Communist North Vietnamese were fighting royal army troops on one
+    front -- near Thakhek , in southern-central Laos .
+
+    '
+- questions: []
+  sentence: 'The executions took place at dawn only a few hours after Havana radio
+    announced their conviction by a revolutionary tribunal at Pinar Del Rio , where
+    the executions took place .
+
+    '
+- questions: ['Who have served time in concentration camps in Siberia as political
+      prisoners of the Soviet state , few?', 'Who are the millions who have served
+      time in concentration camps in Siberia as political prisoners of the Soviet
+      state , few emerge in the West to tell about it .
+
+      ?']
+  sentence: 'Of the millions who have served time in concentration camps in Siberia
+    as political prisoners of the Soviet state , few emerge in the West to tell about
+    it .
+
+    '
+- questions: []
+  sentence: 'M. Kegham -- the name is a pseudynom -- was a teacher in Bucharest and
+    a member of the Armenian Revolutionary Federation ( ARF ) -- two reasons the Communists
+    put him away when they arrived in 1945 .
+
+    '
+- questions: ['What could Emory not continue to operate according to its present standards
+      as an institution of higher learning , of true university grade , and meet its
+      financial obligations , without?', 'What are available to it only so long?',
+    'What are the tax-exemption privileges which are available to it only so long?']
+  sentence: '`` Emory could not continue to operate according to its present standards
+    as an institution of higher learning , of true university grade , and meet its
+    financial obligations , without the tax-exemption privileges which are available
+    to it only so long as it conforms to the aforementioned constitutional and statutory
+    provisions '''' , the statement said .
+
+    '
+- questions: ['What did The statement not mention?', "What might steps be taken to\
+      \ overcome the legal obstacles to desegregation . \n?"]
+  sentence: 'The statement did not mention what steps might be taken to overcome the
+    legal obstacles to desegregation .
+
+    '
+- questions: []
+  sentence: 'An Emory spokesman indicated , however , that the university itself did
+    not intend to make any test of the laws .
+
+    '
+- questions: ['What will Emory University recognize no obligation and will adopt?',
+    "What would conflict with its purpose to promote excellence in scholarship and\
+      \ Christian education . \n?", 'What is no policy that would conflict with its
+      purpose to promote excellence in scholarship and Christian education .
+
+      ?']
+  sentence: '`` As a private institution , supported by generous individuals , Emory
+    University will recognize no obligation and will adopt no policy that would conflict
+    with its purpose to promote excellence in scholarship and Christian education
+    .
+
+    '
+- questions: ['When were the car they riding slid into a utility pole on Lake Avenue
+      near Waddell Street , NE?']
+  sentence: 'A young man was killed and two others injured at midnight Friday when
+    the car they were riding slid into a utility pole on Lake Avenue near Waddell
+    Street , NE , police said .
+
+    '
+- questions: ['Whom were The other occupants James Willard Olvey , 18 , of 963 Ponce
+      De Leon Ave . , NE , and Larry Coleman Barnett , 19 , of?', "Whom were treated\
+      \ at Grady Hospital for severe lacerations and bruises . \n?", 'Who is 704 Hill
+      St. , SE?']
+  sentence: 'The other occupants were James Willard Olvey , 18 , of 963 Ponce De Leon
+    Ave. , NE , and Larry Coleman Barnett , 19 , of 704 Hill St. , SE , both of whom
+    were treated at Grady Hospital for severe lacerations and bruises .
+
+    '
+- questions: []
+  sentence: 'However , three of the managers did say that they would agree to attend
+    the proposed meeting if all of the other managers decided to attend .
+
+    '
+- questions: []
+  sentence: 'Several theater operators said , however , that there is little likelihood
+    of the subject being discussed during the three-day affair .
+
+    '
+- questions: ['Who was A 24-year - old Atlanta man arrested Sunday after breaking
+      into the home of relatives in search of his wife , hitting his uncle with a
+      rock and assaulting?', 'Who tried to subdue him?', 'Who were two police officers
+      who tried to subdue him?']
+  sentence: 'A 24-year-old Atlanta man was arrested Sunday after breaking into the
+    home of relatives in search of his wife , hitting his uncle with a rock and assaulting
+    two police officers who tried to subdue him , police said .
+
+    '
+- questions: ['Who is The fire ant thought to infest approximately two million acres
+      of land in Georgia , attacking crops , young wildlife and livestock and can
+      be a serious health menace to?', 'Who are allergic to its venom?', 'Who are
+      humans who are allergic to its venom?']
+  sentence: 'The fire ant is thought to infest approximately two million acres of
+    land in Georgia , attacking crops , young wildlife and livestock and can be a
+    serious health menace to humans who are allergic to its venom , Blasingame said
+    .
+
+    '
+- questions: ['What can Perhaps?', "What causes all the congestion and suggest methods\
+      \ to eliminate it . \n?"]
+  sentence: 'Perhaps the engineers can find out what causes all the congestion and
+    suggest methods to eliminate it .
+
+    '
+- questions: ['What is It?', "What can emergency allotment be given by the state if\
+      \ necessary . \n?", 'What is GA category , for which emergency allotment can
+      be given by the state if necessary .
+
+      ?']
+  sentence: 'It is the only county in the state so far this month reporting a possible
+    shortage in GA category , for which emergency allotment can be given by the state
+    if necessary .
+
+    '
+- questions: []
+  sentence: 'No request for emergency allotment had yet been received , however .
+
+    '
+- questions: ['Who did The commission , meeting for the first time with both of its
+      newly - appointed commissioners , Roy Webster , of Hood River , and Dr. Ennis
+      Keizer , of North Bend , approve a year ''s contract for?', "Who has been the\
+      \ center of considerable controversy in the past . \n?", 'Who is a consultant
+      in the data processing department who has been the center of considerable controversy
+      in the past .
+
+      ?']
+  sentence: 'The commission , meeting for the first time with both of its newly-appointed
+    commissioners , Roy Webster , of Hood River , and Dr. Ennis Keizer , of North
+    Bend , approved a year''s contract for a consultant in the data processing department
+    who has been the center of considerable controversy in the past .
+
+    '
+- questions: ['Who ?', 'Who is the agencies electronic data processing program to
+      magnetic tape , would renew his present salary of $8 an hour up to a maximum
+      of 200 hours a month .
+
+      ?']
+  sentence: 'The contract with Ray Field , who has been converting the agencies electronic
+    data processing program to magnetic tape , would renew his present salary of $8
+    an hour up to a maximum of 200 hours a month .
+
+    '
+- questions: ['What must the agency train people within?', 'What does Field handle?']
+  sentence: 'But he emphasized that the agency must train people within its own employ
+    to fulfill what Field handles , and he said he personally `` regrets very much
+    that the agency has not done this in the past '''' .
+
+    '
+- questions: ['What is president , quoted him as saying the welfare office move to
+      Salem , instead of `` crippling '''' the agency , had provided an avenue to
+      correct administrative weaknesses , with the key being improved communications
+      between F & A and the commission staff .
+
+      ?']
+  sentence: 'A publicity release from Oregon Physicians Service , of which Harvey
+    is president , quoted him as saying the welfare office move to Salem , instead
+    of `` crippling '''' the agency , had provided an avenue to correct administrative
+    weaknesses , with the key being improved communications between F & A and the
+    commission staff .
+
+    '

@@ -37,6 +37,11 @@ def update_all_tests():
     for i in tests:
         generate_test(i['Sentence'])
 
+def print_all_tests():
+    tests = yaml.load(loadTests())
+    for i in tests:
+        print(i['Sentence'])
+
 def test_rcqg():
     tests = yaml.load(loadTests())
     for i in tests:

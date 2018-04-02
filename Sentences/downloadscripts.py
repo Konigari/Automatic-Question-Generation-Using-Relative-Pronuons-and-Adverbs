@@ -25,14 +25,13 @@ brown_tags = ['WDT', 'WP$', 'WPO', 'WPS', 'WQL', 'WRB']
 
 def brown(new_tags):
     sents = nltk.corpus.brown.tagged_sents()
-    print(len(sents))
-    # filteredsents = (filter(lambda sent: next(filter(lambda x: (x[1] in new_tags), sent), False), sents))
-    # filename = "brown_filtered.txt"
-    # print(len(list(filteredsents)))
-    # with open(filename, 'w') as file:
-    #     for i in filteredsents:
-    #         file.write(" ".join(nltk.untag(i)) + "\n")
-    # file.close()
+    filteredsents = (filter(lambda sent: next(filter(lambda x: (x[1] in new_tags), sent), False), sents))
+    filename = "brown_filtered.txt"
+    print(len(list(filteredsents)))
+    with open(filename, 'w') as file:
+        for i in filteredsents:
+            file.write(" ".join(nltk.untag(i)) + "\n")
+    file.close()
 
 
 def genbrownquestions():

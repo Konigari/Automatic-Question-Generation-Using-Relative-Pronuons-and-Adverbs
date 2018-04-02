@@ -1,7 +1,7 @@
-import inspect
 import copy
+import inspect
+
 from spacy import displacy
-import ipdb
 
 
 def filetotext():
@@ -359,7 +359,6 @@ class WHQuestionGenerator():
                         'tag_': 'VBZ',
                         'dep_': ['relcl','ccomp']
                     }, relclause)
-                    print(relclause,"asdddddddddddddd")
                     if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass":
                         # TODO - Mukul says its Hack , Co-authors disagree , Module overlap
 

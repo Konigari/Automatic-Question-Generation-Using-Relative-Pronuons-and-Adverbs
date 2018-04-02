@@ -191,9 +191,11 @@ class WHQuestionGenerator():
             'tag_': ['WDT', 'WP$', 'WPO', 'WPS', 'WQL', 'WRB', 'WP'],
         }, doc)
         loc_relative_clause = 0
+        adjusted_answer = False
 
         for wpindex,wpword in enumerate(relativeclauseswh):
-
+            adjusted_answer = False
+                  
             '''
             Rule 1: Using the matrix clause
             Rule 2: Using the embedded clause
@@ -206,11 +208,12 @@ class WHQuestionGenerator():
                     index = index - 1 
                     if index <= 0 :
                         return False
-                
+                #flag set if ccomp or advcl occurs
                 answer = getNounChunk(doc[index-1])
                 return answer
 
             if wpword.head.dep_ in ['ccomp','advcl']:
+                adjusted_answer = True
                 answer = subs_answer()
             else:
                 answer = PPChunker(doc, NounParent(wpword))
@@ -292,7 +295,7 @@ class WHQuestionGenerator():
                         'tag_': 'VBZ',
                         'dep_': 'ROOT'
                     }, matrix)
-                    print(matrix,"hie")
+                    # print(matrix,"hie")
 
                     if len(pasttenseverb) > 0:
 
@@ -429,54 +432,49 @@ class WHQuestionGenerator():
 
                     #My TRAILS
                     temp_head = answer
+                    print(doc[answer.end - 1],"end")
+                    
                     print(answer.start, answer.end,answer)
-                    # for noun in answer:
+                    checker = self.filteratt({
+                        'dep_': ['nsubj','relcl']
+                    }, sum([list(x.children) for x in answer],[]))
+                    
+                    if (not checker and adjusted_answer):
+                        head = doc[answer.end - 1]
+                    elif(len(checker[0].head)):
+                        head = checker[0].head
 
-
-
-
-
-
-
-
-
-                    # Requirements
-                    if not noun_chunk:
+                    if not head:
                         print("Subject modified by relative clause not found.")
-                        
-                    elif(Head_Noun_Chunk.tag_ != "NNP"):
+                    elif(head.pos_ == "PROPN"):
+                    #stop rule 3 questions at the noun_chunk only
+                        if (head.tag_ == "NNS"):
+                            if len(pasttenseverb) > 0:
+                                yield ("%s were %s?" % (questionwords[2], answer))
+                            else:
+                                yield ("%s are %s?" % (questionwords[2], answer))
+                        elif (not head.tag_ == "NNS"):
+                            if len(pasttenseverb) > 0:
+                                yield ("%s was %s?" % (questionwords[2], answer))
+                            else:
+                                yield ("%s is %s?" % (questionwords[2], answer))
+                    else:
                         if wpindex+1 < len(relativeclauseswh):
                             end = relativeclauseswh[wpindex+1].i
                         else:
                             end = None
-                        
-                        if (Head_Noun_Chunk.tag_ == "NNS"):
+
+                        if (head.tag_ == "NNS"):
                             if len(pasttenseverb) > 0:
-                                yield ("%s were %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:end]))
+                                yield ("%s were %s %s?" % (questionwords[2], answer, doc[head.i + 1:end]))
                             else:
-                                yield ("%s are %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:end]))
+                                yield ("%s are %s %s?" % (questionwords[2], answer, doc[head.i + 1:end]))
                         else:
                             if len(pasttenseverb) > 0:
-                                yield ("%s was %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:end]))
+                                yield ("%s was %s %s?" % (questionwords[2], answer, doc[head.i + 1:end]))
                             else:
-                                print(noun_chunk,Head_Noun_Chunk,end)
-                                yield ("%s is %s %s? " % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:end]))
-
-                    else:
-                        #Generate rule 3 questions only when there is a proper noun as noun_chunk
-                        if (Head_Noun_Chunk.tag_ == "NNS"):
-                            if len(pasttenseverb) > 0:
-                                yield ("%s were %s?" % (questionwords[2], noun_chunk))
-                            else:
-                                yield ("%s are %s?" % (questionwords[2], noun_chunk))
-                        elif (not Head_Noun_Chunk.tag_ == "NNS"):
-                            if len(pasttenseverb) > 0:
-                                yield ("%s was %s?" % (questionwords[2], noun_chunk))
-                            else:
-                                yield ("%s is %s? " % (questionwords[2], noun_chunk))
-                    
-                    
-
+                                print(answer,head,end)
+                                yield ("%s is %s %s?" % (questionwords[2], answer, doc[head.i + 1:end]))
 
             loc_relative_clause = wpword.i
 

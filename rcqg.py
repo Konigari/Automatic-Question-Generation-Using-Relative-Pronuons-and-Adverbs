@@ -292,6 +292,7 @@ class WHQuestionGenerator():
                         'tag_': 'VBZ',
                         'dep_': 'ROOT'
                     }, matrix)
+                    print(matrix,"hie")
 
                     if len(pasttenseverb) > 0:
 
@@ -353,25 +354,24 @@ class WHQuestionGenerator():
                     # Find Requirements
                     pasttenseverb = self.filteratt({
                         'tag_': 'VBD',
-                        'dep_': ['relcl','ccomp']
+                        'dep_': ['relcl','ccomp','advcl']
                     }, relclause)
                     presentcontinuousverb = self.filteratt({
                         'tag_': 'VBG',
-                        'dep_': ['relcl','ccomp']
+                        'dep_': ['relcl','ccomp','advcl']
                     }, relclause)
                     pastparticiple = self.filteratt({
                         'tag_': 'VBN',
-                        'dep_': ['relcl','ccomp']
+                        'dep_': ['relcl','ccomp','advcl']
                     }, relclause)
                     presentsimple = self.filteratt({
                         'tag_': 'VBP',
-                        'dep_': ['relcl','ccomp']
+                        'dep_': ['relcl','ccomp','advcl']
                     }, relclause)
                     presentsimplethird = self.filteratt({
                         'tag_': 'VBZ',
-                        'dep_': ['relcl','ccomp']
+                        'dep_': ['relcl','ccomp','advcl']
                     }, relclause)
-                    
                     if wpindex+1 < len(relativeclauseswh):
                         end = relativeclauseswh[wpindex+1].i
                     else:
@@ -380,7 +380,6 @@ class WHQuestionGenerator():
 
                     if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass":
                         # TODO - Mukul says its Hack , Co-authors disagree , Module overlap
-
                         if len(root) > 0:
                             yield ("%s %s?" % (
                             questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:VerbChunk(root[0])]])))
@@ -422,8 +421,23 @@ class WHQuestionGenerator():
 
                 if questionwords[2]:
                     # Rule 3
+                    # Head_Noun_Chunk = answer
+                    # noun_chunk = answer
+                    # print(answer.start,answer.end)
                     Head_Noun_Chunk = NounParent(wpword)
                     noun_chunk = PPChunker(doc, Head_Noun_Chunk).text
+
+                    #My TRAILS
+                    temp_head = answer
+                    print(answer.start, answer.end,answer)
+                    # for noun in answer:
+
+
+
+
+
+
+
 
 
                     # Requirements
@@ -445,6 +459,7 @@ class WHQuestionGenerator():
                             if len(pasttenseverb) > 0:
                                 yield ("%s was %s %s?" % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:end]))
                             else:
+                                print(noun_chunk,Head_Noun_Chunk,end)
                                 yield ("%s is %s %s? " % (questionwords[2], noun_chunk, doc[Head_Noun_Chunk.i + 1:end]))
 
                     else:

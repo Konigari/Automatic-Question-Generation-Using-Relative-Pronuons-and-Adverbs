@@ -23,7 +23,7 @@ class WHQuestionGenerator():
     def show(self, u_line):
         doc = self.nlp(u_line)
         print("=========================Sentence -", u_line)
-        print("=========================Tokens and POS tags")
+        print("=========================Text Lemma POS Tag Dep Shape Is_Alpha Is_Stop")
         for token in doc:
             print(token.text, token.lemma_, token.pos_, token.tag_, token.dep_, token.shape_, token.is_alpha,
                   token.is_stop)
@@ -216,7 +216,6 @@ class WHQuestionGenerator():
                 adjusted_answer = True
                 answer = subs_answer()
             else:
-                print("I'm heres")
                 answer = PPChunker(doc, NounParent(wpword))
             
 
@@ -376,12 +375,24 @@ class WHQuestionGenerator():
                         'tag_': 'VBZ',
                         'dep_': ['relcl','ccomp','advcl']
                     }, relclause)
+                    # ending = doc[wpword.i:]
+                    # punctCheck = self.filteratt({
+                    # 'pos_': ['PUNCT'    ]
+                    # },ending )
+
+                    # print("punctCheck",punctCheck) 
+                    # print ("ending",ending,"wpindex",wpindex,"wpword",wpword)
+                    # if (len(punctCheck)>0):
+                    #     print("punctCheck[0].i",punctCheck[0].i)
+                    #     end = punctCheck[0].i
+                    # else: 
+                    #     print ("FUUUUUCCCCCCCCCCCKKKKKKKKKKK",wpindex,len(relativeclauseswh))
                     if wpindex+1 < len(relativeclauseswh):
                         end = relativeclauseswh[wpindex+1].i
                     else:
                         end = None
-                        
 
+                        
                     if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass":
                         # TODO - Mukul says its Hack , Co-authors disagree , Module overlap
                         if len(root) > 0:
@@ -427,7 +438,6 @@ class WHQuestionGenerator():
                     # Rule 3
                     
                     temp_head = answer
-                    print("ANSWER is",answer)
                     checker = self.filteratt({
                         'dep_': ['nsubj','relcl']
                     }, sum([list(x.children) for x in answer],[]))
@@ -450,29 +460,37 @@ class WHQuestionGenerator():
                             if len(pasttenseverb) > 0:
                                 yield (17,"%s was %s?" % (questionwords[2], answer))
                             else:
-                                yield ("%s is %s?" % (questionwords[2], answer))
+                                yield (18,"%s is %s?" % (questionwords[2], answer))
                     else:
-                        for i,j in enumerate(relativeclauseswh):
-                            print(i,j,"hi")
-                        print("wpindex",wpindex,"len(relativeclauseswh)",len(relativeclauseswh))
-                        if wpindex+1 < len(relativeclauseswh):
-                            end = relativeclauseswh[wpindex+1].i
-                        elif wpindex+1 == len(relativeclauseswh):
-                            end = wpindex
-                        else:
-                            end = None
+                        ending = doc[wpword.i:]
+                        punctCheck = self.filteratt({
+                        'pos_': ['PUNCT'    ]
+                        },ending )
+
+                        print("punctCheck",punctCheck) 
+                        print ("ending",ending,"wpindex",wpindex,"wpword",wpword)
+                        if (len(punctCheck)>0):
+                            print("punctCheck[0].i",punctCheck[0].i)
+                            end = punctCheck[0].i
+                            print (end,"arghhhhh")
+                        else: 
+                            if wpindex+1 < len(relativeclauseswh):
+                                end = relativeclauseswh[wpindex+1].i
+                            # elif wpindex+1 == len(relativeclauseswh):
+                            #     end = wpword.if 
+                            else:
+                                end = None
 
                         if (head.tag_ == "NNS"):
                             if len(pasttenseverb) > 0:
-                                yield (18,"%s were %s %s?" % (questionwords[2], answer, doc[head.i + 1:end]))
+                                yield (19,"%s were %s %s?" % (questionwords[2], answer, doc[head.i + 1:end]))
                             else:
-                                yield (19,"%s are %s %s?" % (questionwords[2], answer, doc[head.i + 1:end]))
+                                yield (20,"%s are %s %s?" % (questionwords[2], answer, doc[head.i + 1:end]))
                         else:
                             if len(pasttenseverb) > 0:
-                                yield (20,"%s was %s %s?" % (questionwords[2], answer, doc[head.i + 1:end]))
+                                yield (21,"%s was %s %s?" % (questionwords[2], answer, doc[head.i + 1:end]))
                             else:
-                                print(answer,head,end)
-                                yield (21,"%s is %s %s?" % (questionwords[2], answer, doc[head.i + 1:end]))
+                                yield (22,"%s is %s %s?" % (questionwords[2], answer, doc[head.i + 1:end]))
 
             #When matrix sentence is immediately complete, waiting for a verb , it's called appositoin- in this case, 
 
@@ -480,7 +498,8 @@ class WHQuestionGenerator():
 
     @lastdec
     def genqlist(self, sentence):
-        sentence = sentence.strip('.',',')
+        sentence = sentence.strip('.')
+        sentence = sentence.strip(',')
         doc = self.nlp(sentence)
         sentences = self.conjHandling(doc)
         return sum([list(self.genq(x.text)) for x in sentences], [])

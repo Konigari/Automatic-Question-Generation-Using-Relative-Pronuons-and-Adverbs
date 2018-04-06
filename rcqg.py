@@ -375,22 +375,17 @@ class WHQuestionGenerator():
                         'tag_': 'VBZ',
                         'dep_': ['relcl','ccomp','advcl']
                     }, relclause)
-                    # ending = doc[wpword.i:]
-                    # punctCheck = self.filteratt({
-                    # 'pos_': ['PUNCT'    ]
-                    # },ending )
-
-                    # print("punctCheck",punctCheck) 
-                    # print ("ending",ending,"wpindex",wpindex,"wpword",wpword)
-                    # if (len(punctCheck)>0):
-                    #     print("punctCheck[0].i",punctCheck[0].i)
-                    #     end = punctCheck[0].i
-                    # else: 
-                    #     print ("FUUUUUCCCCCCCCCCCKKKKKKKKKKK",wpindex,len(relativeclauseswh))
-                    if wpindex+1 < len(relativeclauseswh):
-                        end = relativeclauseswh[wpindex+1].i
+                    ending = doc[wpword.i:]
+                    punctCheck = self.filteratt({
+                    'pos_': ['PUNCT']
+                    },ending )  
+                    if (len(punctCheck) > 0 ):
+                        end = punctCheck[0].i
                     else:
-                        end = None
+                        if wpindex+1 < len(relativeclauseswh):
+                            end = relativeclauseswh[wpindex+1].i
+                        else:
+                            end = None
 
                         
                     if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass":
@@ -442,7 +437,7 @@ class WHQuestionGenerator():
                         'dep_': ['nsubj','relcl']
                     }, sum([list(x.children) for x in answer],[]))
                     
-                    if (len(checker) == 0 and adjusted_answer):
+                    if (len(checker) == 0 or adjusted_answer):
                         head = doc[answer.end - 1]
                     elif(len(checker[0].head)):
                         head = checker[0].head
@@ -467,17 +462,13 @@ class WHQuestionGenerator():
                         'pos_': ['PUNCT'    ]
                         },ending )
 
-                        print("punctCheck",punctCheck) 
-                        print ("ending",ending,"wpindex",wpindex,"wpword",wpword)
                         if (len(punctCheck)>0):
-                            print("punctCheck[0].i",punctCheck[0].i)
                             end = punctCheck[0].i
-                            print (end,"arghhhhh")
                         else: 
                             if wpindex+1 < len(relativeclauseswh):
                                 end = relativeclauseswh[wpindex+1].i
-                            # elif wpindex+1 == len(relativeclauseswh):
-                            #     end = wpword.if 
+                            elif wpindex+1 == len(relativeclauseswh):
+                               end = wpword.i 
                             else:
                                 end = None
 

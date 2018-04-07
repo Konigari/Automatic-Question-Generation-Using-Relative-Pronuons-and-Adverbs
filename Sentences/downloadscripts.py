@@ -33,16 +33,19 @@ def brown(new_tags):
             file.write(" ".join(nltk.untag(i)) + "\n")
     file.close()
 
-
 def genbrownquestions():
+    filename = "brown_filtered.txt"
+    genfilequestions(filename)
+
+
+def genfilequestions(filename):
     import rcqg
     import spacy
     nlp = spacy.load('en')
-    filename = "brown_filtered.txt"
     qg = rcqg.WHQuestionGenerator(nlp)
-    failedfile = open('brown_unabletoprocess.txt', 'w')
-    writefile = open('brown_questions.txt', 'w')
-    structuredfile = open('brown_manual_eval.txt', 'w')
+    failedfile = open(filename + '_unabletoprocess.txt', 'w')
+    writefile = open(filename + '_questions.txt', 'w')
+    structuredfile = open(filename + '_manual_eval.txt', 'w')
     dump = []
 
     def done(signal=None, frame=None):

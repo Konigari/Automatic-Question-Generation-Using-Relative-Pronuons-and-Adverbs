@@ -1,14 +1,14 @@
 import signal
 import sys
-import server
+
+# import server
 # import language_check
 import nltk
 import yaml
+from IPython import get_ipython
 from tqdm import tqdm
 
 # tool = language_check.LanguageTool('en-US')
-
-from IPython import get_ipython
 
 ipython = get_ipython()
 
@@ -41,8 +41,10 @@ def genbrownquestions():
 def genfilequestions(filename):
     import rcqg
     import spacy
+    import traceback
     nlp = spacy.load('en')
     qg = rcqg.WHQuestionGenerator(nlp)
+    tracebacks = open("tracebacks.txt", 'w')
     failedfile = open(filename + '_unabletoprocess.txt', 'w')
     writefile = open(filename + '_questions.txt', 'w')
     structuredfile = open(filename + '_manual_eval.txt', 'w')
@@ -54,6 +56,7 @@ def genfilequestions(filename):
         writefile.close()
         failedfile.close()
         structuredfile.close()
+        tracebacks.close()
         file.close()
         sys.exit(0)
 
@@ -63,16 +66,18 @@ def genfilequestions(filename):
         count = 0
         for filteredsent in tqdm(file):
             count += 1
+            questions = []
             try:
                 questions = qg.genqlist(filteredsent)
-                for question in questions:
-                    writefile.write(question + '\n')
-                dump.append({
-                    'sentence': filteredsent,
-                    'questions': questions
-                })
-            except:
+            except Exception as e:
+                tracebacks.write(traceback.format_exc())
                 failedfile.write(filteredsent)
+            for question in questions:
+                writefile.write(question + '\n')
+            dump.append({
+                'sentence': filteredsent,
+                'questions': questions
+            })
         print("Count: ", count)
         done()
 

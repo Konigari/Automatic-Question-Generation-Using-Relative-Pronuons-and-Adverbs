@@ -99,7 +99,7 @@ class WHQuestionGenerator():
         end = len(doc)
         for conjunction in reversed(sorted_conjunctions):
             # temp_doc = doc[conjunction.i:]
-            noun_chunks = [c for c in doc[conjunction.i:].noun_chunks]
+            noun_chunks = [c for c in doc[conjunction.i:end].noun_chunks]
             if len(noun_chunks) > 0:
                 if noun_chunks[0].root.dep_ == "nsubj":
                     sentential_conjunctions.append(conjunction)
@@ -164,12 +164,8 @@ class WHQuestionGenerator():
             return Head_Noun_Chunk
 
         def getNounChunk(noun):
-            found = False
-            for noun_chunk in doc.noun_chunks:
-                if noun_chunk.start <= noun.i and noun_chunk.end >= noun.i:
-                    found = True
-                    result = noun_chunk
-            if found:
+            result = next(filter(lambda x: x.start <= noun.i and x.end >= noun.i, doc.noun_chunks), None)
+            if result:
                 return result
             else:
                 return doc[noun.i:noun.i + 1]

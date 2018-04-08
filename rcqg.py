@@ -194,9 +194,13 @@ class WHQuestionGenerator():
         loc_relative_clause = 0
         adjusted_answer = False
         is_whose = False
+        rule_zero = False
+
         for wpindex, wpword in enumerate(relativeclauseswh):
             adjusted_answer = False
             is_whose = False
+            rule_zero = False
+            
             '''
             Rule 1: Using the matrix clause
             Rule 2: Using the embedded clause
@@ -269,13 +273,14 @@ class WHQuestionGenerator():
 
                 # Rules
                 # Rule 0
-                if len(root) > 0:
-                    if self.filteratt({'dep_': ['nsubj', 'nsubjpass']}, list(root[0].children))[0].text in answer.text:
-                        rule_zero = True
-                        yield (1, questionwords[0] + " " + doc[VerbChunk(root[0]):].text + "?")
-
+                
                 # Rule 1
                 if questionwords[0]:
+                    if len(root) > 0:
+                        if self.filteratt({'dep_': ['nsubj', 'nsubjpass']}, list(root[0].children))[0].text in answer.text:
+                            rule_zero = True
+                            yield (1, questionwords[0] + " " + doc[VerbChunk(root[0]):].text + "?")
+
 
                     pasttenseverb = self.filteratt({
                         'tag_': 'VBD',

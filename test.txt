@@ -25,8 +25,8 @@
 - Questions: ['Who did The boy give chocolates to?', 'Who was fat?', 'Who was the
       girl who was fat?']
   Sentence: The boy gave chocolates to the girl who was fat
-- Questions: ['Who studies law in India for his mother and plays football?', 'Who
-      is His friend who studies law in India for his mother and plays football?',
+- Questions: ['Who is fat?', 'Who studies law in India for his mother and plays football
+      ,?', 'Who is His friend who studies law in India for his mother and plays football?',
     'Who is in USA?', 'Who hates me?', 'Who is his mom who hates me is in USA?']
   Sentence: His friend who studies law in India for his mother and plays football,
     is fat and his mom who hates me is in USA
@@ -81,9 +81,6 @@
 - Questions: ['What has Robert postponed?', 'What brought everyone bad luck in the
       company?', 'What was the event that brought everyone bad luck in the company?']
   Sentence: Robert has postponed the event that brought everyone bad luck in the company
-- Questions: ['Who did Mary meet?', 'Who is studying?', 'Who is Bob?', 'Who is Bob
-      in the car  who is studying?']
-  Sentence: 'Mary met Bob in the car  who is studying '
 - Questions: ['Who did I kill?', 'Who was a BTech student?', 'Who was the man who
       was a BTech student?']
   Sentence: I killed the man who was a BTech student

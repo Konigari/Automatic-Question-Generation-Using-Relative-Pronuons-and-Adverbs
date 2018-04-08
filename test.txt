@@ -81,9 +81,6 @@
 - Questions: ['What has Robert postponed?', 'What brought everyone bad luck in the
       company?', 'What was the event that brought everyone bad luck in the company?']
   Sentence: Robert has postponed the event that brought everyone bad luck in the company
-- Questions: ['Who did Mary meet Bob in?', 'Who is studying?', 'Who is the car  who
-      is studying?']
-  Sentence: 'Mary met Bob in the car  who is studying '
 - Questions: ['Who did Mary meet?', 'Who is studying?', 'Who is Bob?', 'Who is Bob
       in the car  who is studying?']
   Sentence: 'Mary met Bob in the car  who is studying '

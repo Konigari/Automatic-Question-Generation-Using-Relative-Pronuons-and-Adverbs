@@ -1,12 +1,12 @@
 import signal
 import sys
-
-import language_check
+import server
+# import language_check
 import nltk
 import yaml
 from tqdm import tqdm
 
-tool = language_check.LanguageTool('en-US')
+# tool = language_check.LanguageTool('en-US')
 
 from IPython import get_ipython
 
@@ -53,6 +53,7 @@ def genfilequestions(filename):
         structuredfile.write(yaml.dump(dump))
         writefile.close()
         failedfile.close()
+        structuredfile.close()
         file.close()
         sys.exit(0)
 
@@ -64,6 +65,41 @@ def genfilequestions(filename):
             count += 1
             try:
                 questions = qg.genqlist(filteredsent)
+                for question in questions:
+                    writefile.write(question + '\n')
+                dump.append({
+                    'sentence': filteredsent,
+                    'questions': questions
+                })
+            except:
+                failedfile.write(filteredsent)
+        print("Count: ", count)
+        done()
+
+
+def genfileheilmanquestions(filename):
+    failedfile = open(filename + '_heilunabletoprocess.txt', 'w')
+    writefile = open(filename + '_heilquestions.txt', 'w')
+    structuredfile = open(filename + '_heilmanual_eval.txt', 'w')
+    dump = []
+
+    def done(signal=None, frame=None):
+        print("Ended")
+        structuredfile.write(yaml.dump(dump))
+        writefile.close()
+        failedfile.close()
+        structuredfile.close()
+        file.close()
+        sys.exit(0)
+
+    signal.signal(signal.SIGINT, done)
+    with open(filename, 'r') as file:
+        print("started")
+        count = 0
+        for filteredsent in tqdm(file):
+            count += 1
+            try:
+                questions = server.generate(filteredsent)
                 for question in questions:
                     writefile.write(question + '\n')
                 dump.append({

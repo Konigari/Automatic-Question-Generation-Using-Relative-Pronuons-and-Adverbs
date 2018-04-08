@@ -266,6 +266,7 @@ class WHQuestionGenerator():
                 # Rule 0
                 if len(root) > 0:
                     if self.filteratt({'dep_': ['nsubj', 'nsubjpass']}, list(root[0].children))[0].text in answer.text:
+                        rule_zero = True
                         yield (1, questionwords[0] + " " + doc[VerbChunk(root[0]):].text + "?")
 
                 # Rule 1
@@ -295,7 +296,6 @@ class WHQuestionGenerator():
                         'tag_': 'VBZ',
                         'dep_': 'ROOT'
                     }, matrix)
-                    # print(matrix,"hie")
 
                     if len(pasttenseverb) > 0:
 
@@ -471,8 +471,8 @@ class WHQuestionGenerator():
                         else:
                             if wpindex + 1 < len(relativeclauseswh):
                                 end = relativeclauseswh[wpindex + 1].i
-                            elif wpindex + 1 == len(relativeclauseswh):
-                                end = wpword.i
+                            # elif wpindex + 1 == len(relativeclauseswh):
+                            #     end = wpword.i
                             else:
                                 end = None
 

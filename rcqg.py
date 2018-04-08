@@ -193,15 +193,16 @@ class WHQuestionGenerator():
         }, doc)
         loc_relative_clause = 0
         adjusted_answer = False
-
+        is_whose = False
         for wpindex, wpword in enumerate(relativeclauseswh):
             adjusted_answer = False
-
+            is_whose = False
             '''
             Rule 1: Using the matrix clause
             Rule 2: Using the embedded clause
             Rule 3: Relative clause modifying the NP Constituent
             '''
+            
 
             def subs_answer():
                 index = wpword.i
@@ -213,7 +214,11 @@ class WHQuestionGenerator():
                 answer = getNounChunk(doc[index - 1])
                 return answer
 
-            if wpword.head.dep_ in ['ccomp', 'advcl']:
+            if wpword.text == "whose":
+                answer = PPChunker(doc, wpword.head.head.head)
+                is_whose == True
+
+            elif wpword.head.dep_ in ['clausecomp', 'advcl']:
                 adjusted_answer = True
                 answer = subs_answer()
             else:
@@ -221,7 +226,7 @@ class WHQuestionGenerator():
 
             matrix = doc[loc_relative_clause:wpword.i]
             relclause = doc[wpword.i:]
-
+            print(answer ,is_whose)
             hasanswer = {
                 'who': True,
                 'whom': True,
@@ -392,7 +397,7 @@ class WHQuestionGenerator():
                         else:
                             end = None
 
-                    if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass":
+                    if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass" or is_whose:
                         # TODO - Mukul says its Hack , Co-authors disagree , Module overlap
                         if len(root) > 0:
                             yield (9, "%s %s?" % (
@@ -427,6 +432,7 @@ class WHQuestionGenerator():
                                          presentsimple.i + 1:end]]
                             yield (13, "%s do %s?" % (questionwords[1], " ".join(converted)))
                         if len(presentsimplethird) > 0:
+
                             presentsimplethird = presentsimplethird[0]
                             converted = [x.text for x in doc[wpword.i + 1:presentsimplethird.i]] + [
                                 presentsimplethird.lemma_] + [x.text for x in doc[

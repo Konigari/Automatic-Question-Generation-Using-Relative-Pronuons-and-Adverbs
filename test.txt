@@ -19,124 +19,105 @@
       in France?']
   Sentence: I met my brother who is in Africa because my mother is in USA and my sister
     who is in France
-- Questions: ['Who met my mother?', 'Who studies law ,?', 'Who is His friend?', 'Who
-      is His friend who studies law , met my mother?']
+- Questions: ['Who met my mother?', 'Who studies law ,?', 'Who is His friend who studies
+      law?']
   Sentence: His friend who studies law , met my mother
 - Questions: ['Who did The boy give chocolates to?', 'Who was fat?', 'Who was the
-      girl?', 'Who was the girl who was fat?']
+      girl who was fat?']
   Sentence: The boy gave chocolates to the girl who was fat
 - Questions: ['Who studies law in India for his mother and plays football?', 'Who
-      is His friend?', 'Who is His friend who studies law in India for his mother
-      and plays football?', 'Who is in USA?', 'Who hates me?', 'Who is his mom?',
-    'Who is his mom who hates me is in USA?']
+      is His friend who studies law in India for his mother and plays football?',
+    'Who is in USA?', 'Who hates me?', 'Who is his mom who hates me is in USA?']
   Sentence: His friend who studies law in India for his mother and plays football,
     is fat and his mom who hates me is in USA
-- Questions: ['Who studies law?', 'Who is His friend?', 'Who is His friend who studies
-      law?', 'Who is in USA?', 'Who hates me?', 'Who is his mom?', 'Who is his mom
-      who hates me is in USA?']
+- Questions: ['Who studies law?', 'Who is His friend who studies law?', 'Who is in
+      USA?', 'Who hates me?', 'Who is his mom who hates me is in USA?']
   Sentence: 'His friend who studies law , is fat and his mom who hates me is in USA '
 - Questions: ['Who does Mary love?', 'Who loves Ana?', 'Who is John?']
   Sentence: Mary loves John who loves Ana
-- Questions: ['Who did Mary love?', 'Who loved Ana?', 'Who was John?', 'Who was John
-      who loved Ana?']
+- Questions: ['Who did Mary love?', 'Who loved Ana?', 'Who was John?']
   Sentence: Mary loved John who loved Ana
-- Questions: ['Who has Mary been loving?', 'Who has been loving Ana?', 'Who is John?',
-    'Who is John who has been loving Ana?']
+- Questions: ['Who has Mary been loving?', 'Who has been loving Ana?', 'Who is John?']
   Sentence: Mary has been loving John who has been loving Ana
-- Questions: ['Who should Mary not love?', 'Who loves Ana?', 'Who is John?', 'Who
-      is John who loves Ana?']
+- Questions: ['Who should Mary not love?', 'Who loves Ana?', 'Who is John?']
   Sentence: Mary should not love John who loves Ana
 - Questions: ['Who should Mary not be thinking about loving?', 'Who loves Ana?', 'Who
-      is John?', 'Who is John who loves Ana?']
+      is John?']
   Sentence: Mary should not be thinking about loving John who loves Ana
 - Questions: ['Who did The president just meet?', 'Who lives in France?', 'Who is
-      the son of the king?', 'Who is the son of the king of France who lives in France?']
+      the son of the king of France who lives in France?']
   Sentence: The president just met the son of the king of France who lives in France
-- Questions: ['Who is Mary?', 'Who are jealous of her?', 'Who are Indian women?',
-    'Who are Indian women who are jealous of her?']
+- Questions: ['Who is Mary?', 'Who are jealous of her?', 'Who are Indian women who
+      are jealous of her?']
   Sentence: Mary is friends with Indian women who are jealous of her.
 - Questions: ['What has Robert postponed?', 'What brought everyone bad luck in the
-      company?', 'What was the event?', 'What was the event that brought everyone
-      bad luck in the company?']
+      company?', 'What was the event that brought everyone bad luck in the company?']
   Sentence: Robert has postponed the event that brought everyone bad luck in the company.
-- Questions: ['What does he start?', 'What makes tremendous profit?', 'What is a company?',
-    'What is a company which makes tremendous profit?']
+- Questions: ['What makes tremendous profit?', 'What is a company which makes tremendous
+      profit?']
   Sentence: Robert would like to make sure that he starts a company which makes tremendous
     profit
-- Questions: ['Who did The dog chase?', 'Who chased the rat who ate all my cheese?',
-    'Who was the cat?', 'Who was the cat who chased the rat who ate all my cheese?',
-    'Who ate all my cheese?', 'Who was the rat?', 'Who was the rat who ate all my
+- Questions: ['Who did The dog chase?', 'Who chased the rat?', 'Who was the cat who
+      chased the rat?', 'Who ate all my cheese?', 'Who was the rat who ate all my
       cheese?']
   Sentence: The dog chased the cat who chased the rat who ate all my cheese
-- Questions: ['Who does The cop chase?', 'Who steals from the banker who steals from
-      the public who votes for the corrupt politicians?', 'Who is the thief?', 'Who
-      is the thief who steals from the banker who steals from the public who votes
-      for the corrupt politicians?', 'Who steals from the public who votes for the
-      corrupt politicians?', 'Who is the banker?', 'Who is the banker who steals from
-      the public who votes for the corrupt politicians?', 'Who votes for the corrupt
-      politicians?', 'Who is the public?', 'Who is the public who votes for the corrupt
-      politicians?']
+- Questions: ['Who does The cop chase?', 'Who steals from the banker?', 'Who is the
+      thief who steals from the banker?', 'Who steals from the public?', 'Who is the
+      banker who steals from the public?', 'Who votes for the corrupt politicians?',
+    'Who is the public who votes for the corrupt politicians?']
   Sentence: The cop chases the thief who steals from the banker who steals from the
     public who votes for the corrupt politicians
-- Questions: ['What did The cat quickly chase?', 'What was perhaps dark black in colour?',
-    'What was the mouse?', 'What was the mouse which was perhaps dark black in colour?']
+- Questions: ['What was perhaps dark black in colour?', 'What was the mouse which
+      was perhaps dark black in colour?']
   Sentence: The cat quickly chased the mouse which was perhaps dark black in colour
-- Questions: ['Who is invited to the party?', 'Who is fat?', 'Who is Rachna?', 'Who
-      is Rachna who is fat is invited to the party?']
+- Questions: ['Who is invited to the party?', 'Who is fat?', 'Who is Rachna?']
   Sentence: Rachna who is fat is invited to the party
-- Questions: ['What was fixed yesterday?', 'What got broken?', 'What is The table?',
-    'What is The table that got broken was fixed yesterday?']
+- Questions: ['What was fixed yesterday?', 'What got broken?', 'What is The table
+      that got broken was fixed yesterday?']
   Sentence: The table that got broken was fixed yesterday.
-- Questions: ['Who is Mary?', 'Who are jealous of her?', 'Who are Indian women?',
-    'Who are Indian women who are jealous of her?']
+- Questions: ['Who is Mary?', 'Who are jealous of her?', 'Who are Indian women who
+      are jealous of her?']
   Sentence: Mary is friends with Indian women who are jealous of her
 - Questions: ['What has Robert postponed?', 'What brought everyone bad luck in the
-      company?', 'What was the event?', 'What was the event that brought everyone
-      bad luck in the company?']
+      company?', 'What was the event that brought everyone bad luck in the company?']
   Sentence: Robert has postponed the event that brought everyone bad luck in the company
 - Questions: ['Who did Mary meet?', 'Who is studying?', 'Who is Bob?', 'Who is Bob
       in the car  who is studying?']
   Sentence: 'Mary met Bob in the car  who is studying '
-- Questions: ['Who did Mary meet?', 'Who is studying?', 'Who is Bob?', 'Who is Bob
-      in the car  who is studying?']
-  Sentence: 'Mary met Bob in the car  who is studying '
-- Questions: ['Who did I kill?', 'Who was a BTech student?', 'Who was the man?', 'Who
-      was the man who was a BTech student?']
+- Questions: ['Who did I kill?', 'Who was a BTech student?', 'Who was the man who
+      was a BTech student?']
   Sentence: I killed the man who was a BTech student
 - Questions: ['Who should You be seriously considering the option to marry?', 'Who
-      has your family searched for you?', 'Who is the girl?', 'Who is the girl who
-      your family has searched for you?']
+      has your family searched for you?', 'Who is the girl who your family has searched
+      for you?']
   Sentence: You should be seriously considering the option to marry the girl who your
     family has searched for you
-- Questions: ['Who did That crazy old guy shut the door on?', 'Who works in a bank
-      which is state operated?', 'Who is his neighbour?', 'Who is his neighbour who
-      works in a bank which is state operated?', 'What is state operated?', 'What
-      is a bank?', 'What is a bank which is state operated?']
+- Questions: ['Who did That crazy old guy shut the door on?', 'Who works in a bank?',
+    'Who is his neighbour who works in a bank?', 'What is state operated?', 'What
+      is a bank which is state operated?']
   Sentence: That crazy old guy shut the door on his neighbour who works in a bank
     which is state operated
 - Questions: ['What are These chocolate chip cookies processed by?', 'What manufactures
-      cocoa?', 'What is the company?', 'What is the company that manufactures cocoa?']
+      cocoa?', 'What is the company that manufactures cocoa?']
   Sentence: These chocolate chip cookies are processed by the company that manufactures
     cocoa
 - Questions: ['Who am I certain he had been goofing around with?', 'Who have had bad
-      taste in music?', 'Who are women?', 'Who are women who have had bad taste in
-      music?']
+      taste in music?', 'Who are women who have had bad taste in music?']
   Sentence: I am certain he had been goofing around with women who have had bad taste
     in music
-- Questions: ['What will I place?', 'What did I bring from an online store next to
-      the window which does not have tempered glass?', 'What was the bed?', 'What
-      was the bed which I brought from an online store next to the window which does
-      not have tempered glass?', 'What does not have tempered glass?', 'What is the
-      window?', 'What is the window which does not have tempered glass?']
+- Questions: ['What did I bring from an online store next to the window?', 'What was
+      the bed which I brought from an online store next to the window?', 'What does
+      not have tempered glass?', 'What is the window which does not have tempered
+      glass?']
   Sentence: I will place the bed which I brought from an online store next to the
     window which does not have tempered glass
 - Questions: ['Who is The audience going to throw all these tomatoes at?', 'Who bored
-      them to death on Christmas eve?', 'Who was the artist?', 'Who was the artist
-      who bored them to death on Christmas eve?']
+      them to death on Christmas eve?', 'Who was the artist who bored them to death
+      on Christmas eve?']
   Sentence: The audience is going to throw all these tomatoes at the artist who bored
     them to death on Christmas eve
-- Questions: ['Who wish to pursue a career in literature?', 'Who are students?', 'Who
-      are students who wish to pursue a career in literature?']
+- Questions: ['Who wish to pursue a career in literature?', 'Who are students who
+      wish to pursue a career in literature?']
   Sentence: According to Janet, this classic novel would a perfect start for students
     who wish to pursue a career in literature
 - Questions: ['Who does Mary love?', 'Who loves Ana?', 'Who is a boy who loves Ana?']
@@ -144,3 +125,6 @@
 - Questions: ['Who is He giving chocolates to?', 'Who is fat?', 'Who is the boy who
       is fat?']
   Sentence: He is giving chocolates to the boy who is fat and she likes him
+- Questions: ['Who studies law?', 'Who is His friend who studies law?', 'Who is in
+      USA?', 'Who hates me?', 'Who is his mom who hates me is in USA?']
+  Sentence: His friend who studies law , is fat and his mom who hates me is in USA

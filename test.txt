@@ -30,9 +30,6 @@
     'Who is in USA?', 'Who hates me?', 'Who is his mom who hates me is in USA?']
   Sentence: His friend who studies law in India for his mother and plays football,
     is fat and his mom who hates me is in USA
-- Questions: ['Who studies law?', 'Who is His friend who studies law?', 'Who is in
-      USA?', 'Who hates me?', 'Who is his mom who hates me is in USA?']
-  Sentence: 'His friend who studies law , is fat and his mom who hates me is in USA '
 - Questions: ['Who does Mary love?', 'Who loves Ana?', 'Who is John?']
   Sentence: Mary loves John who loves Ana
 - Questions: ['Who did Mary love?', 'Who loved Ana?', 'Who was John?']
@@ -122,6 +119,7 @@
 - Questions: ['Who is He giving chocolates to?', 'Who is fat?', 'Who is the boy who
       is fat?']
   Sentence: He is giving chocolates to the boy who is fat and she likes him
-- Questions: ['Who studies law?', 'Who is His friend who studies law?', 'Who is in
-      USA?', 'Who hates me?', 'Who is his mom who hates me is in USA?']
+- Questions: ['Who is fat?', 'Who studies law ,?', 'Who is His friend who studies
+      law?', 'Who is in USA?', 'Who hates me?', 'Who is his mom who hates me is in
+      USA?']
   Sentence: His friend who studies law , is fat and his mom who hates me is in USA

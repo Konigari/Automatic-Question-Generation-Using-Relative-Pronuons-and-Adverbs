@@ -1,14 +1,15 @@
 import signal
 import sys
-import server
+
 # import language_check
 import nltk
 import yaml
+from IPython import get_ipython
 from tqdm import tqdm
 
-# tool = language_check.LanguageTool('en-US')
+import heilmanserver
 
-from IPython import get_ipython
+# tool = language_check.LanguageTool('en-US')
 
 ipython = get_ipython()
 
@@ -99,7 +100,7 @@ def genfileheilmanquestions(filename):
         for filteredsent in tqdm(file):
             count += 1
             try:
-                questions = server.generate(filteredsent)
+                questions = heilmanserver.generate(filteredsent)
                 for question in questions:
                     writefile.write(question + '\n')
                 dump.append({

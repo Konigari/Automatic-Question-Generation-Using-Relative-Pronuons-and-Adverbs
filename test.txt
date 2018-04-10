@@ -25,14 +25,11 @@
 - Questions: ['Who did The boy give chocolates to?', 'Who was fat?', 'Who was the
       girl who was fat?']
   Sentence: The boy gave chocolates to the girl who was fat
-- Questions: ['Who studies law in India for his mother and plays football?', 'Who
-      is His friend who studies law in India for his mother and plays football?',
+- Questions: ['Who is fat?', 'Who studies law in India for his mother and plays football
+      ,?', 'Who is His friend who studies law in India for his mother and plays football?',
     'Who is in USA?', 'Who hates me?', 'Who is his mom who hates me is in USA?']
   Sentence: His friend who studies law in India for his mother and plays football,
     is fat and his mom who hates me is in USA
-- Questions: ['Who studies law?', 'Who is His friend who studies law?', 'Who is in
-      USA?', 'Who hates me?', 'Who is his mom who hates me is in USA?']
-  Sentence: 'His friend who studies law , is fat and his mom who hates me is in USA '
 - Questions: ['Who does Mary love?', 'Who loves Ana?', 'Who is John?']
   Sentence: Mary loves John who loves Ana
 - Questions: ['Who did Mary love?', 'Who loved Ana?', 'Who was John?']
@@ -81,9 +78,6 @@
 - Questions: ['What has Robert postponed?', 'What brought everyone bad luck in the
       company?', 'What was the event that brought everyone bad luck in the company?']
   Sentence: Robert has postponed the event that brought everyone bad luck in the company
-- Questions: ['Who did Mary meet?', 'Who is studying?', 'Who is Bob?', 'Who is Bob
-      in the car  who is studying?']
-  Sentence: 'Mary met Bob in the car  who is studying '
 - Questions: ['Who did I kill?', 'Who was a BTech student?', 'Who was the man who
       was a BTech student?']
   Sentence: I killed the man who was a BTech student
@@ -125,6 +119,7 @@
 - Questions: ['Who is He giving chocolates to?', 'Who is fat?', 'Who is the boy who
       is fat?']
   Sentence: He is giving chocolates to the boy who is fat and she likes him
-- Questions: ['Who studies law?', 'Who is His friend who studies law?', 'Who is in
-      USA?', 'Who hates me?', 'Who is his mom who hates me is in USA?']
+- Questions: ['Who is fat?', 'Who studies law ,?', 'Who is His friend who studies
+      law?', 'Who is in USA?', 'Who hates me?', 'Who is his mom who hates me is in
+      USA?']
   Sentence: His friend who studies law , is fat and his mom who hates me is in USA

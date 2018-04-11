@@ -235,7 +235,6 @@ class WHQuestionGenerator():
             else:
                 if wpindex + 1 < len(relativeclauseswh):
                     end = relativeclauseswh[wpindex + 1].i
-                    print(wpindex+1,"aaaaaaaaaaaa",len(relativeclauseswh),wpword)
                 else:
                     end = None
 
@@ -362,7 +361,6 @@ class WHQuestionGenerator():
                             yield (6, "%s do %s?" % (questionwords[0], " ".join(converted)))
 
                     if len(presentsimplethird) > 0:
-                        print("awefffffffffffffff   ")
                         if (presentsimplethird[0].lemma_ == "be"):
                             noun = self.filteratt({
                                 'dep_': 'nsubj'
@@ -402,15 +400,12 @@ class WHQuestionGenerator():
                         'dep_': ['relcl', 'ccomp', 'advcl']
                     }, relclause)
                     
-
-                    print("END",end)
                     if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass" or is_whose:
                         # TODO - Mukul says its Hack , Co-authors disagree , Module overlap
                         if len(root) > 0:
                             yield (9, "%s %s?" % (
                                 questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:VerbChunk(root[0])]])))
                         else:
-                            print(wpword,end,ending)
                             yield (10, "%s %s?" % (questionwords[1], " ".join([x.text for x in doc[wpword.i + 1:end]])))
 
                     else:
@@ -426,7 +421,6 @@ class WHQuestionGenerator():
                             yield (11, "%s did %s?" % (questionwords[1], " ".join(converted)))
 
                         if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0:
-                            print("#####################relclause",relclause,wpword,"answer",answer,"PREE",presentcontinuousverb,"PAS",pastparticiple)
                             aux = self.filteratt({
                                 'dep_': ['aux', 'auxpass']
                             }, relclause)[0]
@@ -450,7 +444,6 @@ class WHQuestionGenerator():
 
                 if questionwords[2]:
                     # Rule 3
-                    print(answer ,"ANSWER" , wpword)
                     temp_head = answer
                     checker = self.filteratt({
                         'dep_': ['nsubj', 'relcl']

@@ -226,7 +226,6 @@ class WHQuestionGenerator():
 
             matrix = doc[loc_relative_clause:wpword.i]
             relclause = doc[wpword.i:]
-            print(answer ,is_whose)
             hasanswer = {
                 'who': True,
                 'whom': True,

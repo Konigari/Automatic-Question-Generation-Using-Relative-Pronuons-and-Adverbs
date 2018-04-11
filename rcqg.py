@@ -225,7 +225,20 @@ class WHQuestionGenerator():
                 answer = PPChunker(doc, NounParent(wpword))
 
             matrix = doc[loc_relative_clause:wpword.i]
-            relclause = doc[wpword.i:]
+            ending = doc[wpword.i:]
+            punctCheck = self.filteratt({
+                'pos_': ['PUNCT']
+            }, ending)
+
+            if (len(punctCheck) > 0):
+                end = punctCheck[0].i
+            else:
+                if wpindex + 1 < len(relativeclauseswh):
+                    end = relativeclauseswh[wpindex + 1].i
+                else:
+                    end = None
+
+            relclause = doc[wpword.i:end]
             hasanswer = {
                 'who': True,
                 'whom': True,
@@ -256,9 +269,9 @@ class WHQuestionGenerator():
             }
             if wpword.text.lower() in conversions.keys():
                 if answer:
-                    end = answer.start
+                    end_1 = answer.start
                 else:
-                    end = wpword.i
+                    end_1 = wpword.i
 
                 questionwords = conversions[wpword.text.lower()]
                 # Find Requirements - Special case where root comes after relative clause
@@ -309,7 +322,7 @@ class WHQuestionGenerator():
                                 'dep_': 'nsubj'
                             }, pasttenseverb[0].children)[0]
                             yield (2, "%s %s %s?" % (questionwords[0], pasttenseverb[0].text, " ".join(
-                                without(pasttenseverb[0].i, pasttenseverb[0].i, doc[loc_relative_clause:end]))))
+                                without(pasttenseverb[0].i, pasttenseverb[0].i, doc[loc_relative_clause:end_1]))))
 
                         else:
                             pasttenseverb = pasttenseverb[0]
@@ -317,7 +330,7 @@ class WHQuestionGenerator():
                             converted = [x.text for x in doc[loc_relative_clause:pasttenseverb.i]] + [
                                 pasttenseverb.lemma_] + [
                                             x.text for x in doc[
-                                                            pasttenseverb.i + 1:end]]
+                                                            pasttenseverb.i + 1:end_1]]
                             yield (3, "%s did %s?" % (questionwords[0], " ".join(converted)))
 
                     if len(presentcontinuousverb) > 0 or len(pastparticiple) > 0 or len(bareverb) > 0:
@@ -325,7 +338,7 @@ class WHQuestionGenerator():
                             'dep_': ['aux', 'auxpass']
                         }, matrix)[0]
 
-                        converted = [aux.text] + without(aux.i, aux.i, doc[loc_relative_clause: end])
+                        converted = [aux.text] + without(aux.i, aux.i, doc[loc_relative_clause: end_1])
                         yield (4, "%s %s?" % (questionwords[0], " ".join(converted)))
 
                     if len(presentsimple) > 0:
@@ -336,14 +349,14 @@ class WHQuestionGenerator():
                             }, presentsimple[0].children)[0]
                             yield (5, "%s %s %s %s?" % (
                                 questionwords[0], presentsimple[0].text, getNounChunk(noun).text,
-                                doc[presentsimple[0].i + 1:end]))
+                                doc[presentsimple[0].i + 1:end_1]))
                         else:
                             presentsimple = presentsimple[0]
 
                             converted = [x.text for x in doc[loc_relative_clause:presentsimple.i]] + [
                                 presentsimple.lemma_] + [
                                             x.text for x in doc[
-                                                            presentsimple.i + 1:end]]
+                                                            presentsimple.i + 1:end_1]]
                             yield (6, "%s do %s?" % (questionwords[0], " ".join(converted)))
 
                     if len(presentsimplethird) > 0:
@@ -359,13 +372,13 @@ class WHQuestionGenerator():
 
                             converted = [x.text for x in doc[loc_relative_clause:presentsimplethird.i]] + [
                                 presentsimplethird.lemma_] + [x.text for x in doc[
-                                                                              presentsimplethird.i + 1:end]]
+                                                                              presentsimplethird.i + 1:end_1]]
                             yield (8, "%s does %s?" % (questionwords[0], " ".join(converted)))
 
                 if questionwords[1]:
                     # Rule 2
                     # Find Requirements
-                    pasttenseverb = self.filteratt({
+                    pasttenseverb = self.filteratt({    
                         'tag_': 'VBD',
                         'dep_': ['relcl', 'ccomp', 'advcl']
                     }, relclause)
@@ -385,18 +398,7 @@ class WHQuestionGenerator():
                         'tag_': 'VBZ',
                         'dep_': ['relcl', 'ccomp', 'advcl']
                     }, relclause)
-                    ending = doc[wpword.i:]
-                    punctCheck = self.filteratt({
-                        'pos_': ['PUNCT']
-                    }, ending)
-                    if (len(punctCheck) > 0):
-                        end = punctCheck[0].i
-                    else:
-                        if wpindex + 1 < len(relativeclauseswh):
-                            end = relativeclauseswh[wpindex + 1].i
-                        else:
-                            end = None
-
+                    
                     if wpword.dep_ == "nsubj" or wpword.dep_ == "nsubjpass" or is_whose:
                         # TODO - Mukul says its Hack , Co-authors disagree , Module overlap
                         if len(root) > 0:
@@ -441,7 +443,6 @@ class WHQuestionGenerator():
 
                 if questionwords[2]:
                     # Rule 3
-
                     temp_head = answer
                     checker = self.filteratt({
                         'dep_': ['nsubj', 'relcl']
